@@ -1,0 +1,26 @@
+User: Utilisateur
+user:
+  label: Utilisateurs
+  help: Petit message
+  list:
+    label: Liste des utilisateurs
+    help: test
+
+action:
+  new: Créer
+  edit: Modifier
+  search: Chercher
+  delete: Supprimer
+  save: Sauvegarder
+  list: Liste des utilisateurs
+  cancel: Annuler
+
+property:
+  username: Nom d'utilisateur
+  email: E-mail
+  image: Image
+  id: Id
+  enabled: Activé
+  roles: Rôles
+  imageFile: Fichier image
+

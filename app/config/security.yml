@@ -1,0 +1,29 @@
+# To get started with security, check out the documentation:
+# https://symfony.com/doc/current/security.html
+security:
+    encoders:
+        AD\UserBundle\Entity\User: sha512
+    providers:
+        main:
+            id: fos_user.user_provider.username
+    role_hierarchy:
+        ROLE_ADMIN:       ROLE_USER
+        ROLE_SUPER_ADMIN: [ROLE_USER, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|uploads|js)/
+            security: false
+        main:
+            pattern:      ^/
+            anonymous:    true
+            provider:     main
+            form_login:
+                login_path: fos_user_security_login
+                check_path: fos_user_security_check
+            logout:
+                path:       fos_user_security_logout
+                target:     fos_user_security_login
+            remember_me:
+                secret:     '%secret%'
+    access_control:
+        - { path: ^/admin, roles: ROLE_ADMIN }

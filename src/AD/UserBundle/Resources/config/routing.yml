@@ -1,0 +1,3 @@
+user_my_account:
+    path:     /
+    defaults: { _controller: UserBundle:User:account }

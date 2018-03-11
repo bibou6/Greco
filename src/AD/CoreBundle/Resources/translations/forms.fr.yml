@@ -1,0 +1,15 @@
+forms:
+ send: Envoyer
+ add: Ajouter
+ delete: Supprimer
+ edit: Modifier
+ search: Rechercher
+ reset: Réinitialiser
+ 
+labels:
+ name: 'Nom: '
+ forname: 'Prénom:'
+ birthdate: 'Date de naissance: '
+ email: 'Adresse email: '
+ username: 'Nom d''utilisateur: '
+ 

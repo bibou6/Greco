@@ -1,0 +1,31 @@
+{# src/OC/PlatformBundle/Resources/views/layout.html.twig #}
+
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}Greco Inmobiliaria{% endblock %}</title>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
+	{% stylesheets filter='cssrewrite,?scssphp' 
+		'bundles/core/css/*' 
+	%}
+  		<link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+    {% endstylesheets %}
+    
+  </head>
+  <body>
+  	{% block header %}
+  	{% endblock %}
+  	{% block menu %}
+    {% endblock %}
+    {% block body %}
+    {% endblock %}
+    
+    {% block javascript %}
+        {% javascripts filter='jsqueeze' 'bundles/core/js/main.js' %}
+      		<script type="text/javascript" src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+    {% endblock %}
+  </body>
+</html>
