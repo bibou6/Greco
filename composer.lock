@@ -1153,12 +1153,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfSymfony/FOSUserBundle.git",
-                "reference": "742f22f7d18fd2edb617243b92fed3f1b2bbd87f"
+                "reference": "1049935edd24ec305cc6cfde1875372fa9600446"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSUserBundle/zipball/742f22f7d18fd2edb617243b92fed3f1b2bbd87f",
-                "reference": "742f22f7d18fd2edb617243b92fed3f1b2bbd87f",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSUserBundle/zipball/1049935edd24ec305cc6cfde1875372fa9600446",
+                "reference": "1049935edd24ec305cc6cfde1875372fa9600446",
                 "shasum": ""
             },
             "require": {
@@ -1221,7 +1221,7 @@
             "keywords": [
                 "User management"
             ],
-            "time": "2018-03-01T12:39:08+00:00"
+            "time": "2018-03-08T08:59:27+00:00"
         },
         {
             "name": "imagine/imagine",
