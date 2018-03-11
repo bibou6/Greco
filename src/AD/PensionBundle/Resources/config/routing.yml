@@ -1,0 +1,3 @@
+pension_homepage:
+    path:     /
+    defaults: { _controller: PensionBundle:Default:index }

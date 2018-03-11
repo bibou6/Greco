@@ -1,0 +1,3 @@
+{% for val in value %}
+	<a href="{{ path('easyadmin', { action: 'show', entity: 'PensionImage', id: val.id }) }}"><img src="{{ vich_uploader_asset(val,'imageFile') | imagine_filter('my_thumb')}}" /></a>
+{% endfor %}

@@ -1,5 +1,5 @@
 easy_admin:
-    site_name: 'Website Name'
+    site_name: 'Greco Inmobiliaria'
     design:
         brand_color: '#1ABC9C'
         color_scheme: 'dark'
@@ -14,27 +14,72 @@ easy_admin:
     entities:
         User:
             class: AD\UserBundle\Entity\User
-            translation_domain: 'user'
+            translation_domain: 'admin'
             label: user.label
             form:
                 fields:
-                    - { property: 'imageFile', type: 'vich_image', label: 'property.imageFile' }
-                    - { property: 'username', label: 'property.username' }
-                    - { property: 'email', label: 'property.email' }
+                    - { property: 'imageFile', type: 'vich_image', label: 'user.property.imageFile' }
+                    - { property: 'username', label: 'user.property.username' }
+                    - { property: 'email', label: 'user.property.email' }
             list:
                 title: user.list.label
                 max_results: '10'
                 fields:
-                    - { property: 'image', type: 'image', base_path: '%app.path.user_images%', label: 'property.image' }
-                    - { property: 'id', label: 'property.id' }
-                    - { property: 'username', label: 'property.username' }
-                    - { property: 'email', label: 'property.email' }
-                    - { property: 'roles', label: 'property.roles' }
-                    - { property: 'enabled', type: 'boolean', label: 'property.enabled' }
+                    - { property: 'image', type: 'image', base_path: '%app.path.user_images%', label: 'user.property.image' }
+                    - { property: 'id', label: 'user.property.id' }
+                    - { property: 'username', label: 'user.property.username' }
+                    - { property: 'email', label: 'user.property.email' }
+                    - { property: 'roles', label: 'user.property.roles' }
+                    - { property: 'enabled', type: 'boolean', label: 'user.property.enabled' }
             show:
                 fields:
                     - { property: 'image', type: 'image', base_path: '%app.path.user_images%' }
             search: #https://symfony.com/doc/current/bundles/EasyAdminBundle/book/list-search-show-configuration.html
                 fields:
-                    - { property: 'username', label: 'property.username' }
-                    - { property: 'email', label: 'property.email' }
+                    - { property: 'username', label: 'user.property.username' }
+                    - { property: 'email', label: 'user.property.email' }
+        Pension:
+            class: AD\PensionBundle\Entity\Pension
+            translation_domain: 'admin'
+            label: pension.label
+            form:
+                fields:
+                    - { property: 'imageFile', type: 'vich_image', label: 'pension.property.imageFile' }
+                    - { property: 'name', label: 'pension.property.name' }
+                    - { property: 'description', label: 'pension.property.description' }
+                    - { property: 'minimumPrice', label: 'pension.property.minimumPrice' }
+                    - { property: 'maximumPrice', label: 'pension.property.maximumPrice' }
+            list:
+                title: pension.list.label
+                max_results: '10'
+                fields:
+                    - { property: 'image', type: 'image', base_path: '%app.path.pension_images%', label: 'pension.property.image' }
+                    - { property: 'name', label: 'pension.property.name' }
+                    - { property: 'minimumPrice', label: 'pension.property.minimumPrice' }
+                    - { property: 'maximumPrice', label: 'pension.property.maximumPrice' }
+                    - { property: 'updatedAt', label: 'pension.property.updatedAt' }
+                    - { property: 'images', type:'AD\PensionBundle\Entity\PensionImage', label: 'pension.property.images', template: 'images_list.html.twig' }
+            search: #https://symfony.com/doc/current/bundles/EasyAdminBundle/book/list-search-show-configuration.html
+                fields:
+                    - { property: 'name', label: 'pension.property.name' }
+        PensionImage:
+            class: AD\PensionBundle\Entity\PensionImage
+            translation_domain: 'admin'
+            label: pensionImage.label
+            form:
+                fields:
+                    - { property: 'imageFile', type: 'vich_image', label: 'pension.property.imageFile' }
+                    - { property: 'alt', label: 'pensionImage.property.alt' }
+                    - { property: 'pension',type: 'entity', type_options: { class: 'AD\PensionBundle\Entity\Pension', choice_label: name } }
+            list:
+                title: pensionImage.list.label
+                max_results: '10'
+                fields:
+                    - { property: 'image', type: 'image', base_path: '%app.path.pension_images%', label: 'pensionImage.property.image' }
+                    - { property: 'alt', label: 'pension.property.name' }
+                    - { property: 'creationDate', label: 'pensionImage.property.creationDate' }
+                    - { property: 'pension', label: 'pensionImage.property.pension' }
+            search: #https://symfony.com/doc/current/bundles/EasyAdminBundle/book/list-search-show-configuration.html
+                fields:
+                    - { property: 'name', label: 'pension.property.name', type_options: { class: 'AD\PensionBundle\Entity\Pension' } }
+        

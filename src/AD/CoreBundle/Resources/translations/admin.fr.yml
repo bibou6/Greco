@@ -1,0 +1,62 @@
+User: Utilisateur
+user:
+  label: Utilisateurs
+  help: Petit message
+  
+  list:
+    label: Liste des utilisateurs
+    help: test
+    
+  property:
+    username: Nom d'utilisateur
+    email: E-mail
+    image: Image
+    id: Id
+    enabled: Activé
+    roles: Rôles
+    imageFile: Fichier image
+
+action:
+  new: Créer
+  edit: Modifier
+  search: Chercher
+  delete: Supprimer
+  save: Sauvegarder
+  list: Retour à la liste
+  cancel: Annuler
+  
+label.form.empty_value: none
+
+Pension: Pension
+pension:
+  label: Pensions
+  help: Petit message
+  
+  list:
+    label: Liste des pensions
+    help: test
+  property:
+    image: Image
+    name: Nom de la pension
+    description: Description
+    isFull: Est pleine?
+    id: Id
+    minimumPrice: Prix minimum
+    maximumPrice: Prix maximum
+    updatedAt: Mis à jour
+    imageFile: Fichier image
+    images: Images de la pension
+    
+PensionImage: Pension Image
+pensionImage:
+  label: Pension images
+  help: Petit message
+  
+  list:
+    label: Liste des images des pensions
+    help: test
+  property:
+    image: Image
+    alt: Texte alternatif
+    creationDate: Date de Création
+    pension: Pension

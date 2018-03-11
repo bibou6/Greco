@@ -22,6 +22,7 @@ class AppKernel extends Kernel
         	new EasyCorp\Bundle\EasyAdminBundle\EasyAdminBundle(),
         	new Vich\UploaderBundle\VichUploaderBundle(),
         	new Liip\ImagineBundle\LiipImagineBundle(),
+            new AD\PensionBundle\PensionBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

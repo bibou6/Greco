@@ -4,3 +4,6 @@ vich_uploader:
         user_images:
             uri_prefix:         '%app.path.user_images%'
             upload_destination: '%kernel.root_dir%/../web/uploads/images/users'
+        pension_images:
+            uri_prefix:         '%app.path.pension_images%'
+            upload_destination: '%kernel.root_dir%/../web/uploads/images/pensions'
