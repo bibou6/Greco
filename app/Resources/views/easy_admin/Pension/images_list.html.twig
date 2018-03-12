@@ -1,3 +1,4 @@
+{% trans_default_domain "CoreBundle" %}
 {% for val in value %}
-	<a href="{{ path('easyadmin', { action: 'show', entity: 'PensionImage', id: val.id }) }}"><img src="{{ vich_uploader_asset(val,'imageFile') | imagine_filter('my_thumb')}}" /></a>
+	<a href="{{ path('pension_image_delete', { entity: 'Pension', id: val.id }) }}" onclick="return confirm('{{ 'pensionImage.delete.confirm'|trans({}, 'admin') }}')")><img src="{{ vich_uploader_asset(val,'imageFile') | imagine_filter('my_thumb')}}" /></a>
 {% endfor %}

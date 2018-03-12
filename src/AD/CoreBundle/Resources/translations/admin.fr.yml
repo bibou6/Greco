@@ -31,6 +31,9 @@ Pension: Pension
 pension:
   label: Pensions
   help: Petit message
+  images: Images
+  information: Information
+  description: Description
   
   list:
     label: Liste des pensions
@@ -51,6 +54,8 @@ PensionImage: Pension Image
 pensionImage:
   label: Pension images
   help: Petit message
+  delete:
+    confirm: êtes-vous sûre de vouloir supprimer la photo?
   
   list:
     label: Liste des images des pensions
