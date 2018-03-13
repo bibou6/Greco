@@ -171,9 +171,9 @@ class PensionImage
     	return $this->pension;
     }
     
-    public function __toString()
+    /*public function __toString()
     {
     	return (string) $this->image;
-    }
+    }*/
 }
 

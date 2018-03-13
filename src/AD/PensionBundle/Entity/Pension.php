@@ -89,11 +89,12 @@ class Pension
     /**
      * @var PensionImage[]|ArrayCollection
      *
-     * @ORM\OneToMany(targetEntity="AD\PensionBundle\Entity\PensionImage", mappedBy="pension", cascade={"persist"})
+     * @ORM\OneToMany(targetEntity="AD\PensionBundle\Entity\PensionImage", mappedBy="pension", cascade={"persist","remove"}, orphanRemoval=true)
      */
     private $images;
 
-    public function __construct(){
+    public function __construct()
+    {
     	$this->images = new \Doctrine\Common\Collections\ArrayCollection();
     }
     

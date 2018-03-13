@@ -34,6 +34,7 @@ pension:
   images: Images
   information: Information
   description: Description
+  attachment: Pièces jointes
   
   list:
     label: Liste des pensions

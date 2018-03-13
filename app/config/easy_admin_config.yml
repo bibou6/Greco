@@ -46,13 +46,14 @@ easy_admin:
                 fields:
                     - { type: 'group', label: 'pension.information', css_class: 'col-sm-6' }
                     - { property: 'name', label: 'pension.property.name' }
-                    - { property: 'minimumPrice', css_class: 'col-sm-1', label: 'pension.property.minimumPrice',type: 'money', type_options: { currency: 'CLP' } }
+                    - { property: 'minimumPrice', label: 'pension.property.minimumPrice',type: 'money', type_options: { currency: 'CLP' } }
                     - { property: 'maximumPrice', label: 'pension.property.maximumPrice',type: 'money', type_options: { currency: 'CLP' } }
                     - { type: 'group', label: 'pension.images', css_class: 'col-sm-6' }
                     - { property: 'imageFile', type: 'vich_image', label: 'pension.property.imageFile' }
-                    - images
                     - { type: 'group', label: 'pension.description' }
                     - { property: 'description', type: 'ckeditor', label: 'pension.property.description' }
+                    - { type: 'group', label: 'pension.attachment' }
+                    - { property: 'images', type: 'collection', type_options: { entry_type: 'AD\PensionBundle\Form\PensionImageType', by_reference: false } }
             list:
                 title: pension.list.label
                 max_results: '10'
@@ -77,26 +78,3 @@ easy_admin:
                     - { property: 'image', type: 'image', base_path: '%app.path.pension_images%', label: 'pension.property.image' }
                     - { property: 'description', label: 'pension.property.description' }
                     - { property: 'images', type: 'AD\PensionBundle\Entity\PensionImage', label: 'pension.property.images', template: 'images_list.html.twig' }
-            
-                    
-        PensionImage:
-            class: AD\PensionBundle\Entity\PensionImage
-            translation_domain: 'admin'
-            label: pensionImage.label
-            form:
-                fields:
-                    - { property: 'imageFile', type: 'vich_image', label: 'pension.property.imageFile' }
-                    - { property: 'alt', label: 'pensionImage.property.alt' }
-                    - { property: 'pension',type: 'entity', type_options: { class: 'AD\PensionBundle\Entity\Pension', choice_label: name } }
-            list:
-                title: pensionImage.list.label
-                max_results: '10'
-                fields:
-                    - { property: 'image', type: 'image', base_path: '%app.path.pension_images%', label: 'pensionImage.property.image' }
-                    - { property: 'alt', label: 'pension.property.name' }
-                    - { property: 'creationDate', label: 'pensionImage.property.creationDate' }
-                    - { property: 'pension', label: 'pensionImage.property.pension' }
-            search: #https://symfony.com/doc/current/bundles/EasyAdminBundle/book/list-search-show-configuration.html
-                fields:
-                    - { property: 'name', label: 'pension.property.name', type_options: { class: 'AD\PensionBundle\Entity\Pension' } }
-        
