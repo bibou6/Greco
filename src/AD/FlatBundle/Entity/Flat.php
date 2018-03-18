@@ -41,7 +41,7 @@ class Flat
     /**
      * @var boolean
      *
-     * @ORM\Column(name="enabled", type="boolean")
+     * @ORM\Column(name="isEnabled", type="boolean")
      */
     private $enabled;
 

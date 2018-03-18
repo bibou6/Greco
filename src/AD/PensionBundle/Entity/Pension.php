@@ -76,9 +76,9 @@ class Pension
     /**
      * @var bool
      *
-     * @ORM\Column(name="isFull", type="boolean", nullable=true)
+     * @ORM\Column(name="full", type="boolean", nullable=true)
      */
-    private $isFull;
+    private $full;
 
     
     /**
@@ -261,30 +261,6 @@ class Pension
         return $this->roomAmount;
     }
 
-    /**
-     * Set isFull
-     *
-     * @param boolean $isFull
-     *
-     * @return Pension
-     */
-    public function setIsFull($isFull)
-    {
-        $this->isFull = $isFull;
-
-        return $this;
-    }
-
-    /**
-     * Get isFull
-     *
-     * @return bool
-     */
-    public function getIsFull()
-    {
-        return $this->isFull;
-    }
-    
     public function setImageFile(File $image = null)
     {
     	$this->imageFile = $image;
@@ -356,6 +332,7 @@ class Pension
     	return (string) $this->name;
     }
 
+
     /**
      * Set enabled
      *
@@ -378,5 +355,29 @@ class Pension
     public function getEnabled()
     {
         return $this->enabled;
+    }
+
+    /**
+     * Set full
+     *
+     * @param boolean $full
+     *
+     * @return Pension
+     */
+    public function setFull($full)
+    {
+        $this->full = $full;
+
+        return $this;
+    }
+
+    /**
+     * Get full
+     *
+     * @return boolean
+     */
+    public function getFull()
+    {
+        return $this->full;
     }
 }

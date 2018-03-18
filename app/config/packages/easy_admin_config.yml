@@ -138,4 +138,3 @@ easy_admin:
                     - { property: 'image', type: 'image', base_path: '%app.path.flat_images%', label: 'flat.property.image' }
                     - { property: 'description', label: 'flat.property.description' }
                     - { property: 'images', type: 'AD\FlatBundle\Entity\pImage', label: 'flat.property.images', template: 'images_list_upload.html.twig' }
-        
