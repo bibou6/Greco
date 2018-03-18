@@ -23,6 +23,7 @@ class AppKernel extends Kernel
         	new Vich\UploaderBundle\VichUploaderBundle(),
         	new Liip\ImagineBundle\LiipImagineBundle(),
             new AD\PensionBundle\PensionBundle(),
+        	new AD\FlatBundle\FlatBundle(),
         	new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
         ];
 

@@ -1,14 +1,14 @@
 <?php
 
-namespace AD\PensionBundle\Controller;
+namespace AD\FlatBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
-use AD\PensionBundle\Entity\PensionImage;
+use AD\FlatBundle\Entity\Flat;
+use AD\FlatBundle\Entity\FlatImage;
 use Symfony\Component\HttpFoundation\JsonResponse;
-
-class PensionController extends Controller
+class FlatController extends Controller
 {
     public function indexAction()
     {
@@ -20,10 +20,10 @@ class PensionController extends Controller
      */
     public function deleteImageAction(Request $request){
     	
-    	$pensionImageId = $request->query->get('id');
+    	$flatImageId = $request->query->get('id');
     	$em = $this->getDoctrine()->getManager();
-    	$pension = $em->getRepository('PensionBundle:PensionImage')->find($pensionImageId);
-    	$em->remove($pension);
+    	$flat = $em->getRepository('FlatBundle:FlatImage')->find($flatImageId);
+    	$em->remove($flat);
     	$em->flush();
     	
     	// redirect to the 'list' view of the given entity
@@ -34,39 +34,41 @@ class PensionController extends Controller
     	
     }
     
+    
     /**
      * @Security("has_role('ROLE_ADMIN')")
      */
-    public function uploadPensionImageAction($id, Request $request){
-    
+    public function uploadFlatImageAction($id, Request $request){
+    	 
     	$logger = $this->get('logger');
     	$em = $this->getDoctrine()->getManager();
-    	 
-    	//Retrieving flat on which you add the file
-    	 
-    	$pension = $em->getRepository('PensionBundle:Pension')->find($id);
-    	$uploaded_file = $request->files->get('file');
     	
-    	$logger->info('File upload for Pension : '.$pension->getName());
+    	//Retrieving flat on which you add the file
+    	
+	 	$flat = $em->getRepository('FlatBundle:Flat')->find($id);
+    	$uploaded_file = $request->files->get('file');
     	
     	if($request->isMethod("POST")){
     		if($uploaded_file !== null){
-    			$logger->info('File upload for Pension : '.$pension->getName());
-    			$pensionImage = new PensionImage();
-    			$pensionImage->setAlt(null);
-    			$pensionImage->setPension($pension);
-    			$pensionImage->setImageFile($uploaded_file);
-    			$em->persist($pensionImage);
-    	   
-    			$pension->addImage($pensionImage);
-    	   
-    			$em->flush();
-    		}
+	    		$logger->info('File upload for Flat : '.$flat->getName());
+	    		$flatImage = new FlatImage();
+	    		$flatImage->setAlt(null);
+	    		$flatImage->setFlat($flat);
+	    		$flatImage->setImageFile($uploaded_file);
+	    		$em->persist($flatImage);
+	    		
+	    		$flat->addImage($flatImage);
+	    		
+	    		$em->flush();
+	    	}
     		// redirect to the 'list' view of the given entity
     		return new JsonResponse(array('success' => true));
     	}
-    
+    	 
     	// redirect to the 'list' view of the given entity
     	return new JsonResponse(array('success' => false));
-	}
+    	 
+    }
+    
+    
 }

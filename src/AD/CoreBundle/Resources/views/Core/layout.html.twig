@@ -23,9 +23,23 @@
     {% endblock %}
     
     {% block javascript %}
-        {% javascripts filter='jsqueeze' 'bundles/core/js/main.js' %}
+        {% javascripts filter='jsqueeze' 'bundles/core/js/*' %}
       		<script type="text/javascript" src="{{ asset_url }}"></script>
         {% endjavascripts %}
+        <script type="text/javascript">
+     // "myAwesomeDropzone" is the camelized version of the HTML element's ID
+        Dropzone.options.myAwesomeDropzone = {
+          paramName: "file", // The name that will be used to transfer the file
+          maxFilesize: 10, // MB
+          accept: function(file, done) {
+            if (file.name == "justinbieber.jpg") {
+              done("Naha, you don't.");
+            }
+            else { done(); }
+          }
+        };
+
+        </script>
     {% endblock %}
   </body>
 </html>

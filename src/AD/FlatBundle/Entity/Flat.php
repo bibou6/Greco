@@ -1,19 +1,19 @@
 <?php
 
-namespace AD\PensionBundle\Entity;
+namespace AD\FlatBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
- * Pension
+ * Flat
  *
- * @ORM\Table(name="gi_pension")
- * @ORM\Entity(repositoryClass="AD\PensionBundle\Repository\PensionRepository")
+ * @ORM\Table(name="gi_flat")
+ * @ORM\Entity(repositoryClass="AD\FlatBundle\Repository\FlatRepository")
  * @Vich\Uploadable
  */
-class Pension
+class Flat
 {
     /**
      * @var int
@@ -30,6 +30,13 @@ class Pension
      * @ORM\Column(name="updatedAt", type="datetime", nullable=true)
      */
     private $updatedAt;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="price", type="integer")
+     */
+    private $price;
     
     /**
      * @var boolean
@@ -37,20 +44,6 @@ class Pension
      * @ORM\Column(name="enabled", type="boolean")
      */
     private $enabled;
-
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="minimumPrice", type="integer")
-     */
-    private $minimumPrice;
-
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="maximumPrice", type="integer")
-     */
-    private $maximumPrice;
 
     /**
      * @var string
@@ -88,15 +81,15 @@ class Pension
     private $image="avatar.png";
     
     /**
-     * @Vich\UploadableField(mapping="pension_images", fileNameProperty="image")
+     * @Vich\UploadableField(mapping="flat_images", fileNameProperty="image")
      * @var File
      */
     private $imageFile;
     
     /**
-     * @var PensionImage[]|ArrayCollection
+     * @var FlatImage[]|ArrayCollection
      *
-     * @ORM\OneToMany(targetEntity="AD\PensionBundle\Entity\PensionImage", mappedBy="pension", cascade={"persist","remove"}, orphanRemoval=true)
+     * @ORM\OneToMany(targetEntity="AD\FlatBundle\Entity\FlatImage", mappedBy="flat", cascade={"persist","remove"}, orphanRemoval=true)
      */
     private $images;
 
@@ -122,7 +115,7 @@ class Pension
      *
      * @param \DateTime $updatedAt
      *
-     * @return Pension
+     * @return Flat
      */
     public function setUpdatedAt($updatedAt)
     {
@@ -142,51 +135,27 @@ class Pension
     }
 
     /**
-     * Set minimumPrice
-     *
-     * @param integer $minimumPrice
-     *
-     * @return Pension
-     */
-    public function setMinimumPrice($minimumPrice)
-    {
-        $this->minimumPrice = $minimumPrice;
-
-        return $this;
-    }
-
-    /**
-     * Get minimumPrice
-     *
-     * @return int
-     */
-    public function getMinimumPrice()
-    {
-        return $this->minimumPrice;
-    }
-
-    /**
      * Set maximumPrice
      *
-     * @param integer $maximumPrice
+     * @param integer $price
      *
-     * @return Pension
+     * @return Flat
      */
-    public function setMaximumPrice($maximumPrice)
+    public function setPrice($price)
     {
-        $this->maximumPrice = $maximumPrice;
+        $this->price = $price;
 
         return $this;
     }
 
     /**
-     * Get maximumPrice
+     * Get price
      *
      * @return int
      */
-    public function getMaximumPrice()
+    public function getPrice()
     {
-        return $this->maximumPrice;
+        return $this->price;
     }
 
     /**
@@ -194,7 +163,7 @@ class Pension
      *
      * @param string $description
      *
-     * @return Pension
+     * @return Flat
      */
     public function setDescription($description)
     {
@@ -218,7 +187,7 @@ class Pension
      *
      * @param string $name
      *
-     * @return Pension
+     * @return Flat
      */
     public function setName($name)
     {
@@ -242,7 +211,7 @@ class Pension
      *
      * @param integer $roomAmount
      *
-     * @return Pension
+     * @return Flat
      */
     public function setRoomAmount($roomAmount)
     {
@@ -266,7 +235,7 @@ class Pension
      *
      * @param boolean $isFull
      *
-     * @return Pension
+     * @return Flat
      */
     public function setIsFull($isFull)
     {
@@ -316,7 +285,7 @@ class Pension
     /**
      * Get images
      *
-     * @return PensionImages[]|ArrayCollection
+     * @return FlatImages[]|ArrayCollection
      */
     public function getImages()
     {
@@ -326,13 +295,13 @@ class Pension
     /**
      * Add image
      *
-     * @param PensionImage $image
+     * @param FlatImage $image
      *
      * @return Room
      */
-    public function addImage(PensionImage $image)
+    public function addImage(FlatImage $image)
     {
-    	$image->setPension($this);
+    	$image->setFlat($this);
     	$this->images[] = $image;
     
     	dump($image);
@@ -343,11 +312,11 @@ class Pension
     /**
      * Remove image
      *
-     * @param PensionImage $image
+     * @param FlatImage $image
      */
-    public function removeImage(PensionImage $image)
+    public function removeImage(FlatImage $image)
     {
-    	$image->setPension(null);
+    	$image->setFlat(null);
     	$this->images->removeElement($image);
     }
     
@@ -361,7 +330,7 @@ class Pension
      *
      * @param boolean $enabled
      *
-     * @return Pension
+     * @return Flat
      */
     public function setEnabled($enabled)
     {

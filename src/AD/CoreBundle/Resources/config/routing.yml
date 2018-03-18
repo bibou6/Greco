@@ -31,3 +31,7 @@ pension:
     resource: "@PensionBundle/Resources/config/routing.yml"
     prefix: /pension
     
+flat:
+    resource: "@FlatBundle/Resources/config/routing.yml"
+    prefix: /flat
+    

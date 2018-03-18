@@ -1,3 +1,6 @@
+#####################################
+#             USER                  #
+#####################################
 User: Utilisateur
 user:
   label: Utilisateurs
@@ -27,6 +30,10 @@ action:
   
 label.form.empty_value: none
 
+
+#####################################
+#             PENSION               #
+#####################################
 Pension: Pension
 pension:
   label: Pensions
@@ -41,9 +48,10 @@ pension:
     help: test
   property:
     image: Image
-    name: Nom de la pension
+    name: Nom
+    enabled: Activé
     description: Description
-    isFull: Est pleine?
+    isFull: pleine
     id: Id
     minimumPrice: Prix minimum
     maximumPrice: Prix maximum
@@ -66,3 +74,53 @@ pensionImage:
     alt: Texte alternatif
     creationDate: Date de Création
     pension: Pension
+    
+#####################################
+#             FLAT                  #
+#####################################
+Flat: Appartement
+flat:
+  label: Appartements
+  help: Petit message
+  images: Images
+  information: Information
+  description: Description
+  attachment: Pièces jointes
+  
+  list:
+    label: Liste des appartements
+    help: test
+  property:
+    image: Image
+    name: Nom
+    enabled: Activé
+    description: Description
+    isFull: Est pleine?
+    id: Id
+    price: Prix
+    updatedAt: Mis à jour
+    imageFile: Fichier image
+    images: Images
+    
+FlatImage: Image appartement
+flatImage:
+  label: Image appartement
+  help: Petit message
+  delete:
+    confirm: êtes-vous sûre de vouloir supprimer la photo?
+  
+  list:
+    label: Liste des images des appartements
+    help: test
+  property:
+    image: Image
+    alt: Texte alternatif
+    creationDate: Date de Création
+    flat: Appartement
+    
+#####################################
+#             DROPZONE              #
+#####################################
+dropzone:
+  upload:
+    message: Cliquez dans le cadre ou déposez vos fichiers ici pour les uploader !

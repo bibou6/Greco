@@ -1,19 +1,19 @@
 <?php
 
-namespace AD\PensionBundle\Entity;
+namespace AD\FlatBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
- * PensionImage
+ * FlatImage
  *
- * @ORM\Table(name="gi_pension_image")
- * @ORM\Entity(repositoryClass="AD\PensionBundle\Repository\PensionImageRepository")
+ * @ORM\Table(name="gi_flat_image")
+ * @ORM\Entity(repositoryClass="AD\FlatBundle\Repository\FlatImageRepository")
  * @Vich\Uploadable
  */
-class PensionImage
+class FlatImage
 {
     /**
      * @var int
@@ -45,16 +45,16 @@ class PensionImage
     private $image="avatar.png";
     
     /**
-     * @Vich\UploadableField(mapping="pension_images", fileNameProperty="image")
+     * @Vich\UploadableField(mapping="flat_images", fileNameProperty="image")
      * @var File
      */
     private $imageFile;
     
     /**
-     * @var Pension
-     * @ORM\ManyToOne(targetEntity="AD\PensionBundle\Entity\Pension", inversedBy="images")
+     * @var Flat
+     * @ORM\ManyToOne(targetEntity="AD\FlatBundle\Entity\Flat", inversedBy="images")
      */
-    private $pension;
+    private $flat;
 
     
     public function __construct(){
@@ -76,7 +76,7 @@ class PensionImage
      *
      * @param string $alt
      *
-     * @return PensionImage
+     * @return FlatImage
      */
     public function setAlt($alt)
     {
@@ -100,7 +100,7 @@ class PensionImage
      *
      * @param \DateTime $creationDate
      *
-     * @return PensionImage
+     * @return FlatImage
      */
     public function setCreationDate($creationDate)
     {
@@ -148,27 +148,27 @@ class PensionImage
     }
     
     /**
-     * Set pension
+     * Set flat
      *
-     * @param Pension $pension
+     * @param Flat $flat
      *
-     * @return PensionImage
+     * @return FlatImage
      */
-    public function setPension(Pension $pension = null)
+    public function setFlat(Flat $flat = null)
     {
-    	$this->pension = $pension;
+    	$this->flat = $flat;
     
     	return $this;
     }
     
     /**
-     * Get Pension
+     * Get Flat
      *
-     * @return Pension
+     * @return Flat
      */
-    public function getPension()
+    public function getFlat()
     {
-    	return $this->pension;
+    	return $this->flat;
     }
     
     /*public function __toString()
