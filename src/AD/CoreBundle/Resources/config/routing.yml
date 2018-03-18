@@ -27,3 +27,11 @@ fos_user_change_password:
     resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
     prefix: /profile
     
+pension:
+    resource: "@PensionBundle/Resources/config/routing.yml"
+    prefix: /pension
+    
+flat:
+    resource: "@FlatBundle/Resources/config/routing.yml"
+    prefix: /flat
+    

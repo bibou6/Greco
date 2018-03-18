@@ -1,0 +1,27 @@
+Pension: Pension
+pension:
+  label: Pensions
+  help: Petit message
+  list:
+    label: Liste des pensions
+    help: test
+
+action:
+  new: Créer
+  edit: Modifier
+  search: Chercher
+  delete: Supprimer
+  save: Sauvegarder
+  list: Liste des pensions
+  cancel: Annuler
+
+property:
+  image: Image
+  name: Nom de la pension
+  description: Description
+  isFull: Est pleine?
+  id: Id
+  minimumPrice: Prix minimum
+  maximumPrice: Prix maximum
+  updatedAt: Mis à jour
+

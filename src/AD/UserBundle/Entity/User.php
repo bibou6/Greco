@@ -8,7 +8,7 @@ use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
- * @ORM\Table(name="ad_user")
+ * @ORM\Table(name="gi_user")
  * @ORM\Entity(repositoryClass="AD\UserBundle\Repository\UserRepository")
  * @Vich\Uploadable
  */
@@ -25,7 +25,7 @@ class User extends BaseUser
 	 * @ORM\Column(type="string", length=255)
 	 * @var string
 	 */
-	private $image;
+	private $image="avatar.png";
 	
 	/**
 	 * @Vich\UploadableField(mapping="user_images", fileNameProperty="image")
@@ -34,7 +34,7 @@ class User extends BaseUser
 	private $imageFile;
 	
 	/**
-	 * @ORM\Column(type="datetime")
+	 * @ORM\Column(type="datetime", nullable=true)
 	 * @var \DateTime
 	 */
 	private $updatedAt;

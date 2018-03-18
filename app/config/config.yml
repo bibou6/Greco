@@ -2,11 +2,10 @@ imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
     - { resource: services.yml }
-    - { resource: easy_admin_config.yml }
-    - { resource: liip_imagine_config.yml }
-    - { resource: vich_uploader_config.yml }
+    - { resource: packages/*.yml }
     - { resource: "@CoreBundle/Resources/config/services.yml" }
     - { resource: "@UserBundle/Resources/config/services.yml" }
+    - { resource: "@PensionBundle/Resources/config/services.yml" }
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
@@ -14,6 +13,8 @@ parameters:
     locale: fr
     version: 1.0
     app.path.user_images: /uploads/images/users
+    app.path.pension_images: /uploads/images/pensions
+    app.path.flat_images: /uploads/images/flats
 
 framework:
     #esi: ~
