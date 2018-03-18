@@ -124,3 +124,4 @@ flatImage:
 dropzone:
   upload:
     message: Cliquez dans le cadre ou déposez vos fichiers ici pour les uploader !
+    

@@ -1,13 +1,14 @@
 flat_homepage:
     path:     /
-    defaults: { _controller: FlatBundle:Flat:index }
+    defaults: { _controller: 'FlatBundle:Flat:index' }
     
 flat_image_delete:
     path:     /delete/image
-    defaults: { _controller: FlatBundle:Flat:deleteImage }
+    defaults: { _controller: 'FlatBundle:Flat:deleteImage' }
     
 flat_image_upload:
     path:     /upload/{id}/image
-    defaults: { _controller: FlatBundle:Flat:uploadFlatImage }
+    defaults: { _controller: 'FlatBundle:Flat:uploadFlatImage' }
     requirements:
         id: \d+
+
