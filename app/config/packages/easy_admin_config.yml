@@ -1,26 +1,31 @@
 easy_admin:
     site_name: 'Greco Inmobiliaria'
     design:
-        brand_color: '#1ABC9C'
+        menu: ['Pension', 'Flat', 'User']
+        brand_color: '#d66e00'
         color_scheme: 'dark'
+        form_theme: 'vertical'
         assets:
             favicon: '/assets/backend/favicon.png'
             css:
-                #look here to find the ids for the css: https://symfony.com/doc/current/bundles/EasyAdminBundle/book/design-configuration.html
-                # HTTP protocol-relative URL
-                #- '//example.org/css/admin1.css'
+                - '/bundles/core/css/dropzone.css'
             js:
-                #Same as css
+                - '/bundles/core/js/dropzone.js'
     entities:
+        #############################################
+        #            USER CONFIGURATION             #
+        #############################################
         User:
             class: AD\UserBundle\Entity\User
             translation_domain: 'admin'
             label: user.label
+            # FORM
             form:
                 fields:
                     - { property: 'imageFile', type: 'vich_image', label: 'user.property.imageFile' }
                     - { property: 'username', label: 'user.property.username' }
                     - { property: 'email', label: 'user.property.email' }
+            # LIST
             list:
                 title: user.list.label
                 max_results: '10'
@@ -30,18 +35,24 @@ easy_admin:
                     - { property: 'username', label: 'user.property.username' }
                     - { property: 'email', label: 'user.property.email' }
                     - { property: 'roles', label: 'user.property.roles' }
-                    - { property: 'enabled', type: 'boolean', label: 'user.property.enabled' }
+                    - { property: 'enabled', label: 'user.property.enabled' }
+            # SHOW
             show:
                 fields:
                     - { property: 'image', type: 'image', base_path: '%app.path.user_images%' }
-            search: #https://symfony.com/doc/current/bundles/EasyAdminBundle/book/list-search-show-configuration.html
+            # SEARCH
+            search: 
                 fields:
                     - { property: 'username', label: 'user.property.username' }
                     - { property: 'email', label: 'user.property.email' }
+        #############################################
+        #         PENSION CONFIGURATION             #
+        #############################################
         Pension:
             class: AD\PensionBundle\Entity\Pension
             translation_domain: 'admin'
             label: pension.label
+            # FORM
             form:
                 fields:
                     - { type: 'group', label: 'pension.information', css_class: 'col-sm-6' }
@@ -54,6 +65,7 @@ easy_admin:
                     - { property: 'description', type: 'ckeditor', label: 'pension.property.description' }
                     - { type: 'group', label: 'pension.attachment' }
                     - { property: 'images', type: 'collection', type_options: { entry_type: 'AD\PensionBundle\Form\PensionImageType', by_reference: false } }
+            # LIST
             list:
                 title: pension.list.label
                 max_results: '10'
@@ -62,14 +74,17 @@ easy_admin:
                     - { name: 'edit', icon: 'pencil', label: false }  
                     - { name: 'delete', icon: 'trash', label: false }
                 fields:
+                    - { property: 'enabled', label: 'pension.property.enabled' }
                     - { property: 'image', type: 'image', base_path: '%app.path.pension_images%', label: 'pension.property.image' }
                     - { property: 'name', label: 'pension.property.name' }
                     - { property: 'minimumPrice',label: 'pension.property.minimumPrice' }
                     - { property: 'maximumPrice', label: 'pension.property.maximumPrice' }
                     - { property: 'images', type: 'AD\PensionBundle\Entity\PensionImage', label: 'pension.property.images', template: 'images_list.html.twig' }
-            search: #https://symfony.com/doc/current/bundles/EasyAdminBundle/book/list-search-show-configuration.html
+            # SEARCH
+            search:
                 fields:
                     - { property: 'name', label: 'pension.property.name' }
+            # SHOW
             show:
                 fields:
                     - { property: 'name', label: 'pension.property.name' }
@@ -77,4 +92,50 @@ easy_admin:
                     - { property: 'maximumPrice', label: 'pension.property.maximumPrice' }
                     - { property: 'image', type: 'image', base_path: '%app.path.pension_images%', label: 'pension.property.image' }
                     - { property: 'description', label: 'pension.property.description' }
-                    - { property: 'images', type: 'AD\PensionBundle\Entity\PensionImage', label: 'pension.property.images', template: 'images_list.html.twig' }
+                    - { property: 'images', type: 'AD\PensionBundle\Entity\PensionImage', label: 'pension.property.images', template: 'images_list_upload.html.twig' }
+        #############################################
+        #            FLAT CONFIGURATION             #
+        #############################################
+        Flat:
+            class: AD\FlatBundle\Entity\Flat
+            translation_domain: 'admin'
+            label: flat.label
+            # FORM
+            form:
+                fields:
+                    - { type: 'group', label: 'flat.information', css_class: 'col-sm-6' }
+                    - { property: 'name', label: 'flat.property.name' }
+                    - { property: 'price', label: 'flat.property.price',type: 'money', type_options: { currency: 'CLP' } }
+                    - { type: 'group', label: 'flat.images', css_class: 'col-sm-6' }
+                    - { property: 'imageFile', type: 'vich_image', label: 'flat.property.imageFile' }
+                    - { type: 'group', label: 'flat.description' }
+                    - { property: 'description', type: 'ckeditor', label: 'flat.property.description' }
+                    - { type: 'group', label: 'flat.attachment' }
+                    - { property: 'images', type: 'collection', type_options: { entry_type: 'AD\FlatBundle\Form\FlatImageType', by_reference: false } }
+            # LIST
+            list:
+                title: flat.list.label
+                max_results: '10'
+                actions: 
+                    - { name: 'show', icon: 'search', label: false }
+                    - { name: 'edit', icon: 'pencil', label: false }  
+                    - { name: 'delete', icon: 'trash', label: false }
+                fields:
+                    - { property: 'enabled', label: 'flat.property.enabled' }
+                    - { property: 'image', type: 'image', base_path: '%app.path.flat_images%', label: 'flat.property.image' }
+                    - { property: 'name', label: 'flat.property.name' }
+                    - { property: 'price',label: 'flat.property.price' }
+                    - { property: 'images', type: 'AD\FlatBundle\Entity\FlatImage', label: 'flat.property.images', template: 'images_list.html.twig' }
+            # SEARCH
+            search: 
+                fields:
+                    - { property: 'name', label: 'flat.property.name' }
+            # SHOW
+            show:
+                fields:
+                    - { property: 'name', label: 'flat.property.name' }
+                    - { property: 'price', label: 'flat.property.price' }
+                    - { property: 'image', type: 'image', base_path: '%app.path.flat_images%', label: 'flat.property.image' }
+                    - { property: 'description', label: 'flat.property.description' }
+                    - { property: 'images', type: 'AD\FlatBundle\Entity\pImage', label: 'flat.property.images', template: 'images_list_upload.html.twig' }
+        
