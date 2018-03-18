@@ -1,6 +1,6 @@
 core_homepage:
-    path:     /
-    defaults: { _controller: CoreBundle:Core:index }
+    path: /
+    defaults: { _controller: 'CoreBundle:Core:index' }
 
 #USER SECTION
 
@@ -34,4 +34,3 @@ pension:
 flat:
     resource: "@FlatBundle/Resources/config/routing.yml"
     prefix: /flat
-    

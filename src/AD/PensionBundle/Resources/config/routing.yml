@@ -1,13 +1,13 @@
 pension_homepage:
     path:     /
-    defaults: { _controller: PensionBundle:Pension:index }
+    defaults: { _controller: 'PensionBundle:Pension:index' }
     
 pension_image_delete:
     path:     /delete/image
-    defaults: { _controller: PensionBundle:Pension:deleteImage }
+    defaults: { _controller: 'PensionBundle:Pension:deleteImage' }
 
 pension_image_upload:
     path:     /upload/{id}/image
-    defaults: { _controller: PensionBundle:Pension:uploadPensionImage }
+    defaults: { _controller: 'PensionBundle:Pension:uploadPensionImage' }
     requirements:
         id: \d+
