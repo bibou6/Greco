@@ -34,9 +34,9 @@ class Pension
     /**
      * @var boolean
      *
-     * @ORM\Column(name="enabled", type="boolean")
+     * @ORM\Column(name="isEnabled", type="boolean")
      */
-    private $enabled;
+    private $isEnabled;
 
     /**
      * @var int
@@ -357,26 +357,26 @@ class Pension
     }
 
     /**
-     * Set enabled
+     * Set isEnabled
      *
-     * @param boolean $enabled
+     * @param boolean $isEnabled
      *
      * @return Pension
      */
-    public function setEnabled($enabled)
+    public function setIsEnabled($isEnabled)
     {
-        $this->enabled = $enabled;
+        $this->isEnabled = $isEnabled;
 
         return $this;
     }
 
     /**
-     * Get enabled
+     * Get isEnabled
      *
      * @return boolean
      */
-    public function getEnabled()
+    public function getIsEnabled()
     {
-        return $this->enabled;
+        return $this->isEnabled;
     }
 }

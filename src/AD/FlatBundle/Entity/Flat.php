@@ -41,9 +41,9 @@ class Flat
     /**
      * @var boolean
      *
-     * @ORM\Column(name="enabled", type="boolean")
+     * @ORM\Column(name="isEnabled", type="boolean")
      */
-    private $enabled;
+    private $isEnabled;
 
     /**
      * @var string
@@ -347,5 +347,29 @@ class Flat
     public function getEnabled()
     {
         return $this->enabled;
+    }
+
+    /**
+     * Set isEnabled
+     *
+     * @param boolean $isEnabled
+     *
+     * @return Flat
+     */
+    public function setIsEnabled($isEnabled)
+    {
+        $this->isEnabled = $isEnabled;
+
+        return $this;
+    }
+
+    /**
+     * Get isEnabled
+     *
+     * @return boolean
+     */
+    public function getIsEnabled()
+    {
+        return $this->isEnabled;
     }
 }
