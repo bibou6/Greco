@@ -1,0 +1,28 @@
+@CHARSET "ISO-8859-1";
+
+@media screen and (max-width: 800px) {
+	#right-banner{
+		display:none;
+	}
+	
+	#logo-banner{
+		width: 100%;
+	}
+
+	#middle-line{
+		display: none;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	#middle-line{
+		display: none;
+	}
+	
+	.small-screen-border-bottom{
+		border:0;
+		border-bottom: 1px solid #04317a;
+		padding-bottom: 1em;
+		margin-bottom: 1em;
+	}
+}

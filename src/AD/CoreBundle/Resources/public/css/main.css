@@ -4,3 +4,92 @@
 	max-width: 100%;
 	max-height: 100%;
 }
+/*
+###################################
+#			BANNER: 			  #
+###################################
+*/
+
+#banner{
+	border-bottom: 2px solid #04317a;
+}
+
+#banner img{
+	z-index: 10;
+	max-width: 100%;
+	min-width: 300px;
+}
+#logo-banner{
+	text-align: center;
+}
+
+#middle-line{
+	height:50px;
+	border-bottom: 1px solid #d66e00;
+}
+
+#right-banner{
+	color: #d66e00;
+	margin-top:30px;;
+	font-family:    Brush Script MT, Brush Script Std, cursive;
+    font-size:      1.5em;
+    font-weight:    bold;
+    font-style: italic;
+    text-align: center;
+
+}
+
+/*
+###################################
+#			Paragraph  			  #
+###################################
+*/
+
+
+.p-underligned{
+	border-bottom: 1px solid #04317a;
+	padding: 1em 0;
+	margin-bottom: 1em;
+}
+.p-left-padding{
+	padding-left: 1em;
+}
+
+.p-right-padding{
+	padding-right: 1em;
+}
+
+.p-horizontal-padding{
+	padding: 0 1em;
+}
+
+.p-vertical-padding{
+	padding: 1em 0;
+}
+
+.p-border-right{
+	border-right: 1px solid #04317a;
+}
+
+.p-border-left{
+	border-left: 1px solid #04317a;
+}
+
+
+/*
+###################################
+#			Button:  			  #
+###################################
+*/
+
+
+.btn-primary{
+	background-color: #d66e00;
+	border-color: #d66e00;
+}
+
+.btn-primary:hover{
+	background-color: #04317a;
+	color:white;
+	border-color: #04317a;
+}
