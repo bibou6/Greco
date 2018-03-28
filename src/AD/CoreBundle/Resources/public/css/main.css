@@ -39,6 +39,10 @@
 
 }
 
+#small-logo-banner{
+	display:none;
+}
+
 /*
 ###################################
 #			Paragraph  			  #
@@ -71,8 +75,16 @@
 	border-right: 1px solid #04317a;
 }
 
+.p-border-right-main{
+	border-right: 1px solid #d66e00;
+}
+
 .p-border-left{
 	border-left: 1px solid #04317a;
+}
+
+.p-border-left-main{
+	border-left: 1px solid #d66e00;
 }
 
 
@@ -92,4 +104,34 @@
 	background-color: #04317a;
 	color:white;
 	border-color: #04317a;
+}
+
+/*
+###################################
+#			Footer:  			  #
+###################################
+*/
+
+.main-content{
+	padding-bottom: 2em;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 200px; /* Margin bottom by footer height */
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 200px; /* Set the fixed height of the footer here */
+  /*line-height: 200px; /* Vertically center the text there */
+  background-color: #04317a;
+  color: #FFF;
+  padding-top:2em;
 }

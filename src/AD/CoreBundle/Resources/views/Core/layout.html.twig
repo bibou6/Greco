@@ -22,6 +22,9 @@
 				<div id="logo-banner" class="col-12 col-sm-6 col-lg-4">
 					<img src="{{ asset('bundles/core/img/greco_logo.png') }}" height="100px">
 				</div>
+				<div id="small-logo-banner" class="col-12 text-center">
+					<img src="{{ asset('bundles/core/img/logo_small_rounded.png') }}">
+				</div>
 				<div id="middle-line" class="col-lg-4">
 				</div>
 				<div id="right-banner" class="col-sm-6 col-lg-4">
@@ -34,7 +37,30 @@
     {% endblock %}
     {% block body %}
     {% endblock %}
-    
+    {% block footer %}
+    	<footer class="footer">
+        	<div class="container">
+        		<div class="row text-center">
+        			<div class="col-sm-12 col-12 col-lg-4 p-border-right-main lg-screen-border-bottom-main">
+        				<div>Place sticky footer content here.</div>
+        				<div>Place sticky footer content here.</div>
+        				<div>Place sticky footer content here.</div>
+        			</div>
+        			<div class="col-12 col-sm-12 col-lg-4 p-border-right-main lg-screen-border-bottom-main">
+        				<div>Place sticky footer content here.</div>
+        				<div>Place sticky footer content here.</div>
+        				<div>Place sticky footer content here.</div>
+        			</div>
+        			<div class="col-12 col-sm-12 col-lg-4">
+        				<div>Place sticky footer content here.</div>
+        				<div>Place sticky footer content here.</div>
+        				<div>Place sticky footer content here.</div>
+        			</div>
+        		</div>
+            	
+        	</div>
+        </footer>
+    {% endblock %}
     {% block javascript %}
         {% javascripts filter='jsqueeze' 'bundles/core/js/*' %}
       		<script type="text/javascript" src="{{ asset_url }}"></script>

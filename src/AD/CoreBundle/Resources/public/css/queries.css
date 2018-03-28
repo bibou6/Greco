@@ -1,28 +1,144 @@
 @CHARSET "ISO-8859-1";
 
-@media screen and (max-width: 800px) {
+
+/* ########### X-SMALL ################ */
+@media screen and (max-width: 576px) {
 	#right-banner{
 		display:none;
 	}
 	
 	#logo-banner{
 		width: 100%;
+		display:none;
 	}
-
-	#middle-line{
-		display: none;
+	#small-logo-banner{
+		display:block;
 	}
-}
-
-@media screen and (max-width: 1000px) {
+	#small-logo-banner img{
+		max-height: 100px;
+		min-width: 0px;
+		padding: 10px;
+	}
+	#banner{
+		background-color: #d66e00;
+	}
+	
 	#middle-line{
 		display: none;
 	}
 	
-	.small-screen-border-bottom{
+	.xs-screen-border-bottom{
 		border:0;
 		border-bottom: 1px solid #04317a;
 		padding-bottom: 1em;
 		margin-bottom: 1em;
 	}
+	.xs-screen-border-bottom-main{
+		border:0;
+		border-bottom: 1px solid #d66e00;
+		padding-bottom: 1em;
+		margin-bottom: 1em;
+	}	
+	
+	
+}
+
+
+
+/* ########### SMALL ################ */
+@media screen and (max-width: 768px) {
+	#right-banner{
+		display:none;
+	}
+	
+	#logo-banner{
+		width: 100%;
+		display:none;
+	}
+	
+	#banner{
+		background-color: #d66e00;
+	}
+
+	#middle-line{
+		display: none;
+	}
+	
+	#small-logo-banner{
+		display:block;
+	}
+	
+	#small-logo-banner img{
+		max-height: 100px;
+		min-width: 0px;
+		padding: 10px;
+	}
+	
+	.sm-screen-border-bottom{
+		border:0;
+		border-bottom: 1px solid #04317a;
+		padding-bottom: 1em;
+		margin-bottom: 1em;
+	}
+	.sm-screen-border-bottom-main{
+		border:0;
+		border-bottom: 1px solid #d66e00;
+		padding-bottom: 1em;
+		margin-bottom: 1em;
+	}	
+	
+	
+}
+
+/* ########### MEDIUM ################ */
+@media screen and (max-width: 992px) {
+	#middle-line{
+		display: none;
+	}
+	
+	.md-screen-border-bottom{
+		border:0;
+		border-bottom: 1px solid #04317a;
+		padding-bottom: 1em;
+		margin-bottom: 1em;
+	}
+	.md-screen-border-bottom-main{
+		border:0;
+		border-bottom: 1px solid #d66e00;
+		padding-bottom: 1em;
+		margin-bottom: 1em;
+	}	
+	
+	body {
+	  margin-bottom: 350px; /* Margin bottom by footer height */
+	}
+	
+	.footer {
+	  position: absolute;
+	  bottom: 0;
+	  width: 100%;
+	  height: 350px; /* Set the fixed height of the footer here */
+	  /*line-height: 200px; /* Vertically center the text there */
+	  background-color: #04317a;
+	  color: #FFF;
+	  padding-top:2em;
+	}
+}
+
+/* ########### LARGE ################ */
+@media screen and (max-width: 1200px){
+	
+	.lg-screen-border-bottom{
+		border:0;
+		border-bottom: 1px solid #04317a;
+		padding-bottom: 1em;
+		margin-bottom: 1em;
+	}
+	.lg-screen-border-bottom-main{
+		border:0;
+		border-bottom: 1px solid #d66e00;
+		padding-bottom: 1em;
+		margin-bottom: 1em;
+	}	
+	
 }

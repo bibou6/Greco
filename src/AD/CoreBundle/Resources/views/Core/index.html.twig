@@ -5,23 +5,27 @@
 {% block title %}{{ parent() }} - Index{% endblock %}
 
 {% block body %}
-	<div class="container">
+	<div class="container main-content">
 		<div class="row">
 			<div class="col-sm-1 col-lg-2"></div>
 			<div class="col-12 col-sm-10 col-lg-8">
 				<div class="p-underligned text-justify">
-					<p><i class="fa fa-info-circle fa-3x fa-pull-left" style="color:#04317a;"></i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra finibus nunc non consequat. Phasellus in ornare velit. Maecenas lobortis mi arcu, at porttitor enim mattis at. Integer tempor pretium nisi et tempor. Nulla eget velit dapibus, ultricies enim nec, lobortis turpis. Fusce auctor lacus in justo eleifend dictum. Fusce maximus sem mauris, ut pulvinar sapien sagittis ac. Nullam auctor dolor at libero blandit congue.</p>
+					<p><i class="fa fa-info-circle fa-3x fa-pull-left" style="color:#04317a;"></i>{{ 'core.index.information.text'|trans }}</p>
 					<div class="text-right">
-					<a href="#" class="btn btn-md btn-primary">Learn more about us!</a>
-				</div>
+						<a href="#" class="btn btn-md btn-primary col-lg-4 col-sm-6 col-12">{{ 'core.index.information.see'|trans }}</a>
+					</div>
 				</div>
 				
 				<div class="row">
-					<div class="col-12 col-lg-6 p-right-padding p-border-right text-justify small-screen-border-bottom">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra finibus nunc non consequat. Phasellus in ornare velit. Maecenas lobortis mi arcu, at porttitor enim mattis at. Integer tempor pretium nisi et tempor. Nulla eget velit dapibus, ultricies enim nec, lobortis turpis. Fusce auctor lacus in justo eleifend dictum. Fusce maximus sem mauris, ut pulvinar sapien sagittis ac. Nullam auctor dolor at libero blandit congue.</p>
+					<div class="col-lg-12 col-xl-6 p-right-padding p-border-right text-justify lg-screen-border-bottom">
+						<h2 class="text-center display-4 text-muted">{{ 'core.index.flat.title'|trans }}</h2>
+						<p>{{ 'core.index.flat.text'|trans }}</p>
+						<a href="#" class="btn btn-md btn-primary col-12">{{ 'core.index.flat.see'|trans }}</a>
 					</div>
-					<div class="col-12 col-lg-6 p-left-padding text-justify">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra finibus nunc non consequat. Phasellus in ornare velit. Maecenas lobortis mi arcu, at porttitor enim mattis at. Integer tempor pretium nisi et tempor. Nulla eget velit dapibus, ultricies enim nec, lobortis turpis. Fusce auctor lacus in justo eleifend dictum. Fusce maximus sem mauris, ut pulvinar sapien sagittis ac. Nullam auctor dolor at libero blandit congue.</p>
+					<div class="col-lg-12 col-xl-6 p-left-padding text-justify">
+						<h2 class="text-center display-4 text-muted">{{ 'core.index.pension.title'|trans }}</h2>
+						<p>{{ 'core.index.pension.text'|trans }}</p>
+						<a href="#" class="btn btn-md btn-primary col-12">{{ 'core.index.pension.see'|trans }}</a>
 					</div>
 				</div>
 			</div>
