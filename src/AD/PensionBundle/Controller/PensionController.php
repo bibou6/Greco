@@ -10,9 +10,18 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 
 class PensionController extends Controller
 {
-    public function indexAction()
+    public function listAction()
     {
-        return $this->render('PensionBundle:Default:index.html.twig');
+    	$em = $this->getDoctrine()->getManager();
+    	$pensions = $em->getRepository('PensionBundle:Pension')->findBy(array(
+            'enabled' => true
+    	));
+    	
+    	
+        return $this->render('PensionBundle::list.html.twig', array(
+        		'menu' => 'pension',
+        		'pensions' => $pensions
+        ));
     }
     
     /**

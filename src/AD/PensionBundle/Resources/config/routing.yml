@@ -1,6 +1,6 @@
-pension_homepage:
+pension_list:
     path:     /
-    defaults: { _controller: 'PensionBundle:Pension:index' }
+    defaults: { _controller: 'PensionBundle:Pension:list' }
     
 pension_image_delete:
     path:     /delete/image

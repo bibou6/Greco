@@ -47,10 +47,13 @@ pension:
     label: Liste des pensions
     help: test
   property:
+    roomAmount: Nombre de chambre
     image: Image
     name: Nom
     enabled: Activé
-    description: Description
+    description_spanish: Description en espagnol
+    description_english: Description en anglais
+    description_french: Description en français
     isFull: pleine
     id: Id
     minimumPrice: Prix minimum

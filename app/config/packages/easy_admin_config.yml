@@ -13,39 +13,6 @@ easy_admin:
                 - '/bundles/core/js/dropzone.js'
     entities:
         #############################################
-        #            USER CONFIGURATION             #
-        #############################################
-        User:
-            class: AD\UserBundle\Entity\User
-            translation_domain: 'admin'
-            label: user.label
-            # FORM
-            form:
-                fields:
-                    - { property: 'imageFile', type: 'vich_image', label: 'user.property.imageFile' }
-                    - { property: 'username', label: 'user.property.username' }
-                    - { property: 'email', label: 'user.property.email' }
-            # LIST
-            list:
-                title: user.list.label
-                max_results: '10'
-                fields:
-                    - { property: 'image', type: 'image', base_path: '%app.path.user_images%', label: 'user.property.image' }
-                    - { property: 'id', label: 'user.property.id' }
-                    - { property: 'username', label: 'user.property.username' }
-                    - { property: 'email', label: 'user.property.email' }
-                    - { property: 'roles', label: 'user.property.roles' }
-                    - { property: 'enabled', label: 'user.property.enabled' }
-            # SHOW
-            show:
-                fields:
-                    - { property: 'image', type: 'image', base_path: '%app.path.user_images%' }
-            # SEARCH
-            search: 
-                fields:
-                    - { property: 'username', label: 'user.property.username' }
-                    - { property: 'email', label: 'user.property.email' }
-        #############################################
         #         PENSION CONFIGURATION             #
         #############################################
         Pension:
@@ -59,10 +26,13 @@ easy_admin:
                     - { property: 'name', label: 'pension.property.name' }
                     - { property: 'minimumPrice', label: 'pension.property.minimumPrice',type: 'money', type_options: { currency: 'CLP' } }
                     - { property: 'maximumPrice', label: 'pension.property.maximumPrice',type: 'money', type_options: { currency: 'CLP' } }
+                    - { property: 'roomAmount', label: 'pension.property.roomAmount'}
                     - { type: 'group', label: 'pension.images', css_class: 'col-sm-6' }
                     - { property: 'imageFile', type: 'vich_image', label: 'pension.property.imageFile' }
                     - { type: 'group', label: 'pension.description' }
-                    - { property: 'description', type: 'ckeditor', label: 'pension.property.description' }
+                    - { property: 'description_spanish', type: 'ckeditor', label: 'pension.property.description_spanish' }
+                    - { property: 'description_english', type: 'ckeditor', label: 'pension.property.description_english' }
+                    - { property: 'description_french', type: 'ckeditor', label: 'pension.property.description_french' }
                     - { type: 'group', label: 'pension.attachment' }
                     - { property: 'images', type: 'collection', type_options: { entry_type: 'AD\PensionBundle\Form\PensionImageType', by_reference: false } }
             # LIST
@@ -91,7 +61,9 @@ easy_admin:
                     - { property: 'minimumPrice',label: 'pension.property.minimumPrice' }
                     - { property: 'maximumPrice', label: 'pension.property.maximumPrice' }
                     - { property: 'image', type: 'image', base_path: '%app.path.pension_images%', label: 'pension.property.image' }
-                    - { property: 'description', label: 'pension.property.description' }
+                    - { property: 'description_spanish', label: 'pension.property.description_spanish' }
+                    - { property: 'description_english', label: 'pension.property.description_english' }
+                    - { property: 'description_french', label: 'pension.property.description_french' }
                     - { property: 'images', type: 'AD\PensionBundle\Entity\PensionImage', label: 'pension.property.images', template: 'images_list_upload.html.twig' }
         #############################################
         #            FLAT CONFIGURATION             #
@@ -138,3 +110,36 @@ easy_admin:
                     - { property: 'image', type: 'image', base_path: '%app.path.flat_images%', label: 'flat.property.image' }
                     - { property: 'description', label: 'flat.property.description' }
                     - { property: 'images', type: 'AD\FlatBundle\Entity\pImage', label: 'flat.property.images', template: 'images_list_upload.html.twig' }
+        #############################################
+        #            USER CONFIGURATION             #
+        #############################################
+        User:
+            class: AD\UserBundle\Entity\User
+            translation_domain: 'admin'
+            label: user.label
+            # FORM
+            form:
+                fields:
+                    - { property: 'imageFile', type: 'vich_image', label: 'user.property.imageFile' }
+                    - { property: 'username', label: 'user.property.username' }
+                    - { property: 'email', label: 'user.property.email' }
+            # LIST
+            list:
+                title: user.list.label
+                max_results: '10'
+                fields:
+                    - { property: 'image', type: 'image', base_path: '%app.path.user_images%', label: 'user.property.image' }
+                    - { property: 'id', label: 'user.property.id' }
+                    - { property: 'username', label: 'user.property.username' }
+                    - { property: 'email', label: 'user.property.email' }
+                    - { property: 'roles', label: 'user.property.roles' }
+                    - { property: 'enabled', label: 'user.property.enabled' }
+            # SHOW
+            show:
+                fields:
+                    - { property: 'image', type: 'image', base_path: '%app.path.user_images%' }
+            # SEARCH
+            search: 
+                fields:
+                    - { property: 'username', label: 'user.property.username' }
+                    - { property: 'email', label: 'user.property.email' }

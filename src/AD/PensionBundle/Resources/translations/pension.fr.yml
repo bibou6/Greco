@@ -5,6 +5,8 @@ pension:
   list:
     label: Liste des pensions
     help: test
+  information:
+    button: Plus d'information
 
 action:
   new: Créer

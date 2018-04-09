@@ -20,7 +20,7 @@
 		<div id="banner" class="page-header top">
 			<div class="row">
 				<div id="logo-banner" class="col-12 col-sm-6 col-lg-4">
-					<img src="{{ asset('bundles/core/img/greco_logo.png') }}" height="100px">
+					<img src="{{ asset('bundles/core/img/greco_logo.png') | imagine_filter('my_banner') }}">
 				</div>
 				<div id="small-logo-banner" class="col-12 text-center">
 					<img src="{{ asset('bundles/core/img/logo_small_rounded.png') }}">
@@ -28,7 +28,7 @@
 				<div id="middle-line" class="col-lg-4">
 				</div>
 				<div id="right-banner" class="col-sm-6 col-lg-4">
-	                 {{ 'core.slogan'|trans }}
+	                 {{ 'gi.slogan'|trans }}
 				</div>
 			</div>
 		</div>
@@ -41,12 +41,12 @@
     	<footer class="footer">
         	<div class="container">
         		<div class="row text-center">
-        			<div class="col-sm-12 col-12 col-lg-4 p-border-right-main lg-screen-border-bottom-main">
+        			<div class="col-sm-12 col-12 col-lg-4 p-border-right-main md-screen-border-bottom-main">
         				<div>Place sticky footer content here.</div>
         				<div>Place sticky footer content here.</div>
         				<div>Place sticky footer content here.</div>
         			</div>
-        			<div class="col-12 col-sm-12 col-lg-4 p-border-right-main lg-screen-border-bottom-main">
+        			<div class="col-12 col-sm-12 col-lg-4 p-border-right-main md-screen-border-bottom-main">
         				<div>Place sticky footer content here.</div>
         				<div>Place sticky footer content here.</div>
         				<div>Place sticky footer content here.</div>
@@ -96,10 +96,12 @@
     
             // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
             function myFunction() {
-            	if (window.pageYOffset >= sticky) {
+            	if (window.pageYOffset >= 100) {
                 	header.classList.add("fixed-top");
+                	$('.main-content').addClass("pt-5 mt-5");
               	} else {
                 	header.classList.remove("fixed-top");
+                	$('.main-content').removeClass("pt-5 mt-5");
               	}
             }
         </script>

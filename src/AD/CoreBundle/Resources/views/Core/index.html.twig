@@ -1,5 +1,3 @@
-{# src/OC/PlatformBundle/Resources/views/Advert/index.html.twig #}
-
 {% extends "CoreBundle:Core:menu.html.twig" %}
 
 {% block title %}{{ parent() }} - Index{% endblock %}
@@ -10,22 +8,22 @@
 			<div class="col-sm-1 col-lg-2"></div>
 			<div class="col-12 col-sm-10 col-lg-8">
 				<div class="p-underligned text-justify">
-					<p><i class="fa fa-info-circle fa-3x fa-pull-left" style="color:#04317a;"></i>{{ 'core.index.information.text'|trans }}</p>
+					<p><i class="fa fa-info-circle fa-3x fa-pull-left" style="color:#04317a;"></i>{{ 'gi.information.text'|trans }}</p>
 					<div class="text-right">
-						<a href="#" class="btn btn-md btn-primary col-lg-4 col-sm-6 col-12">{{ 'core.index.information.see'|trans }}</a>
+						<a href="#" class="btn btn-md btn-primary col-lg-4 col-sm-6 col-12">{{ 'gi.button.information.see'|trans }}</a>
 					</div>
 				</div>
 				
 				<div class="row">
 					<div class="col-lg-12 col-xl-6 p-right-padding p-border-right text-justify lg-screen-border-bottom">
-						<h2 class="text-center display-4 text-muted">{{ 'core.index.flat.title'|trans }}</h2>
-						<p>{{ 'core.index.flat.text'|trans }}</p>
-						<a href="#" class="btn btn-md btn-primary col-12">{{ 'core.index.flat.see'|trans }}</a>
+						<h2 class="text-center display-4 text-muted">{{ 'gi.flat.title'|trans }}</h2>
+						<p>{{ 'gi.flat.text'|trans }}</p>
+						<a href="#" class="btn btn-md btn-primary col-12">{{ 'gi.button.flat.information'|trans }}</a>
 					</div>
 					<div class="col-lg-12 col-xl-6 p-left-padding text-justify">
-						<h2 class="text-center display-4 text-muted">{{ 'core.index.pension.title'|trans }}</h2>
-						<p>{{ 'core.index.pension.text'|trans }}</p>
-						<a href="#" class="btn btn-md btn-primary col-12">{{ 'core.index.pension.see'|trans }}</a>
+						<h2 class="text-center display-4 text-muted">{{ 'gi.pension.title'|trans }}</h2>
+						<p>{{ 'gi.pension.text'|trans }}</p>
+						<a href="{{ path('pension_list') }}" class="btn btn-md btn-primary col-12">{{ 'gi.button.pension.information'|trans }}</a>
 					</div>
 				</div>
 			</div>

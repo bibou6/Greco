@@ -12,6 +12,8 @@ class CoreController extends Controller
     	
     	
     	
-        return $this->render('CoreBundle:Core:index.html.twig');
+        return $this->render('CoreBundle:Core:index.html.twig',array(
+        		'menu' => 'home'
+        ));
     }
 }

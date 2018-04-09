@@ -16,3 +16,15 @@ liip_imagine:
                 # create a 2px black border: center the thumbnail on a black background
                 # 4px larger to create a 2px border around the final image
                 background: { size: [64, 54], position: center, color: '#000000' }
+
+        my_banner:
+            quality: 100
+            filters:
+                relative_resize:
+                    heighten: 100
+                  
+        pension_list_height:
+            quality: 80
+            filters:
+                relative_resize:
+                    heighten: 300
