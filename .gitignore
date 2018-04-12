@@ -20,7 +20,7 @@
 /app/config/parameters.ini
 
 #Production
-/app/production/*
+/app/config/production/*
 
 # Managed by Composer
 /app/bootstrap.php.cache
