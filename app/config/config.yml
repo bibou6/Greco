@@ -15,6 +15,11 @@ parameters:
     app.path.user_images: /uploads/images/users
     app.path.pension_images: /uploads/images/pensions
     app.path.flat_images: /uploads/images/flats
+    navbar:
+      home: true
+      about: false
+      flat: false
+      pension: true
 
 framework:
     #esi: ~
@@ -45,6 +50,8 @@ framework:
 twig:
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
+    globals:
+      navbar: '%navbar%'
 
 # Doctrine Configuration
 doctrine:

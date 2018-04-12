@@ -45,6 +45,35 @@
 
 /*
 ###################################
+#			Background 			  #
+###################################
+*/
+
+.bg-main{
+	background-color: #d66e00!important;
+}
+
+.bg-secondary{
+	background-color: #04317a!important;
+}
+/*
+###################################
+#			border  			  #
+###################################
+*/
+
+.border-rounded-main{
+	border: 1px solid #d66e00;
+	border-radius: 20px;
+}
+
+.border-rounded-secondary{
+	border: 1px solid #04317a;
+	border-radius: 20px;
+}
+
+/*
+###################################
 #			Paragraph  			  #
 ###################################
 */

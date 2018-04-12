@@ -2,6 +2,12 @@ pension_list:
     path:     /
     defaults: { _controller: 'PensionBundle:Pension:list' }
     
+pension_show:
+    path:     /{id}
+    defaults: { _controller: 'PensionBundle:Pension:show' }
+    requirements:
+        id: \d+
+        
 pension_image_delete:
     path:     /delete/image
     defaults: { _controller: 'PensionBundle:Pension:deleteImage' }

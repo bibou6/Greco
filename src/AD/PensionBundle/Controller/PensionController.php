@@ -7,6 +7,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use AD\PensionBundle\Entity\PensionImage;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use AD\PensionBundle\Entity\Pension;
 
 class PensionController extends Controller
 {
@@ -22,6 +23,18 @@ class PensionController extends Controller
         		'menu' => 'pension',
         		'pensions' => $pensions
         ));
+    }
+    
+    public function showAction(Pension $pension)
+    {
+    	if($pension == null){
+    		return $this->redirectToRoute('pension_list');
+    	}
+    	
+    	return $this->render('PensionBundle::show.html.twig', array(
+    			'menu' => 'pension',
+    			'pension' => $pension
+    	));
     }
     
     /**

@@ -1,0 +1,63 @@
+{% extends "CoreBundle:Core:menu.html.twig" %}
+
+{% block title %}{{ parent() }} - Index{% endblock %}
+
+{% block body %}
+<div class="container main-content">
+	<h1 class="text-center display-3 text-muted text-underlign mb-4">{{ pension.name }}</h1>
+	<div class="row border-top border-warning pt-4">
+		<div class="col-lg-12 col-xl-6 text-center px-4 pt-4">
+			<img class="rounded" src="{{ vich_uploader_asset(pension,'imageFile')| imagine_filter('pension_list_height') }}" />
+			<div class="row border-bottom pt-4">
+				<div class="col border-right">{{ 'gi.pension.minimumPrice.label'|trans }}</div>
+				<div class="col">{{ 'gi.pension.maximumPrice.label'|trans }}</div>
+			</div>
+			<div class="row border-top border-bottom">
+				<div class="col border-right">${{ pension.minimumPrice }}</div>
+				<div class="col">${{ pension.maximumPrice }}</div>
+			</div>
+			<div class="text-justify container mt-3 pension-description">
+				{% if app.request.getLocale() == 'fr' %}
+					{{ pension.descriptionFrench|replace({'<p>':'','</p>':''})|length > 350 ? pension.descriptionFrench|replace({'<p>':'','</p>':''})|slice(0, 350) ~ '...' : pension.descriptionFrench|replace({'<p>':'','</p>':''}) }}
+				{% endif %}
+				{% if app.request.getLocale() == 'en' %}
+					{{ pension.descriptionEnglish|replace({'<p>':'','</p>':''})|length > 350 ? pension.descriptionEnglish|replace({'<p>':'','</p>':''})|slice(0, 350) ~ '...' : pension.descriptionEnglish|replace({'<p>':'','</p>':''})  }}
+				{% endif %}
+				{% if app.request.getLocale() == 'es' %}
+					{{ pension.descriptionSpanish|length > 350 ? pension.descriptionSpanish|replace({'<p>':'','</p>':''})|slice(0, 350) ~ '...' : pension.descriptionSpanish|replace({'<p>':'','</p>':''})  }}
+				{% endif %}
+			</div>
+		</div>
+		
+		<div class="col-lg-12 col-xl-6 px-4 pt-4">
+    		<div id="carouselExampleIndicators" class="carousel slide border-rounded-secondary py-4" data-ride="carousel">
+{#     			<ol class="carousel-indicators">#}
+{#     			{% for image in pension.images %}#}
+{#     				<li data-target="#carouselExampleIndicators" data-slide-to="{{ loop.index0 }}" {% if loop.index0 == 0 %}class="active"{% endif %}></li>#}
+{#                 {% endfor %}#}
+{#     			</ol>#}
+    			<div class="carousel-inner">
+    			{% for image in pension.images %}
+    				<div class="carousel-item {% if loop.index0 == 0 %}active{% endif %}">
+    					<img class="d-block mw-100 rounded" src="{{ vich_uploader_asset(image,'imageFile')| imagine_filter('pension_list_height') }}" alt="">
+    				</div>
+    			{% endfor %}
+    			</div>
+    			<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    				<span class="carousel-control-prev-icon bg-secondary" aria-hidden="true"></span>
+    				<span class="sr-only">Previous</span>
+    			</a>
+    			<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    				<span class="carousel-control-next-icon bg-secondary" aria-hidden="true"></span>
+    				<span class="sr-only">Next</span>
+    			</a>
+    		</div>
+    		<div class="pt-4 container" style="margin:auto">
+			{% for image in pension.images %}
+                	<img id="pension-image-tb-{{ loop.index0 }}"class="img-thumbnail {% if loop.index0 == 0 %}bg-main{% endif %}" src="{{ vich_uploader_asset(image,'imageFile') | imagine_filter('pension_thumbnail') }}" onclick="showCarouselImage({{ loop.index0 }})">
+            {% endfor %}
+            </div>
+		</div>
+	</div>
+</div>
+{% endblock %}
