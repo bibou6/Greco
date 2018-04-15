@@ -10,10 +10,31 @@ use AD\FlatBundle\Entity\FlatImage;
 use Symfony\Component\HttpFoundation\JsonResponse;
 class FlatController extends Controller
 {
-    public function indexAction()
-    {
-        return $this->render('PensionBundle:Default:index.html.twig');
-    }
+	public function listAction()
+	{
+		$em = $this->getDoctrine()->getManager();
+		$flats = $em->getRepository('FlatBundle:Flat')->findBy(array(
+				'enabled' => true
+		));
+		 
+		 
+		return $this->render('FlatBundle::list.html.twig', array(
+				'menu' => 'flat',
+				'flats' => $flats
+		));
+	}
+	
+	public function showAction(Flat $flat)
+	{
+		if($flat == null){
+			return $this->redirectToRoute('pension_list');
+		}
+		 
+		return $this->render('FlatBundle::show.html.twig', array(
+				'menu' => 'flat',
+				'flat' => $flat
+		));
+	}
     
     /**
      * @Security("has_role('ROLE_ADMIN')")

@@ -1,0 +1,75 @@
+{% extends "CoreBundle:Core:menu.html.twig" %}
+
+{% block title %}{{ parent() }} - Index{% endblock %}
+
+{% block body %}
+<div class="container main-content">
+	<h1 class="text-center display-3 text-muted text-underlign mb-4">{{ pension.name }}</h1>
+	<div class="row">
+    	<div class="col-lg-12 px-4 pt-4  border-top border-warning">
+    		<div class="pt-4 container text-center" style="margin:auto">
+    		{% for image in pension.images %}
+                	<img id="pension-image-tb-{{ loop.index0 }}"class="img-thumbnail {% if loop.index0 == 0 %}bg-main{% endif %}" src="{{ vich_uploader_asset(image,'imageFile') | imagine_filter('pension_thumbnail') }}" onclick="showCarouselImage({{ loop.index0 }})">
+            {% endfor %}
+            </div>
+    		<div id="carouselExampleIndicators" class="carousel slide border-rounded-secondary py-4" data-ride="carousel">
+    			<div class="carousel-inner">
+    			{% for image in pension.images %}
+    				<div class="carousel-item pension-show-image {% if loop.index0 == 0 %}active{% endif %}" data-slide-to="{{ loop.index0 }}">
+    					<img class="d-block mw-100 rounded" src="{{ vich_uploader_asset(image,'imageFile')| imagine_filter('pension_show_height') }}" alt="">
+    				</div>
+    			{% endfor %}
+    			</div>
+    			<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    				<span class="carousel-control-prev-icon bg-secondary" aria-hidden="true"></span>
+    				<span class="sr-only">Previous</span>
+    			</a>
+    			<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    				<span class="carousel-control-next-icon bg-secondary" aria-hidden="true"></span>
+    				<span class="sr-only">Next</span>
+    			</a>
+    		</div>
+    	</div>
+    	<div class="row">
+    		<div class="col-lg-12 col-xl-6 order-xl-12 px-4 pt-4">
+    			<h2>{{ 'gi.pension.labels.information'|trans }}</h2>
+    			<div class="container">
+        			<h5>{{ 'gi.pension.labels.price'|trans }}</h5>
+        			<div class="row border-bottom pt-4 text-center">
+        				<div class="col border-right">{{ 'gi.pension.minimumPrice.label'|trans }}</div>
+        				<div class="col">{{ 'gi.pension.maximumPrice.label'|trans }}</div>
+        			</div>
+        			<div class="row border-top border-bottom text-center">
+        				<div class="col border-right">${{ pension.minimumPrice }}</div>
+        				<div class="col">${{ pension.maximumPrice }}</div>
+        			</div>
+    			</div>
+    			<div class="pt-2">
+    				<div class="container">
+        				<h5>{{ 'gi.contact.title'|trans }}</h5>
+        				<table>
+            				<tr><td><div class="pt-2"><i class="fa fa-envelope"></i></td><td><span class="pl-4">{{ 'gi.contact.email'|trans }}</span></div></td></tr>
+            				<tr><td><div class="pt-1"><i class="fa fa-phone"></i><i class="fa fa-whatsapp ml-1"></i></td><td><span class="pl-4">{{ 'gi.contact.number'|trans }}</span></div></td></tr>
+            				<tr><td><div class="pt-1"><i class="fa fa-whatsapp"></i></td><td><span class="pl-4">{{ 'gi.contact.number_second'|trans }}</span></div></td></tr>
+            			</table>
+    				</div>
+    			</div>
+        	</div>
+        	<div class="col-lg-12 col-xl-6 order-xl-1 border-warning pt-4">
+        		<h2>{{ 'gi.pension.labels.description'|trans }}</h2>
+    			<div class="text-justify container mt-3 pension-description">
+    				{% if app.request.getLocale() == 'fr' %}
+    					{{ pension.descriptionFrench|raw }}
+    				{% endif %}
+    				{% if app.request.getLocale() == 'en' %}
+    					{{ pension.descriptionEnglish|raw  }}
+    				{% endif %}
+    				{% if app.request.getLocale() == 'es' %}
+    					{{ pension.descriptionSpanish|raw  }}
+    				{% endif %}
+    			</div>
+    		</div>
+    	</div>
+	</div>
+</div>
+{% endblock %}

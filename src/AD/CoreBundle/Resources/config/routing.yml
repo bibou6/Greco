@@ -1,4 +1,10 @@
 core_homepage:
+    path: /{_locale}/
+    defaults: { _controller: 'CoreBundle:Core:index' }
+    requirements:
+      _locale: en|fr|es 
+      
+core_homepage_wo_locale:
     path: /
     defaults: { _controller: 'CoreBundle:Core:index' }
 
@@ -27,10 +33,26 @@ fos_user_change_password:
     resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
     prefix: /profile
     
+
+#Image Section
+_liip_imagine:
+    resource: "@LiipImagineBundle/Resources/config/routing.xml"
+
+#Pension Section
 pension:
     resource: "@PensionBundle/Resources/config/routing.yml"
-    prefix: /pension
-    
+    prefix: /{_locale}/pension
+    requirements:
+      _locale: en|fr|es 
+#Admin section
+easy_admin_bundle:
+    resource: "@EasyAdminBundle/Controller/AdminController.php"
+    type:     annotation
+    prefix: /admin
+      
+#Flat Section
 flat:
     resource: "@FlatBundle/Resources/config/routing.yml"
-    prefix: /flat
+    prefix: /{_locale}/flat
+    requirements:
+      _locale: en|fr|es 

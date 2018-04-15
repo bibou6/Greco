@@ -5,27 +5,64 @@
   <head>
     <meta charset="utf-8">
     <title>{% block title %}Greco Inmobiliaria{% endblock %}</title>
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
-	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
-	{% stylesheets filter='cssrewrite,?scssphp' 
-		'bundles/core/css/*' 
-	%}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	{% stylesheets filter='cssrewrite,?scssphp' 'bundles/core/css/*' 'bundles/pension/css/*' %}
   		<link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
     {% endstylesheets %}
     
   </head>
   <body>
   	{% block header %}
+  		<!-- Navbar (sit on top) -->
+		<div id="banner" class="page-header top">
+			<div class="row">
+				<div id="logo-banner" class="col-12 col-sm-6 col-lg-4">
+					<img src="{{ asset('bundles/core/img/greco_logo.png') | imagine_filter('my_banner') }}">
+				</div>
+				<div id="small-logo-banner" class="col-12 text-center">
+					<img src="{{ asset('bundles/core/img/logo_small_rounded.png') }}">
+				</div>
+				<div id="middle-line" class="col-lg-4">
+				</div>
+				<div id="right-banner" class="col-sm-6 col-lg-4">
+	                 {{ 'gi.slogan'|trans }}
+				</div>
+			</div>
+		</div>
   	{% endblock %}
   	{% block menu %}
     {% endblock %}
     {% block body %}
     {% endblock %}
-    
+    {% block footer %}
+    	<footer class="footer">
+        	<div class="container">
+        		<div class="row text-center">
+        			<div class="col-sm-12 col-12 col-lg-4 p-border-right-main md-screen-border-bottom-main">
+        				<div><i class="fa fa-envelope"></i><span class="pl-2">{{ 'gi.contact.email'|trans }}</span></div>
+        			</div>
+        			<div class="col-12 col-sm-12 col-lg-4 p-border-right-main md-screen-border-bottom-main">
+        				<div><i class="fa fa-phone"></i><i class="fa fa-whatsapp ml-1"></i><span class="pl-2">{{ 'gi.contact.number'|trans }}</span></div>
+        			</div>
+        			<div class="col-12 col-sm-12 col-lg-4">
+        				<div><i class="fa fa-whatsapp"></i><span class="pl-2">{{ 'gi.contact.number_second'|trans }}</span></div>
+        			</div>
+        		</div>
+            	
+        	</div>
+        </footer>
+    {% endblock %}
     {% block javascript %}
-        {% javascripts filter='jsqueeze' 'bundles/core/js/*' %}
+        
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        
+        {% javascripts filter='jsqueeze' 'bundles/core/js/*' 'bundles/pension/js/*' %}
       		<script type="text/javascript" src="{{ asset_url }}"></script>
         {% endjavascripts %}
+        
         <script type="text/javascript">
      // "myAwesomeDropzone" is the camelized version of the HTML element's ID
         Dropzone.options.myAwesomeDropzone = {
@@ -38,8 +75,30 @@
             else { done(); }
           }
         };
-
         </script>
+        <script type="text/javascript">
+         // When the user scrolls the page, execute myFunction 
+            window.onscroll = function() {myFunction()};
+    
+        	// Get the header
+            var header = document.getElementById("navbar");
+    
+            // Get the offset position of the navbar
+            var sticky = header.offsetTop;
+    
+            // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+            function myFunction() {
+            	if (window.pageYOffset >= 100) {
+                	header.classList.add("fixed-top");
+                	$('.main-content').addClass("pt-5 mt-5");
+              	} else {
+                	header.classList.remove("fixed-top");
+                	$('.main-content').removeClass("pt-5 mt-5");
+              	}
+            }
+        </script>
+        
+        
     {% endblock %}
   </body>
 </html>

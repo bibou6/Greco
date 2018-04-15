@@ -55,9 +55,23 @@ class Pension
     /**
      * @var string
      *
-     * @ORM\Column(name="description", type="text", nullable=true)
+     * @ORM\Column(name="descriptionSpanish", type="text", nullable=true)
      */
-    private $description;
+    private $descriptionSpanish;
+    
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descriptionEnglish", type="text", nullable=true)
+     */
+    private $descriptionEnglish;
+    
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descriptionFrench", type="text", nullable=true)
+     */
+    private $descriptionFrench;
 
     /**
      * @var string
@@ -189,29 +203,6 @@ class Pension
         return $this->maximumPrice;
     }
 
-    /**
-     * Set description
-     *
-     * @param string $description
-     *
-     * @return Pension
-     */
-    public function setDescription($description)
-    {
-        $this->description = $description;
-
-        return $this;
-    }
-
-    /**
-     * Get description
-     *
-     * @return string
-     */
-    public function getDescription()
-    {
-        return $this->description;
-    }
 
     /**
      * Set name
@@ -380,5 +371,76 @@ class Pension
     {
         return $this->full;
     }
-}
 
+    /**
+     * Set descriptionSpanish
+     *
+     * @param string $descriptionSpanish
+     *
+     * @return Pension
+     */
+    public function setDescriptionSpanish($descriptionSpanish)
+    {
+        $this->descriptionSpanish = $descriptionSpanish;
+
+        return $this;
+    }
+
+    /**
+     * Get descriptionSpanish
+     *
+     * @return string
+     */
+    public function getDescriptionSpanish()
+    {
+        return $this->descriptionSpanish;
+    }
+
+    /**
+     * Set descriptionEnglish
+     *
+     * @param string $descriptionEnglish
+     *
+     * @return Pension
+     */
+    public function setDescriptionEnglish($descriptionEnglish)
+    {
+        $this->descriptionEnglish = $descriptionEnglish;
+
+        return $this;
+    }
+
+    /**
+     * Get descriptionEnglish
+     *
+     * @return string
+     */
+    public function getDescriptionEnglish()
+    {
+        return $this->descriptionEnglish;
+    }
+
+    /**
+     * Set descriptionFrench
+     *
+     * @param string $descriptionFrench
+     *
+     * @return Pension
+     */
+    public function setDescriptionFrench($descriptionFrench)
+    {
+        $this->descriptionFrench = $descriptionFrench;
+
+        return $this;
+    }
+
+    /**
+     * Get descriptionFrench
+     *
+     * @return string
+     */
+    public function getDescriptionFrench()
+    {
+        return $this->descriptionFrench;
+    }
+}

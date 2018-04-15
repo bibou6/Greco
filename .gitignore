@@ -19,6 +19,9 @@
 /app/config/parameters.yml
 /app/config/parameters.ini
 
+#Production
+/app/config/production/*
+
 # Managed by Composer
 /app/bootstrap.php.cache
 /var/bootstrap.php.cache
@@ -48,3 +51,6 @@
 
 # Embedded web-server pid file
 /.web-server-pid
+
+/.htaccess
+

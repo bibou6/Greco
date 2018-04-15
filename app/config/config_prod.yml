@@ -1,5 +1,8 @@
 imports:
     - { resource: config.yml }
+    - { resource: production/parameters_prod.yml }
+    # Local (for clearing cache before production)
+    #- { resource: parameters.yml }
 
 #doctrine:
 #    orm:

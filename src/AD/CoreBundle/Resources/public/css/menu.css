@@ -1,5 +1,19 @@
 @CHARSET "ISO-8859-1";
 
-.test{
-	padding:10px;
+ul > li{
+	padding: 0.5em 2em;
+}
+
+ul > li:hover{
+	border-bottom: 3px solid #d66e00;
+}
+
+
+ul > li.active{
+	border-bottom: 3px solid #d66e00;
+}
+
+#navbar{
+	background-color: rgb(230, 242, 255,0.8)!important;
+	margin-bottom: 4em;
 }

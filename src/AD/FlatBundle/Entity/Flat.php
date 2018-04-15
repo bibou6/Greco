@@ -48,9 +48,23 @@ class Flat
     /**
      * @var string
      *
-     * @ORM\Column(name="description", type="text", nullable=true)
+     * @ORM\Column(name="descriptionSpanish", type="text", nullable=true)
      */
-    private $description;
+    private $descriptionSpanish;
+    
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descriptionEnglish", type="text", nullable=true)
+     */
+    private $descriptionEnglish;
+    
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descriptionFrench", type="text", nullable=true)
+     */
+    private $descriptionFrench;
 
     /**
      * @var string
@@ -158,29 +172,6 @@ class Flat
         return $this->price;
     }
 
-    /**
-     * Set description
-     *
-     * @param string $description
-     *
-     * @return Flat
-     */
-    public function setDescription($description)
-    {
-        $this->description = $description;
-
-        return $this;
-    }
-
-    /**
-     * Get description
-     *
-     * @return string
-     */
-    public function getDescription()
-    {
-        return $this->description;
-    }
 
     /**
      * Set name
@@ -347,5 +338,77 @@ class Flat
     public function getEnabled()
     {
         return $this->enabled;
+    }
+
+    /**
+     * Set descriptionSpanish
+     *
+     * @param string $descriptionSpanish
+     *
+     * @return Flat
+     */
+    public function setDescriptionSpanish($descriptionSpanish)
+    {
+        $this->descriptionSpanish = $descriptionSpanish;
+
+        return $this;
+    }
+
+    /**
+     * Get descriptionSpanish
+     *
+     * @return string
+     */
+    public function getDescriptionSpanish()
+    {
+        return $this->descriptionSpanish;
+    }
+
+    /**
+     * Set descriptionEnglish
+     *
+     * @param string $descriptionEnglish
+     *
+     * @return Flat
+     */
+    public function setDescriptionEnglish($descriptionEnglish)
+    {
+        $this->descriptionEnglish = $descriptionEnglish;
+
+        return $this;
+    }
+
+    /**
+     * Get descriptionEnglish
+     *
+     * @return string
+     */
+    public function getDescriptionEnglish()
+    {
+        return $this->descriptionEnglish;
+    }
+
+    /**
+     * Set descriptionFrench
+     *
+     * @param string $descriptionFrench
+     *
+     * @return Flat
+     */
+    public function setDescriptionFrench($descriptionFrench)
+    {
+        $this->descriptionFrench = $descriptionFrench;
+
+        return $this;
+    }
+
+    /**
+     * Get descriptionFrench
+     *
+     * @return string
+     */
+    public function getDescriptionFrench()
+    {
+        return $this->descriptionFrench;
     }
 }

@@ -7,12 +7,34 @@ use Symfony\Component\HttpFoundation\Request;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use AD\PensionBundle\Entity\PensionImage;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use AD\PensionBundle\Entity\Pension;
 
 class PensionController extends Controller
 {
-    public function indexAction()
+    public function listAction()
     {
-        return $this->render('PensionBundle:Default:index.html.twig');
+    	$em = $this->getDoctrine()->getManager();
+    	$pensions = $em->getRepository('PensionBundle:Pension')->findBy(array(
+            'enabled' => true
+    	));
+    	
+    	
+        return $this->render('PensionBundle::list.html.twig', array(
+        		'menu' => 'pension',
+        		'pensions' => $pensions
+        ));
+    }
+    
+    public function showAction(Pension $pension)
+    {
+    	if($pension == null){
+    		return $this->redirectToRoute('pension_list');
+    	}
+    	
+    	return $this->render('PensionBundle::show.html.twig', array(
+    			'menu' => 'pension',
+    			'pension' => $pension
+    	));
     }
     
     /**

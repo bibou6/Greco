@@ -1,6 +1,12 @@
-flat_homepage:
+flat_list:
     path:     /
-    defaults: { _controller: 'FlatBundle:Flat:index' }
+    defaults: { _controller: 'FlatBundle:Flat:list' }
+    
+flat_show:
+    path:     /{id}
+    defaults: { _controller: 'FlatBundle:Flat:show' }
+    requirements:
+        id: \d+
     
 flat_image_delete:
     path:     /delete/image

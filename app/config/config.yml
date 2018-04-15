@@ -10,11 +10,16 @@ imports:
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
-    locale: fr
     version: 1.0
+    locale: 'fr'
     app.path.user_images: /uploads/images/users
     app.path.pension_images: /uploads/images/pensions
     app.path.flat_images: /uploads/images/flats
+    navbar:
+      home: true
+      about: false
+      flat: true
+      pension: true
 
 framework:
     #esi: ~
@@ -45,6 +50,8 @@ framework:
 twig:
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
+    globals:
+      navbar: '%navbar%'
 
 # Doctrine Configuration
 doctrine:
