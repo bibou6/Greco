@@ -20,7 +20,7 @@
     		{% endif %}
     		{% if navbar.flat %}
     		<li class="nav-item {% if menu == 'flat' %}active{% endif %}">
-    			<a class="nav-link" href="#">{{ 'gi.menu.flat'|trans|upper }}</a>	
+    			<a class="nav-link" href="{{ path('flat_list') }}">{{ 'gi.menu.flat'|trans|upper }}</a>	
     		</li>
     		{% endif %}
     		{% if navbar.pension %}

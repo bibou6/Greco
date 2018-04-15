@@ -24,3 +24,8 @@ liip_imagine:
             filters:
                 relative_resize:
                     heighten: 250
+        pension_show_height:
+            quality: 100
+            filters:
+                relative_resize:
+                    heighten: 400

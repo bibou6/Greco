@@ -178,14 +178,14 @@ html {
 }
 
 body {
-  margin-bottom: 200px; /* Margin bottom by footer height */
+  margin-bottom: 100px; /* Margin bottom by footer height */
 }
 
 .footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 200px; /* Set the fixed height of the footer here */
+  height: 100px; /* Set the fixed height of the footer here */
   /*line-height: 200px; /* Vertically center the text there */
   background-color: #04317a;
   color: #FFF;

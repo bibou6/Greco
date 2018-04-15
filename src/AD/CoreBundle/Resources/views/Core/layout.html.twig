@@ -40,19 +40,13 @@
         	<div class="container">
         		<div class="row text-center">
         			<div class="col-sm-12 col-12 col-lg-4 p-border-right-main md-screen-border-bottom-main">
-        				<div>Place sticky footer content here.</div>
-        				<div>Place sticky footer content here.</div>
-        				<div>Place sticky footer content here.</div>
+        				<div><i class="fa fa-envelope"></i><span class="pl-2">{{ 'gi.contact.email'|trans }}</span></div>
         			</div>
         			<div class="col-12 col-sm-12 col-lg-4 p-border-right-main md-screen-border-bottom-main">
-        				<div>Place sticky footer content here.</div>
-        				<div>Place sticky footer content here.</div>
-        				<div>Place sticky footer content here.</div>
+        				<div><i class="fa fa-phone"></i><i class="fa fa-whatsapp ml-1"></i><span class="pl-2">{{ 'gi.contact.number'|trans }}</span></div>
         			</div>
         			<div class="col-12 col-sm-12 col-lg-4">
-        				<div>Place sticky footer content here.</div>
-        				<div>Place sticky footer content here.</div>
-        				<div>Place sticky footer content here.</div>
+        				<div><i class="fa fa-whatsapp"></i><span class="pl-2">{{ 'gi.contact.number_second'|trans }}</span></div>
         			</div>
         		</div>
             	
@@ -60,14 +54,14 @@
         </footer>
     {% endblock %}
     {% block javascript %}
-        {% javascripts filter='jsqueeze' 'bundles/core/js/*' 'bundles/pension/js/*' %}
-      		<script type="text/javascript" src="{{ asset_url }}"></script>
-        {% endjavascripts %}
+        
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         
-        
+        {% javascripts filter='jsqueeze' 'bundles/core/js/*' 'bundles/pension/js/*' %}
+      		<script type="text/javascript" src="{{ asset_url }}"></script>
+        {% endjavascripts %}
         
         <script type="text/javascript">
      // "myAwesomeDropzone" is the camelized version of the HTML element's ID

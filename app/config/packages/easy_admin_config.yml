@@ -81,7 +81,9 @@ easy_admin:
                     - { type: 'group', label: 'flat.images', css_class: 'col-sm-6' }
                     - { property: 'imageFile', type: 'vich_image', label: 'flat.property.imageFile' }
                     - { type: 'group', label: 'flat.description' }
-                    - { property: 'description', type: 'ckeditor', label: 'flat.property.description' }
+                    - { property: 'description_spanish', type: 'ckeditor', label: 'flat.property.description_spanish' }
+                    - { property: 'description_english', type: 'ckeditor', label: 'flat.property.description_english' }
+                    - { property: 'description_french', type: 'ckeditor', label: 'flat.property.description_french' }
                     - { type: 'group', label: 'flat.attachment' }
                     - { property: 'images', type: 'collection', type_options: { entry_type: 'AD\FlatBundle\Form\FlatImageType', by_reference: false } }
             # LIST
@@ -108,7 +110,9 @@ easy_admin:
                     - { property: 'name', label: 'flat.property.name' }
                     - { property: 'price', label: 'flat.property.price' }
                     - { property: 'image', type: 'image', base_path: '%app.path.flat_images%', label: 'flat.property.image' }
-                    - { property: 'description', label: 'flat.property.description' }
+                    - { property: 'description_spanish', label: 'flat.property.description_spanish' }
+                    - { property: 'description_english', label: 'flat.property.description_english' }
+                    - { property: 'description_french', label: 'flat.property.description_french' }
                     - { property: 'images', type: 'AD\FlatBundle\Entity\pImage', label: 'flat.property.images', template: 'images_list_upload.html.twig' }
         #############################################
         #            USER CONFIGURATION             #

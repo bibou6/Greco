@@ -97,7 +97,9 @@ flat:
     image: Image
     name: Nom
     enabled: Activé
-    description: Description
+    description_spanish: Description en espagnol
+    description_english: Description en anglais
+    description_french: Description en français
     isFull: Est pleine?
     id: Id
     price: Prix

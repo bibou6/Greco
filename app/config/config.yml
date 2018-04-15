@@ -18,7 +18,7 @@ parameters:
     navbar:
       home: true
       about: false
-      flat: false
+      flat: true
       pension: true
 
 framework:
