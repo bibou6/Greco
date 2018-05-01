@@ -16,6 +16,7 @@ gi:
     about: Conocenos
     flat: Deptos
     pension: Pensiones
+    locale: Idioma
     
   pension:
     title: Pensiones

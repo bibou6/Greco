@@ -1,34 +1,34 @@
 #####################################
 #             USER                  #
 #####################################
-User: Utilisateur
+User: Usuario
 user:
-  label: Utilisateurs
-  help: Petit message
+  label: Usuarios
+  help:
   
   list:
-    label: Liste des utilisateurs
-    help: test
+    label: Lista de usuarios
+    help: 
     
   property:
-    username: Nom d'utilisateur
-    email: E-mail
-    image: Image
+    username: Nombre de usuario
+    email: Correo
+    image: Imagen
     id: Id
-    enabled: Activé
-    roles: Rôles
-    imageFile: Fichier image
+    enabled: Activado
+    roles: Perfiles
+    imageFile: Archivo imagen
 
 action:
-  new: Créer
-  edit: Modifier
-  search: Chercher
-  delete: Supprimer
-  save: Sauvegarder
-  list: Retour à la liste
-  cancel: Annuler
+  new: Crear
+  edit: Modificar
+  search: Buscar
+  delete: Suprimir
+  save: Guardar
+  list: Volver a la lista
+  cancel: Annular
   
-label.form.empty_value: none
+label.form.empty_value: Ninguno
 
 
 #####################################
@@ -36,97 +36,97 @@ label.form.empty_value: none
 #####################################
 Pension: Pension
 pension:
-  label: Pensions
-  help: Petit message
-  images: Images
-  information: Information
-  description: Description
-  attachment: Pièces jointes
+  label: Pensiones
+  help:
+  images: Imagenes
+  information: Información
+  description: Descripción
+  attachment: Adjuntos
   
   list:
-    label: Liste des pensions
-    help: test
+    label: Lista de pensiones
+    help: 
   property:
-    roomAmount: Nombre de chambre
-    image: Image
-    name: Nom
-    enabled: Activé
-    description_spanish: Description en espagnol
-    description_english: Description en anglais
-    description_french: Description en français
-    isFull: pleine
+    roomAmount: Numero de habitaciones
+    image: Imagen
+    name: Nombre
+    enabled: Activado
+    description_spanish: Descripción en español
+    description_english: Descripción en inglés
+    description_french: Descripción en francés
+    isFull: Lleno
     id: Id
-    minimumPrice: Prix minimum
-    maximumPrice: Prix maximum
-    updatedAt: Mis à jour
-    imageFile: Fichier image
-    images: Images de la pension
+    minimumPrice: Precio minimo
+    maximumPrice: Precio maximo
+    updatedAt: Actualizado
+    imageFile: Archivo Imagen
+    images: Imagenes de la pension
     
-PensionImage: Pension Image
+PensionImage: Pension Imagen
 pensionImage:
-  label: Pension images
-  help: Petit message
+  label: Pension imagenes
+  help: 
   delete:
-    confirm: êtes-vous sûre de vouloir supprimer la photo?
+    confirm: Esta seguro de querer supprimir?
   
   list:
-    label: Liste des images des pensions
-    help: test
+    label: Lista de las imagenes de las pensiones
+    help:
   property:
-    image: Image
-    alt: Texte alternatif
-    creationDate: Date de Création
+    image: Imagen
+    alt: Texto alternativo
+    creationDate: Fecha de Creación
     pension: Pension
     
 #####################################
 #             FLAT                  #
 #####################################
-Flat: Appartement
+Flat: Depto
 flat:
-  label: Appartements
-  help: Petit message
-  images: Images
-  information: Information
-  description: Description
-  attachment: Pièces jointes
+  label: Deptos
+  help:
+  images: Imagenes
+  information: Información
+  description: Descripción
+  attachment: Adjuntos
   
   list:
-    label: Liste des appartements
-    help: test
+    label: Lista de los deptos
+    help: 
   property:
-    image: Image
-    name: Nom
-    enabled: Activé
-    description_spanish: Description en espagnol
-    description_english: Description en anglais
-    description_french: Description en français
-    isFull: Est pleine?
+    image: Imagen
+    name: Nombre
+    enabled: Activado
+    description_spanish: Descripción en español
+    description_english: Descripción en inglés
+    description_french: Descripción en francés
+    isFull: Lleno?
     id: Id
-    price: Prix
-    updatedAt: Mis à jour
-    imageFile: Fichier image
-    images: Images
+    price: Precio
+    updatedAt: Actualizado
+    imageFile: Archivo Imagen
+    images: Imagenes
     
-FlatImage: Image appartement
+FlatImage: Imagen depto
 flatImage:
-  label: Image appartement
-  help: Petit message
+  label: Imagen depto
+  help:
   delete:
-    confirm: êtes-vous sûre de vouloir supprimer la photo?
+    confirm: Esta seguro de querer supprimir?
   
   list:
-    label: Liste des images des appartements
-    help: test
+    label: Lista de las imagenes de los deptos
+    help: 
   property:
-    image: Image
-    alt: Texte alternatif
-    creationDate: Date de Création
-    flat: Appartement
+    image: Imagen
+    alt: Texto alternativo
+    creationDate: Fecha de Creación
+    flat: Depto
     
 #####################################
 #             DROPZONE              #
 #####################################
 dropzone:
   upload:
-    message: Cliquez dans le cadre ou déposez vos fichiers ici pour les uploader !
+    message: Haz click aqui para subir archivos!
     

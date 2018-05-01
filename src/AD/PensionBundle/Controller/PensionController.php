@@ -27,7 +27,7 @@ class PensionController extends Controller
     
     public function showAction(Pension $pension)
     {
-    	if($pension == null){
+    	if($pension == null || !$pension->getEnabled()){
     		return $this->redirectToRoute('pension_list');
     	}
     	
@@ -69,7 +69,7 @@ class PensionController extends Controller
     	$pension = $em->getRepository('PensionBundle:Pension')->find($id);
     	$uploaded_file = $request->files->get('file');
     	
-    	$logger->info('File upload for Pension : '.$pension->getName());
+    	$logger->info('Image upload for Pension : '.$pension->getName());
     	
     	if($request->isMethod("POST")){
     		if($uploaded_file !== null){
