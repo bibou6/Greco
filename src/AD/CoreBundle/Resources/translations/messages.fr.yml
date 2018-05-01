@@ -1,5 +1,9 @@
 gi:
   slogan: Prend la vie comme elle vient!
+  locale:
+    fr: Français
+    en: Anglais
+    es: Espagnol
   contact:
     title: Nous joindre
     number: +56 9 4212 1029 
