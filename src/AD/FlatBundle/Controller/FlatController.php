@@ -26,7 +26,7 @@ class FlatController extends Controller
 	
 	public function showAction(Flat $flat)
 	{
-		if($flat == null){
+		if($flat == null || !$flat->getEnabled()){
 			return $this->redirectToRoute('pension_list');
 		}
 		 
@@ -71,7 +71,7 @@ class FlatController extends Controller
     	
     	if($request->isMethod("POST")){
     		if($uploaded_file !== null){
-	    		$logger->info('File upload for Flat : '.$flat->getName());
+	    		$logger->info('Image upload for Flat : '.$flat->getName());
 	    		$flatImage = new FlatImage();
 	    		$flatImage->setAlt(null);
 	    		$flatImage->setFlat($flat);

@@ -16,6 +16,7 @@ gi:
     about: A propos
     flat: Appartements
     pension: Pensions
+    locale: Langue
     
   pension:
     title: Pensions
