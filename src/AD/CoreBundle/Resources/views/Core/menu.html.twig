@@ -1,6 +1,11 @@
-{% extends 'CoreBundle:core:layout.html.twig' %}
+{% extends 'CoreBundle:Core:layout.html.twig' %}
 
 {% block menu %}
+
+{% set route = app.request.attributes.get('_route') %}
+{% set route_params = app.request.attributes.get('_route_params') %}
+{% set params = route_params|merge(app.request.query.all) %}
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light rounded" id="navbar">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#my-navbar" aria-controls="my-navbar" aria-expanded="false" aria-label="Toggle navigation">
     	<span class="navbar-toggler-icon"></span>
@@ -28,7 +33,18 @@
     			<a class="nav-link" href="{{ path('pension_list') }}">{{ 'gi.menu.pension'|trans|upper }}</a>
     		</li>
     		{% endif %}
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					LANGUE
+				</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+			        <a class="dropdown-item" href="{{ path(route, params|merge({ _locale: 'fr' })) }}">{{ 'gi.locale.fr'|trans|upper }}</a>
+			        <a class="dropdown-item" href="{{ path(route, params|merge({ _locale: 'en' })) }}">{{ 'gi.locale.en'|trans|upper }}</a>
+					<a class="dropdown-item" href="{{ path(route, params|merge({ _locale: 'es' })) }}">{{ 'gi.locale.es'|trans|upper }}</a>
+				</div>
+			</li>    		
     	</ul>
 	</div>
+	
 </nav>
 {% endblock %}

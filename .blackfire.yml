@@ -1,0 +1,57 @@
+tests:
+    "Pages should be fast enough":
+        path: "/.*" # run the assertions for all HTTP requests
+        assertions:
+            - "main.wall_time < 100ms" # wall clock time is less than 100ms
+
+    "Commands should be fast enough":
+        command: ".*" # run the assertions for all CLI commands
+        assertions:
+            - "main.wall_time < 2s" # wall clock time is less than 2s
+
+    'Symfony config resource tracking should be disabled in production':
+        path:
+            - '/.*'
+        methods:
+            - ANY
+        assertions:
+            - { label: null, expression: 'metrics.symfony.config_check.count == 0' }
+        exclude: {  }
+
+    'The Composer autoloader class map should be dumped in production':
+        path:
+            - '/.*'
+        methods:
+            - ANY
+        command: '.*'
+        assertions:
+            - { label: null, expression: 'metrics.composer.autoload.find_file.count <= 50' }
+        exclude: {  }
+    
+    'Symfony debug mode should be disabled in production':
+        path:
+            - '/.*'
+        methods:
+            - ANY
+        command: '.*'
+        assertions:
+            - { label: null, expression: 'metrics.symfony.kernel.debug.count == 0' }
+        exclude: {  }
+        
+    'Doctrine annotations should be cached in production':
+        path:
+            - '/.*'
+        methods:
+            - ANY
+        assertions:
+            - { label: null, expression: 'metrics.doctrine.annotations.parsed.count + metrics.doctrine.annotations.read.count + metrics.doctrine.entities.metadata.count == 0' }
+        exclude: {  }
+    
+    'Doctrine DQL statements should be cached in production':
+        path:
+            - '/.*'
+        methods:
+            - ANY
+        assertions:
+            - { label: null, expression: 'metrics.doctrine.dql.parsed.count == 0' }
+        exclude: {  }

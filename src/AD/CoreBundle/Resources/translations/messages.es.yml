@@ -1,52 +1,52 @@
 gi:
-  slogan: Prend la vie comme elle vient!
+  slogan: Toma la vida como viene!
   locale:
     fr: Français
     en: English
     es: Español
   contact:
-    title: Nous joindre
+    title: Contactanos
     number: +56 9 4212 1029 
     number_second: +56 9 6336 3246
     email: gestioninmobiliaria.greco@gmail.com
   information: 
     text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra finibus nunc non consequat. Phasellus in ornare velit. Maecenas lobortis mi arcu, at porttitor enim mattis at. Integer tempor pretium nisi et tempor. Nulla eget velit dapibus, ultricies enim nec, lobortis turpis. Fusce auctor lacus in justo eleifend dictum. Fusce maximus sem mauris, ut pulvinar sapien sagittis ac. Nullam auctor dolor at libero blandit congue.
   menu:
-    home: Accueil
-    about: A propos
-    flat: Appartements
-    pension: Pensions
+    home: Home
+    about: Conocenos
+    flat: Deptos
+    pension: Pensiones
     
   pension:
-    title: Pensions
-    see: Viens voir nos pensions!
+    title: Pensiones
+    see: Ven a ver nuestras pensiones!
     text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra finibus nunc non consequat. Phasellus in ornare velit. Maecenas lobortis mi arcu, at porttitor enim mattis at. Integer tempor pretium nisi et tempor. Nulla eget velit dapibus, ultricies enim nec, lobortis turpis. Fusce auctor lacus in justo eleifend dictum. Fusce maximus sem mauris, ut pulvinar sapien sagittis ac. Nullam auctor dolor at libero blandit congue.
     maximumPrice:
-      label: Prix maximum
+      label: Precio maximo
     minimumPrice:
-      label: Prix minimum
+      label: Precio minimo
     labels:
-      description: Description
-      information: Information
-      price: Prix
+      description: Descripción
+      information: Información
+      price: Precio
     button:
-      information: Plus d'information
+      information: Más información
       
   flat:
-    title: Appartements
-    see: Clique ici pour voir nos appartements!
+    title: Deptos
+    see: Haz click aquí para ver nuestras pensiones
     text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra finibus nunc non consequat. Phasellus in ornare velit. Maecenas lobortis mi arcu, at porttitor enim mattis at. Integer tempor pretium nisi et tempor. Nulla eget velit dapibus, ultricies enim nec, lobortis turpis. Fusce auctor lacus in justo eleifend dictum. Fusce maximus sem mauris, ut pulvinar sapien sagittis ac. Nullam auctor dolor at libero blandit congue.
     price:
-      label: Prix
+      label: Precio
     labels:
-      description: Description
-      information: Information
-      price: Prix
+      description: Descripción
+      information: Información
+      price: Precio
     
   button:
     pension:
-      information: Plus d'information
+      information: Más información
     flat:
-      information: Plus d'information
+      information: Más información
     information:
-      see: Nous connaître!
+      see: Conozcanos!
