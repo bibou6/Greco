@@ -44,6 +44,9 @@
 		max-height: 150px;
 	}
 	
+	.break-word{
+		word-break: break-word;
+	}
 	
 }
 
