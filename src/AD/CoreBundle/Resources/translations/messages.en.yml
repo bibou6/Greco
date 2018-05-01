@@ -1,20 +1,20 @@
 gi:
-  slogan: Prend la vie comme elle vient!
+  slogan: Take life as it comes!
   locale:
     fr: Français
     en: English
     es: Español
   contact:
-    title: Nous joindre
+    title: Get it touch!
     number: +56 9 4212 1029 
     number_second: +56 9 6336 3246
     email: gestioninmobiliaria.greco@gmail.com
   information: 
     text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra finibus nunc non consequat. Phasellus in ornare velit. Maecenas lobortis mi arcu, at porttitor enim mattis at. Integer tempor pretium nisi et tempor. Nulla eget velit dapibus, ultricies enim nec, lobortis turpis. Fusce auctor lacus in justo eleifend dictum. Fusce maximus sem mauris, ut pulvinar sapien sagittis ac. Nullam auctor dolor at libero blandit congue.
   menu:
-    home: Accueil
-    about: A propos
-    flat: Appartements
+    home: Home
+    about: About
+    flat: Flats
     pension: Pensions
     
   pension:
@@ -22,31 +22,31 @@ gi:
     see: Viens voir nos pensions!
     text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra finibus nunc non consequat. Phasellus in ornare velit. Maecenas lobortis mi arcu, at porttitor enim mattis at. Integer tempor pretium nisi et tempor. Nulla eget velit dapibus, ultricies enim nec, lobortis turpis. Fusce auctor lacus in justo eleifend dictum. Fusce maximus sem mauris, ut pulvinar sapien sagittis ac. Nullam auctor dolor at libero blandit congue.
     maximumPrice:
-      label: Prix maximum
+      label: Maximum price
     minimumPrice:
-      label: Prix minimum
+      label: Minimum price
     labels:
       description: Description
       information: Information
-      price: Prix
+      price: Price
     button:
-      information: Plus d'information
+      information: More information
       
   flat:
-    title: Appartements
-    see: Clique ici pour voir nos appartements!
+    title: Flats
+    see: Click here to see our flats!
     text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra finibus nunc non consequat. Phasellus in ornare velit. Maecenas lobortis mi arcu, at porttitor enim mattis at. Integer tempor pretium nisi et tempor. Nulla eget velit dapibus, ultricies enim nec, lobortis turpis. Fusce auctor lacus in justo eleifend dictum. Fusce maximus sem mauris, ut pulvinar sapien sagittis ac. Nullam auctor dolor at libero blandit congue.
     price:
-      label: Prix
+      label: Price
     labels:
       description: Description
       information: Information
-      price: Prix
+      price: Price
     
   button:
     pension:
-      information: Plus d'information
+      information: More information
     flat:
-      information: Plus d'information
+      information: More information
     information:
-      see: Nous connaître!
+      see: More about us
