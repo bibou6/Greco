@@ -6,17 +6,17 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:url" content="{{ 'gi.facebook.url'|trans }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{ 'gi.facebook.title'|trans }}" />
+    <meta property="og:description" content="{{ 'gi.facebook.description'|trans }}" />
+    <meta property="og:image" content="{{ 'gi.facebook.image'|trans }}" />
     <title>{% block title %}Greco Inmobiliaria{% endblock %}</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	{% stylesheets filter='cssrewrite,?scssphp' 'bundles/core/css/*' 'bundles/pension/css/*' %}
   	<link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
     {% endstylesheets %}
-    <meta property="og:url"           content="{{ 'gi.facebook.url'|trans }}" />
-    <meta property="og:type"          content="website" />
-    <meta property="og:title"         content="{{ 'gi.facebook.title'|trans }}" />
-    <meta property="og:description"   content="{{ 'gi.facebook.description'|trans }}" />
-    <meta property="og:image"         content="{{ 'gi.facebook.image'|trans }}" />
   </head>
   <body>
   	{% block header %}
