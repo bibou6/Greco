@@ -1,7 +1,8 @@
 {# src/OC/PlatformBundle/Resources/views/layout.html.twig #}
 
 <!DOCTYPE HTML>
-<html>
+<html xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="http://www.facebook.com/2008/fbml">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,13 +10,25 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	{% stylesheets filter='cssrewrite,?scssphp' 'bundles/core/css/*' 'bundles/pension/css/*' %}
-  		<link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+  	<link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
     {% endstylesheets %}
-    
+    <meta property="og:url"           content="{{ 'gi.facebook.url'|trans }}" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="{{ 'gi.facebook.title'|trans }}" />
+    <meta property="og:description"   content="{{ 'gi.facebook.description'|trans }}" />
+    <meta property="og:image"         content="{{ 'gi.facebook.image'|trans }}" />
   </head>
   <body>
   	{% block header %}
   		<!-- Navbar (sit on top) -->
+  		<div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = 'https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v3.0';
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
 		<div id="banner" class="page-header top">
 			<div class="row">
 				<div id="logo-banner" class="col-12 col-sm-6 col-lg-4">
@@ -48,6 +61,7 @@
         			</div>
         			<div class="col-12 col-sm-12 col-lg-4">
         				<div><i class="fa fa-whatsapp"></i><span class="pl-2">{{ 'gi.contact.number_second'|trans }}</span></div>
+        				<div class="fb-share-button" data-href="http://grecoinmobiliaria.com/{{ app.request.getLocale() }}/" data-layout="button" data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fgrecoinmobiliaria.com%2F{{ app.request.getLocale() }}%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">{{ 'gi.facebook.share'|trans }}</a></div>
         			</div>
         		</div>
             	
