@@ -5,7 +5,7 @@ gi:
    url: http://grecoinmobiliaria.com/es/
    title: Greco Inmobiliaria - Valparaíso
    description: Necesitas arendar un depto o una habitación en Valpo, aquí lo encontrarás
-   image: http://grecoinmobiliaria.com/media/cache/my_banner/bundles/core/img/greco_logo.png
+   image: http://grecoinmobiliaria.com/bundles/core/img/greco_banner_xlarge.png
   locale:
     fr: Français
     en: English
