@@ -63,9 +63,6 @@
         	</div>
         </footer>
     {% endblock %}
-    
-    
-    
     <noscript id="deferred-styles">
     	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     	{% stylesheets filter='cssrewrite,?scssphp' 'bundles/core/css/*' 'bundles/pension/css/*' %}
@@ -86,38 +83,16 @@
       if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
       else window.addEventListener('load', loadDeferredStyles);
     </script>
-    
-    
-    
-    
-    
-    
-    
-    
-    
     {% block javascript %}
         
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script async src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script async src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script async src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         
         {% javascripts filter='jsqueeze' 'bundles/core/js/*' 'bundles/pension/js/*' %}
-      		<script type="text/javascript" src="{{ asset_url }}"></script>
+      		<script async type="text/javascript" src="{{ asset_url }}"></script>
         {% endjavascripts %}
         
-        <script type="text/javascript">
-     // "myAwesomeDropzone" is the camelized version of the HTML element's ID
-        Dropzone.options.myAwesomeDropzone = {
-          paramName: "file", // The name that will be used to transfer the file
-          maxFilesize: 10, // MB
-          accept: function(file, done) {
-            if (file.name == "justinbieber.jpg") {
-              done("Naha, you don't.");
-            }
-            else { done(); }
-          }
-        };
-        </script>
         <script type="text/javascript">
          // When the user scrolls the page, execute myFunction 
             window.onscroll = function() {myFunction()};
