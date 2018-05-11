@@ -5,6 +5,7 @@ namespace AD\PensionBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * PensionImage
@@ -39,6 +40,12 @@ class PensionImage
     private $creationDate;
     
     /**
+     * @Gedmo\SortablePosition
+     * @ORM\Column(name="position", type="integer")
+     */
+    private $position;
+    
+    /**
      * @ORM\Column(type="string", length=255)
      * @var string
      */
@@ -52,6 +59,7 @@ class PensionImage
     
     /**
      * @var Pension
+     * @Gedmo\SortableGroup
      * @ORM\ManyToOne(targetEntity="AD\PensionBundle\Entity\Pension", inversedBy="images")
      */
     private $pension;
@@ -175,4 +183,28 @@ class PensionImage
     {
     	return (string) $this->image;
     }*/
+
+    /**
+     * Set position
+     *
+     * @param integer $position
+     *
+     * @return PensionImage
+     */
+    public function setPosition($position)
+    {
+        $this->position = $position;
+
+        return $this;
+    }
+
+    /**
+     * Get position
+     *
+     * @return integer
+     */
+    public function getPosition()
+    {
+        return $this->position;
+    }
 }
