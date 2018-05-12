@@ -1,0 +1,25 @@
+{
+  "short_name": "GrecoInmobiliaria",
+  "name": "Greco Inmobiliaria",
+  "background_color": "#d66e00",
+  "display": "standalone",
+  "theme_color": "#d66e00",
+  "icons": [
+    {
+      "src": "web/bundles/core/img/logo_small_rounded_48x48.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "web/bundles/core/img/logo_small_rounded_96x96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "web/bundles/core/img/logo_small_rounded_192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "/"
+}
