@@ -5,7 +5,7 @@
       xmlns:fb="http://www.facebook.com/2008/fbml">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui">
 	<meta name="Description" content="Sitio para encontrar una habitacion o un departamento en Valparaiso.">
     <meta name="theme-color" content="#d66e00"/>
     <meta property="og:url" content="{{ 'gi.facebook.url'|trans }}" />
@@ -91,23 +91,6 @@
         }(document, 'script', 'facebook-jssdk'));</script>
         
         <script type="text/javascript">
-        function toggleFullScreen() {
-        	  var doc = window.document;
-        	  var docEl = doc.documentElement;
-
-        	  var requestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
-        	  var cancelFullScreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;
-
-        	  if(!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement) {
-        	    requestFullScreen.call(docEl);
-        	  }
-        	  else {
-        	    cancelFullScreen.call(doc);
-        	  }
-        	}
-
-        </script>
-        <script type="text/javascript">
          // When the user scrolls the page, execute myFunction 
             window.onscroll = function() {myFunction()};
     
@@ -122,11 +105,9 @@
             	if (window.pageYOffset >= 100) {
                 	header.classList.add("fixed-top");
                 	$('.main-content').addClass("pt-5 mt-5");
-                	toggleFullScreen();
               	} else {
                 	header.classList.remove("fixed-top");
                 	$('.main-content').removeClass("pt-5 mt-5");
-                	toggleFullScreen();
               	}
             }
         </script>
