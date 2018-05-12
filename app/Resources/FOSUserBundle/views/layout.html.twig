@@ -1,7 +1,6 @@
-{# src/OC/UserBundle/Resources/views/layout.html.twig #}
+{% extends 'CoreBundle:Core:menu.html.twig' %}
 
-{# On étend notre layout #}
-{% extends "CoreBundle:Core:menu.html.twig" %}
+{% block title %}Login{% endblock %}
 
 {# Dans notre layout, il faut définir le block body #}
 {% block body %}
@@ -19,4 +18,4 @@
   {% block fos_user_content %}
   {% endblock fos_user_content %}
 
-{% endblock %}
+{% endblock body %}
