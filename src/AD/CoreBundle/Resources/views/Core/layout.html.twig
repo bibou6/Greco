@@ -81,6 +81,22 @@
       if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
       else window.addEventListener('load', loadDeferredStyles);
     </script>
+    <script type="text/javascript">
+        window.addEventListener("load", function() { window. scrollTo(0, 0); });
+        document.addEventListener("touchmove", function(e) { e.preventDefault() });
+
+        var body = document.documentElement;
+        if (body.requestFullscreen) {
+          body.requestFullscreen();
+        } else if (body.webkitrequestFullscreen) {
+          body.webkitrequestFullscreen();
+        } else if (body.mozrequestFullscreen) {
+          body.mozrequestFullscreen();
+        } else if (body.msrequestFullscreen) {
+          body.msrequestFullscreen();
+        }
+        
+    </script>
     {% block javascript %}
         <script>(function(d, s, id) {
           var js, fjs = d.getElementsByTagName(s)[0];
