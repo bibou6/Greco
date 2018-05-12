@@ -104,9 +104,11 @@
             	if (window.pageYOffset >= 100) {
                 	header.classList.add("fixed-top");
                 	$('.main-content').addClass("pt-5 mt-5");
+                	document.body.requestFullscreen();
               	} else {
                 	header.classList.remove("fixed-top");
                 	$('.main-content').removeClass("pt-5 mt-5");
+                	document.exitFullscreen()
               	}
             }
         </script>
