@@ -89,6 +89,24 @@
           js.src = 'https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v3.0';
           fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
+        
+        <script type="text/javascript">
+        function toggleFullScreen() {
+        	  var doc = window.document;
+        	  var docEl = doc.documentElement;
+
+        	  var requestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
+        	  var cancelFullScreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;
+
+        	  if(!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement) {
+        	    requestFullScreen.call(docEl);
+        	  }
+        	  else {
+        	    cancelFullScreen.call(doc);
+        	  }
+        	}
+
+        </script>
         <script type="text/javascript">
          // When the user scrolls the page, execute myFunction 
             window.onscroll = function() {myFunction()};
@@ -98,17 +116,17 @@
     
             // Get the offset position of the navbar
             var sticky = header.offsetTop;
-    
+
             // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
             function myFunction() {
             	if (window.pageYOffset >= 100) {
                 	header.classList.add("fixed-top");
                 	$('.main-content').addClass("pt-5 mt-5");
-                	document.body.requestFullscreen();
+                	toggleFullScreen();
               	} else {
                 	header.classList.remove("fixed-top");
                 	$('.main-content').removeClass("pt-5 mt-5");
-                	document.exitFullscreen()
+                	toggleFullScreen();
               	}
             }
         </script>
