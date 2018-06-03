@@ -1,11 +1,12 @@
 {% trans_default_domain "CoreBundle" %}
-<div class="sortable">
+<table class="sortable">
+	<tbody>
 {% for val in value %}
-	<a href="#" draggable="true" class="easyadmin-thumbnail" data-featherlight="#easyadmin-lightbox-{{ val.id }}" data-featherlight-close-on-click="anywhere">
-    	<img src="{{ vich_uploader_asset(val,'imageFile') }}" style="width: 50px;height:50px;">
-	</a>
-	<div id="easyadmin-lightbox-{{ val.id }}" class="easyadmin-lightbox" data-featherlight="#easyadmin-lightbox-{{ val.id }}" data-featherlight-close-on-click="anywhere">
-    	<img src="{{ vich_uploader_asset(val,'imageFile') }}">
-	</div>
+    	<tr draggable="true" rel="{{ val.position }}">
+    		<td>
+    			<img src="{{ vich_uploader_asset(val,'imageFile') }}" style="width: 50px;height:50px;">
+    		</td>
+    	</tr>
 {% endfor %}
-</class>
+	</tbody>
+</table>

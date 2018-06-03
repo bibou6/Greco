@@ -91,4 +91,22 @@ class PensionController extends Controller
     	// redirect to the 'list' view of the given entity
     	return new JsonResponse(array('success' => false));
 	}
+	
+	
+	/**
+	 * Resorts an item using it's doctrine sortable property
+	 * @param integer $id
+	 * @param integer $position
+	 * @return \Symfony\Component\HttpFoundation\Response
+	 */
+	public function sortAction($id, $position)
+	{
+		$em = $this->getDoctrine()->getManager();
+		$pensionImage = $em->getRepository('PensionBundle:PensionImage')->find($id);
+		$pensionImage->setPosition($position);
+		$em->persist($pensionImage);
+		$em->flush();
+		
+		return new JsonResponse(array('success' => true));
+	}
 }
