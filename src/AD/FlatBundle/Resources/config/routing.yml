@@ -17,4 +17,9 @@ flat_image_upload:
     defaults: { _controller: 'FlatBundle:Flat:uploadFlatImage' }
     requirements:
         id: \d+
+        
+admin_flatimage_sort:
+    path:     /image/sort/{id}/{position}
+    defaults: { _controller: 'FlatBundle:Flat:sort' }
+    methods:  GET
 

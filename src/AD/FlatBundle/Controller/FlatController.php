@@ -91,5 +91,29 @@ class FlatController extends Controller
     	 
     }
     
+    /**
+     * Resorts an item using it's doctrine sortable property
+     * @param integer $id
+     * @param integer $position
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function sortAction($id, $position)
+    {
+    	$em = $this->getDoctrine()->getManager();
+    	$pensionImage = $em->getRepository('FlatBundle:FlatImage')->find($id);
+    	if($pensionImage != null){
+    		$pensionImage->setPosition($position);
+    		$em->persist($pensionImage);
+    		$em->flush();
+    	}
+    	return $this->redirectToRoute('easyadmin', array(
+    			'action' => 'list',
+    			'entity' => 'Flat',
+    	));
+    
+    
+    
+    }
+    
     
 }

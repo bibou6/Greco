@@ -2,6 +2,7 @@
 
 namespace AD\PensionBundle\Entity;
 
+use AD\PensionBundle\Entity\PensionImage;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
@@ -111,6 +112,7 @@ class Pension
      * @var PensionImage[]|ArrayCollection
      *
      * @ORM\OneToMany(targetEntity="AD\PensionBundle\Entity\PensionImage", mappedBy="pension", cascade={"persist","remove"}, orphanRemoval=true)
+     * @ORM\OrderBy({"position" = "ASC"})
      */
     private $images;
 
