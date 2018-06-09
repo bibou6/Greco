@@ -8,11 +8,16 @@ var adminNs =
 			var parentEntityId = null;
 			var parent; // the parent element of the dragged item
 			var entityId; // the id (key) of the entity
+			var entity = null;
+			var entityName = null;
 			
 			
 			function handleDragStart(e) {
 				dragSrcEl = this;
-				entityId = $(this).attr('rel');
+				entity = $(this).attr('rel');
+				res = entity.split('-');
+				entityName=res[0];
+				entityId = res[1];
 				parentEntityId = dragSrcEl.parentNode.id
 				dragSrcEl.style.opacity = '0.4';
 				parent = dragSrcEl.parentNode;
@@ -49,14 +54,13 @@ var adminNs =
 //				Don't do anything if dropping the same column we're dragging.
 				if (dragSrcEl != this) {
 					endPosition = Array.prototype.indexOf.call(parent.children, this);
-					endPosition += 1;
 					console.log("end: "+endPosition);
 //					Set the source column's HTML to the HTML of the column we dropped on.
 					dragSrcEl.innerHTML = this.innerHTML;
 					this.innerHTML = e.dataTransfer.getData('text/html');
 //					do the ajax call to update the database
 					$.ajax({
-						url: '/es/pension/image/sort/'+entityId+'/'+endPosition,
+						url: '/es/'+entityName+'/image/sort/'+entityId+'/'+endPosition,
 					})
 					.done(function(res) {
 						console.log(res)
