@@ -103,10 +103,17 @@ class PensionController extends Controller
 	{
 		$em = $this->getDoctrine()->getManager();
 		$pensionImage = $em->getRepository('PensionBundle:PensionImage')->find($id);
-		$pensionImage->setPosition($position);
-		$em->persist($pensionImage);
-		$em->flush();
+		if($pensionImage != null){
+			$pensionImage->setPosition($position);
+			$em->persist($pensionImage);
+			$em->flush();
+		}
+		return $this->redirectToRoute('easyadmin', array(
+				'action' => 'list',
+				'entity' => 'Pension',
+		));
 		
-		return new JsonResponse(array('success' => true));
+		
+		
 	}
 }

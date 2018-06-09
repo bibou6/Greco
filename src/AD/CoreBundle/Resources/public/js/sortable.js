@@ -5,11 +5,15 @@ var adminNs =
 			var startPosition = null; // the index of the row element (0 through whatever)
 			var endPosition = null; // the index of the row element being dropped on (0
 			// through whatever)
+			var parentEntityId = null;
 			var parent; // the parent element of the dragged item
 			var entityId; // the id (key) of the entity
+			
+			
 			function handleDragStart(e) {
 				dragSrcEl = this;
 				entityId = $(this).attr('rel');
+				parentEntityId = dragSrcEl.parentNode.id
 				dragSrcEl.style.opacity = '0.4';
 				parent = dragSrcEl.parentNode;
 				startPosition = Array.prototype.indexOf.call(parent.children, dragSrcEl);
@@ -45,6 +49,7 @@ var adminNs =
 //				Don't do anything if dropping the same column we're dragging.
 				if (dragSrcEl != this) {
 					endPosition = Array.prototype.indexOf.call(parent.children, this);
+					endPosition += 1;
 					console.log("end: "+endPosition);
 //					Set the source column's HTML to the HTML of the column we dropped on.
 					dragSrcEl.innerHTML = this.innerHTML;
@@ -55,10 +60,11 @@ var adminNs =
 					})
 					.done(function(res) {
 						console.log(res)
-						$("table.sortable tbody").replaceWith($(res).find("table.sortable tbody"));
+						$("table.sortable tbody#"+parentEntityId).replaceWith($(res).find("table.sortable tbody#"+parentEntityId));
 					})
 					.fail(function(err) {
-						alert("An error occurred while sorting. Please refresh the page and try again.")
+						console.log(err);
+						//alert("An error occurred while sorting. Please refresh the page and try again.")
 					})
 					.always(function() {
 						adminNs.initDraggableEntityRows();

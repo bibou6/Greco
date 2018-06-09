@@ -18,7 +18,7 @@ pension_image_upload:
     requirements:
         id: \d+
         
-admin_productcategory_sort:
+admin_pensionimage_sort:
     path:     /image/sort/{id}/{position}
     defaults: { _controller: 'PensionBundle:Pension:sort' }
     methods:  GET

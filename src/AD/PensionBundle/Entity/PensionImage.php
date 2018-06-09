@@ -42,6 +42,7 @@ class PensionImage
     /**
      * @Gedmo\SortablePosition
      * @ORM\Column(name="position", type="integer")
+     * @var integer
      */
     private $position;
     

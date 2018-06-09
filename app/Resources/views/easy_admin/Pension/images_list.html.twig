@@ -1,8 +1,8 @@
 {% trans_default_domain "CoreBundle" %}
 <table class="sortable">
-	<tbody>
+	<tbody id="{{ value.owner.id }}">
 {% for val in value %}
-    	<tr draggable="true" rel="{{ val.position }}">
+    	<tr draggable="true" rel="{{ val.id }}" style="float:left">
     		<td>
     			<img src="{{ vich_uploader_asset(val,'imageFile') }}" style="width: 50px;height:50px;">
     		</td>
