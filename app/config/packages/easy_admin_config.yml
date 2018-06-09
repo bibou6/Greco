@@ -11,6 +11,7 @@ easy_admin:
                 - '/bundles/core/css/dropzone.css'
             js:
                 - '/bundles/core/js/dropzone.js'
+                - '/bundles/core/js/sortable.js'
     entities:
         #############################################
         #         PENSION CONFIGURATION             #
