@@ -5,6 +5,7 @@ namespace AD\FlatBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * FlatImage
@@ -39,6 +40,13 @@ class FlatImage
     private $creationDate;
     
     /**
+     * @Gedmo\SortablePosition
+     * @ORM\Column(name="position", type="integer")
+     * @var integer
+     */
+    private $position;
+    
+    /**
      * @ORM\Column(type="string", length=255)
      * @var string
      */
@@ -52,6 +60,7 @@ class FlatImage
     
     /**
      * @var Flat
+     * @Gedmo\SortableGroup
      * @ORM\ManyToOne(targetEntity="AD\FlatBundle\Entity\Flat", inversedBy="images")
      */
     private $flat;
@@ -175,4 +184,28 @@ class FlatImage
     {
     	return (string) $this->image;
     }*/
+
+    /**
+     * Set position
+     *
+     * @param integer $position
+     *
+     * @return FlatImage
+     */
+    public function setPosition($position)
+    {
+        $this->position = $position;
+
+        return $this;
+    }
+
+    /**
+     * Get position
+     *
+     * @return integer
+     */
+    public function getPosition()
+    {
+        return $this->position;
+    }
 }
