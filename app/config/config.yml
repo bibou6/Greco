@@ -20,6 +20,10 @@ parameters:
       about: false
       flat: true
       pension: true
+      locale:
+        es: true
+        fr: false
+        en: false
 
 framework:
     #esi: ~

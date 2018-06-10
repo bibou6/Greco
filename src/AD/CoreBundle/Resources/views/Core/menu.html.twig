@@ -38,9 +38,9 @@
 					{{ 'gi.menu.locale'|trans|upper }}
 				</a>
 				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-			        <a class="dropdown-item" href="{{ path(route, params|merge({ _locale: 'fr' })) }}">{{ 'gi.locale.fr'|trans|upper }}</a>
-			        <a class="dropdown-item" href="{{ path(route, params|merge({ _locale: 'en' })) }}">{{ 'gi.locale.en'|trans|upper }}</a>
-					<a class="dropdown-item" href="{{ path(route, params|merge({ _locale: 'es' })) }}">{{ 'gi.locale.es'|trans|upper }}</a>
+			        {% if navbar.locale.fr %}<a class="dropdown-item" href="{{ path(route, params|merge({ _locale: 'fr' })) }}">{{ 'gi.locale.fr'|trans|upper }}</a>{% endif %}
+			        {% if navbar.locale.en %}<a class="dropdown-item" href="{{ path(route, params|merge({ _locale: 'en' })) }}">{{ 'gi.locale.en'|trans|upper }}</a>{% endif %}
+					{% if navbar.locale.es %}<a class="dropdown-item" href="{{ path(route, params|merge({ _locale: 'es' })) }}">{{ 'gi.locale.es'|trans|upper }}</a>{% endif %}
 				</div>
 			</li>    		
     	</ul>
