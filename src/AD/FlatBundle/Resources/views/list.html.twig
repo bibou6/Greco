@@ -20,13 +20,13 @@
 			</div>
 			<div class="text-justify container mt-3 pension-description">
 				{% if app.request.getLocale() == 'fr' %}
-					{{ flat.descriptionFrench|replace({'<p>':'','</p>':''})|length > 350 ? flat.descriptionFrench|replace({'<p>':'','</p>':''})|slice(0, 350) ~ '...' : flat.descriptionFrench|replace({'<p>':'','</p>':''}) }}
+					{{ flat.descriptionFrench|length > 350 ? flat.descriptionFrench|striptags|slice(0, 350) ~ '...' : flat.descriptionFrench|raw }}
 				{% endif %}
 				{% if app.request.getLocale() == 'en' %}
-					{{ flat.descriptionEnglish|replace({'<p>':'','</p>':''})|length > 350 ? flat.descriptionEnglish|replace({'<p>':'','</p>':''})|slice(0, 350) ~ '...' : flat.descriptionEnglish|replace({'<p>':'','</p>':''})  }}
+					{{ flat.descriptionEnglish|length > 350 ? flat.descriptionEnglish|striptags|slice(0, 350) ~ '...' : flat.descriptionEnglish|raw  }}
 				{% endif %}
 				{% if app.request.getLocale() == 'es' %}
-					{{ flat.descriptionSpanish|length > 350 ? flat.descriptionSpanish|replace({'<p>':'','</p>':''})|slice(0, 350) ~ '...' : flat.descriptionSpanish|replace({'<p>':'','</p>':''})  }}
+					{{ flat.descriptionSpanish|length > 350 ? flat.descriptionSpanish|striptags|slice(0, 350) ~ '...' : flat.descriptionSpanish|raw  }}
 				{% endif %}
 			</div>
 			<div class="text-right">

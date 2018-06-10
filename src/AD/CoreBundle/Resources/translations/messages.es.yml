@@ -1,5 +1,5 @@
 gi:
-  slogan: Toma la vida como viene!
+  slogan: ""
   legal: Mentions Légales
   facebook:
    share: Compartir
@@ -17,7 +17,9 @@ gi:
     number_second: +56 9 6336 3246
     email: gestioninmobiliaria.greco@gmail.com
   information: 
-    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra finibus nunc non consequat. Phasellus in ornare velit. Maecenas lobortis mi arcu, at porttitor enim mattis at. Integer tempor pretium nisi et tempor. Nulla eget velit dapibus, ultricies enim nec, lobortis turpis. Fusce auctor lacus in justo eleifend dictum. Fusce maximus sem mauris, ut pulvinar sapien sagittis ac. Nullam auctor dolor at libero blandit congue.
+    text: > 
+        Greco Inmobiliaria cuenta con una vasta experiencia en el rubro inmobiliario, con más de 10 años trabajando el área de ventas, arriendos, administraciónes de propiedades con gran especialización en pensiones de estudiantes y hospedaje.<br><br>
+        Nuestro objetivo es rentabilizar las propiedades identificando y explotando el potencial propio del inmueble, de acuerdo a sus características estructurales, localización, posicionamiento y una correcta competencia de precios entre otras características que le entregan una valorización frente a los requerimientos específicos de la demanda actual del mercado inmobiliario. 
   menu:
     home: Home
     about: Conocenos
@@ -28,7 +30,7 @@ gi:
   pension:
     title: Pensiones
     see: Ven a ver nuestras pensiones!
-    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra finibus nunc non consequat. Phasellus in ornare velit. Maecenas lobortis mi arcu, at porttitor enim mattis at. Integer tempor pretium nisi et tempor. Nulla eget velit dapibus, ultricies enim nec, lobortis turpis. Fusce auctor lacus in justo eleifend dictum. Fusce maximus sem mauris, ut pulvinar sapien sagittis ac. Nullam auctor dolor at libero blandit congue.
+    text: Conoce nuestras casas pensiones, todas ubicadas estratégicamente cercanas a centros de estudios de la ciudad de Valparaíso, con todos los servicios incluidos de luz, agua, gas y WiFi y servicio de aseo.
     maximumPrice:
       label: Precio maximo
     minimumPrice:
@@ -41,9 +43,9 @@ gi:
       information: Más información
       
   flat:
-    title: Deptos
+    title: Propiedades
     see: Haz click aquí para ver nuestras pensiones
-    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra finibus nunc non consequat. Phasellus in ornare velit. Maecenas lobortis mi arcu, at porttitor enim mattis at. Integer tempor pretium nisi et tempor. Nulla eget velit dapibus, ultricies enim nec, lobortis turpis. Fusce auctor lacus in justo eleifend dictum. Fusce maximus sem mauris, ut pulvinar sapien sagittis ac. Nullam auctor dolor at libero blandit congue.
+    text: Descubre nuestras propiedades con excelente ubicación y conectividad,  precios competitivos al mercado, con espacios que te permiten tener una mejor calidad de vida, tales como  ciclovías, plazas, cafés, restaurantes y colegios.
     price:
       label: Precio
     labels:

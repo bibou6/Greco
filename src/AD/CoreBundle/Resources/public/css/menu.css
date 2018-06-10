@@ -4,7 +4,7 @@ ul > li{
 	padding: 0.5em 2em;
 }
 
-ul > li:hover{
+ul > li.nav-item:hover{
 	border-bottom: 3px solid #d66e00;
 }
 
