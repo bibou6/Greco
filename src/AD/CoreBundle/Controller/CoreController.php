@@ -17,6 +17,13 @@ class CoreController extends Controller
         ));
     }
     
+    public function projectAction()
+    {
+    	return $this->render('CoreBundle:Project:project.html.twig',array(
+    			'menu' => 'project'
+    	));
+    }
+    
     public function indexWithLocaleAction()
     {
     	 

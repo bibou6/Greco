@@ -42,28 +42,11 @@
     {% block body %}
     {% endblock %}
     {% block footer %}
-    	<footer class="footer">
-        	<div class="container">
-        		<div class="row text-center">
-        			<div class="col-sm-12 col-12 col-lg-4 p-border-right-main md-screen-border-bottom-main">
-        				<div><a href="#" style="color:white"/>{{ 'gi.legal'|trans }}</a></span></div>
-        			</div>
-        			<div class="col-12 col-sm-12 col-lg-4 p-border-right-main md-screen-border-bottom-main">
-        				<div><i class="fa fa-envelope"></i><span class="pl-2"><a href="mailto:{{ 'gi.contact.email'|trans }}" style="text-decoration: none;color:white"/>{{ 'gi.contact.email'|trans }}</a></span></div>
-        				<div><i class="fa fa-phone"></i><i class="fa fa-whatsapp ml-1"></i><span class="pl-2"><a href="tel:{{ 'gi.contact.number'|trans }}" style="text-decoration: none;color:white"/>{{ 'gi.contact.number'|trans }}</a></span></div>
-        				<div><i class="fa fa-whatsapp"></i><span class="pl-2">{{ 'gi.contact.number_second'|trans }}</span></div>
-        			</div>
-        			<div class="col-12 col-sm-12 col-lg-4">
-        				<div class="fb-share-button" data-href="http://grecoinmobiliaria.com/{{ app.request.getLocale() }}/" data-layout="button" data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fgrecoinmobiliaria.com%2F{{ app.request.getLocale() }}%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">{{ 'gi.facebook.share'|trans }}</a></div>
-        			</div>
-        		</div>
-            	
-        	</div>
-        </footer>
+    	
     {% endblock %}
     <noscript id="deferred-styles">
     	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    	{% stylesheets filter='cssrewrite,?scssphp' 'bundles/core/css/*' 'bundles/pension/css/*' %}
+    	{% stylesheets filter='cssrewrite,?scssphp' 'bundles/core/css/*' 'bundles/core/css/parallax/*' 'bundles/pension/css/*' %}
       	<link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
         {% endstylesheets %}
     	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -95,7 +78,7 @@
             window.onscroll = function() {myFunction()};
     
         	// Get the header
-            var header = document.getElementById("navbar");
+            var header = document.getElementById("navbar-bis");
     
             // Get the offset position of the navbar
             var sticky = header.offsetTop;

@@ -22,11 +22,28 @@ gi:
         Nuestro objetivo es rentabilizar las propiedades identificando y explotando el potencial propio del inmueble, de acuerdo a sus características estructurales, localización, posicionamiento y una correcta competencia de precios entre otras características que le entregan una valorización frente a los requerimientos específicos de la demanda actual del mercado inmobiliario. 
   menu:
     home: Home
-    about: Conocenos
-    flat: Deptos
+    about: Proyectos
+    flat: Propiedades
     pension: Pensiones
     locale: Idioma
     
+  project:
+    team:
+      information: >
+          Greco Inmobiliaria cuenta con una vasta experiencia en el rubro inmobiliario, con más de 10 años trabajando el área de ventas, arriendos, administración de propiedades con gran especialización en pensiones de estudiantes y hospedaje.<br><br>
+          Nuestro objetivo es rentabilizar las propiedades identificando y explotando el potencial propio del inmueble, de acuerdo a sus características estructurales, localización, posicionamiento y una correcta competencia de precios entre otras características que le entregan una valorización frente a los requerimientos específicos de la demanda actual del mercado inmobiliario.
+    creation:
+        pension:
+            information: >
+                Como equipo de profesionales gestores de negocios del área inmobiliaria, hemos descubierto un nicho de mercado,  al identificar la gran demanda de estudiantes en la Ciudad de Valparaíso y Viña del Mar provenientes de todas las regiones del país,  cliente meta que requiere de una vivienda accesible y con los requerimientos básicos a sus necesidades estudiantiles.<br><br> 
+                De acuerdo a esto, cuando identificamos una propiedad con las condiciones ideales nos proponemos como empresa, entregar la posibilidad al propietario de rentabilizar sus ingresos creando un modelo de negocio que satisfaga dicha demanda.<br><br>
+                El modelo de negocio es un proyecto con requerimiento de capitales accesibles, con visión en la estabilidad, seguridad y garantía en el cuidado del patrimonio.<br><br>
+                Como empresa creamos y administramos 5 casas de estudiantes,  nos apoyamos en un equipo sólido con profesionales en el área contable, financiera,  administración de negocios,  y agentes del área inmobiliaria, conocimientos que se compenetran para desarrollar un proyecto viable en el tiempo con constantes retribuciones económicas.<br><br>
+                Cada uno de estos proyectos,  fueron fruto de una investigación de mercado, con un análisis FODA de sus  fortalezas, oportunidades, debilidades y amenazas, con un trabajo en el mejoramiento de su imagen,  renovación y  mantención de la propiedad, equipamiento completo y adecuación a las necesidades del cliente meta. Cada propiedad está bien posicionada y compite fuertemente en precios siempre manteniendo una calidad en los servicios entregados a sus clientes y con una plena tranquilidad para el dueño  en la administración,  finanzas, herramientas legales y entrega confiable de los ingresos mensuales y estados financieros anuales.
+        3d:
+            information: >
+                Actualmente existen en Valparaíso y Viña del Mar, propiedades espectaculares con las características idóneas para realizar un proyecto de pensión de estudiante, sin embargo, en ocasiones nos encontramos con la dificultad de imaginar cómo podría desarrollarse el proyecto, y para esto,  hemos complementado el diseño 3D para visualizar de forma más sustancial y  consolidar la seguridad del cliente en el proyecto.
+                
   pension:
     title: Pensiones
     see: Ven a ver nuestras pensiones!

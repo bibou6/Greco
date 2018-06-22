@@ -1,4 +1,4 @@
-{% extends 'CoreBundle:Core:layout.html.twig' %}
+{% extends 'CoreBundle:Core:layout_parallax.html.twig' %}
 
 {% block menu %}
 
@@ -6,7 +6,7 @@
 {% set route_params = app.request.attributes.get('_route_params') %}
 {% set params = route_params|merge(app.request.query.all) %}
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light rounded" id="navbar">
+<nav class="navbar navbar-expand-lg navbar-light bg-light rounded"  id="navbar-bis">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#my-navbar" aria-controls="my-navbar" aria-expanded="false" aria-label="Toggle navigation">
     	<span class="navbar-toggler-icon"></span>
     </button>
