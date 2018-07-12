@@ -1,7 +1,7 @@
 @CHARSET "ISO-8859-1";
 
 ul > li{
-	padding: 0.5em 2em;
+	padding: 0.2em 1em;
 }
 
 ul > li.nav-item:hover{
@@ -13,7 +13,21 @@ ul > li.active{
 	border-bottom: 3px solid #d66e00;
 }
 
+@font-face {
+    font-family: himalaya;
+    src: url(../font/himalaya.ttf);
+}
+
 #navbar{
 	background-color: rgb(230, 242, 255,0.8)!important;
 	margin-bottom: 4em;
+	font-family: himalaya;
+	font-size: 1.7em;
+	
+}
+
+#navbar-bis{
+	background-color: rgb(230, 242, 255,0.5)!important;
+	font-family: himalaya;
+	font-size: 1.7em;
 }

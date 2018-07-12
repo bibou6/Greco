@@ -2,15 +2,27 @@
 
 {% block title %}{{ parent() }} - Index{% endblock %}
 
+{% block style %}
+<style>
+	body{
+		background-image: url({{ asset('bundles/core/img/ACC2.jpg') }});
+	}
+	.main-content{
+		background-color: rgba(0, 0, 0, .4);
+		color:white;
+	}
+</style>
+{% endblock %}
+
 {% block body %}
 <div class="container main-content">
-	<h1 class="text-center display-3 text-muted text-underlign mb-4">{{ 'gi.pension.title'|trans }}</h1>
+	<h1 class="text-center display-4 text-underlign title">{{ 'gi.pension.title'|trans }}</h1>
 	<div class="row border-top border-warning pt-4">
 	{% for pension in pensions %}
 		<div class="col-lg-12 col-xl-6 text-center px-4 pt-4 {% if loop.index0 is divisible by(2) and loop.index < loop.length %} p-right-2x-padding p-border-right {% endif %} {% if loop.index < loop.length %} lg-screen-border-bottom {% endif %}">
-			<img class="mw-100 px-4 rounded" src="{{ vich_uploader_asset(pension,'imageFile')| imagine_filter('pension_list_height') }}" />
+			<img class="mw-100 px-4 py-4 rounded img-list" src="{{ vich_uploader_asset(pension,'imageFile')| imagine_filter('pension_list_height') }}" />
 			<div class="text-center mt-3">
-				<h4 class="text-muted">{{ pension.name }}</h4>
+				<h4 class="display-4 title">{{ pension.name }}</h4>
 			</div>
 			<div class="row border-top border-bottom">
 				<div class="col border-right">{{ 'gi.pension.minimumPrice.label'|trans }}</div>

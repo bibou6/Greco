@@ -8,6 +8,10 @@ core_homepage_wo_locale:
     path: /
     defaults: { _controller: 'CoreBundle:Core:index' }
 
+core_project:
+    path: /{_locale}/project
+    defaults: { _controller: 'CoreBundle:Core:project' }
+
 #USER SECTION
 
 user:
