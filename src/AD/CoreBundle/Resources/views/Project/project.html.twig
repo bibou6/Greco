@@ -1,9 +1,22 @@
 {% extends 'CoreBundle:Core:menu_parallax.html.twig' %}
+{% block style %}
+<style>
+	body{
+		background-image: url({{ asset('bundles/core/img/weon_saltando.jpg') }});
+	}
+	.main-content{
+		background-color: rgba(0, 0, 0, .2);
+		color:white;
+	}
+</style>
+{% endblock %}
+
 
 {% block body %}
-<div class="parallax" style="background-image: url('{{ asset('bundles/core/img/team.png') }}'"></div>
+<div class="parallax" style="background-image: url('{{ asset('bundles/core/img/reloj.jpg') }}'"></div>
 
 <div class="container">
+	<h1 class="center">Equipo</h1>
 	<div class="row mt-5 mb-5">
 		<div class="col-lg-6">
     		<div class="text-center">
@@ -22,10 +35,11 @@
 	</div>
 </div>
 
-<div class="parallax" style="background-image: url('{{ asset('bundles/core/img/project_es.png') }}'"></div>
+<div class="parallax" style="background-image: url('{{ asset('bundles/core/img/mujer.jpg') }}'"></div>
 
 <div class="container">
 	<div class="mt-5 mb-5">
+		<h1 class="center">Proyectos</h1>
         {{ 'gi.project.creation.pension.information'|trans|raw }}
     </div>
 </div>
