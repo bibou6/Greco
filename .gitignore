@@ -35,6 +35,7 @@
 /web/uploads/
 /web/media/
 /web/config.php
+/src/AD/CoreBundle/Resources/public/img/background/*
 
 # PHPUnit
 /app/phpunit.xml
