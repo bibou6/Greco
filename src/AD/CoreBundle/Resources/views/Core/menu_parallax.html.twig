@@ -1,0 +1,50 @@
+{% extends 'CoreBundle:Core:layout_parallax.html.twig' %}
+
+{% block menu %}
+
+{% set route = app.request.attributes.get('_route') %}
+{% set route_params = app.request.attributes.get('_route_params') %}
+{% set params = route_params|merge(app.request.query.all) %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light"  id="navbar-bis">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#my-navbar" aria-controls="my-navbar" aria-expanded="false" aria-label="Toggle navigation">
+    	<span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse justify-content-md-center" id="my-navbar">
+    	<ul class="navbar-nav">
+    		{% if navbar.home %}
+    		<li class="nav-item {% if menu is defined and menu == 'home' %}active{% endif %}">
+    			<a class="nav-link" href="{{ path('core_homepage') }}">{{ 'gi.menu.home'|trans|upper }}<span class="sr-only"></span></a>
+    		</li>
+    		{% endif %}
+    		{% if navbar.project %}
+    		<li class="nav-item {% if menu is defined and menu == 'project' %}active{% endif %}">
+    			<a class="nav-link" href="{{ path('core_project') }}">{{ 'gi.menu.about'|trans|upper }}</a>
+    		</li>
+    		{% endif %}
+    		{% if navbar.flat %}
+    		<li class="nav-item {% if menu is defined and menu == 'flat' %}active{% endif %}">
+    			<a class="nav-link" href="{{ path('flat_list') }}">{{ 'gi.menu.flat'|trans|upper }}</a>	
+    		</li>
+    		{% endif %}
+    		{% if navbar.pension %}
+    		<li class="nav-item {% if menu is defined and menu == 'pension' %}active{% endif %}">
+    			<a class="nav-link" href="{{ path('pension_list') }}">{{ 'gi.menu.pension'|trans|upper }}</a>
+    		</li>
+    		{% endif %}
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					{{ 'gi.menu.locale'|trans|upper }}
+				</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+			        {% if navbar.locale.fr %}<a class="dropdown-item" href="{{ path(route, params|merge({ _locale: 'fr' })) }}">{{ 'gi.locale.fr'|trans|upper }}</a>{% endif %}
+			        {% if navbar.locale.en %}<a class="dropdown-item" href="{{ path(route, params|merge({ _locale: 'en' })) }}">{{ 'gi.locale.en'|trans|upper }}</a>{% endif %}
+					{% if navbar.locale.es %}<a class="dropdown-item" href="{{ path(route, params|merge({ _locale: 'es' })) }}">{{ 'gi.locale.es'|trans|upper }}</a>{% endif %}
+				</div>
+			</li>    		
+    	</ul>
+	</div>
+	
+</nav>
+{% endblock %}

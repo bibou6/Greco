@@ -4,15 +4,15 @@
 
 {% block body %}
 <div class="container main-content">
-	<h1 class="text-center display-3 text-muted text-underlign mb-4">{{ flat.name }}</h1>
+	<h1 class="text-center display-4 text-underlign title">{{ flat.name }}</h1>
 	<div class="row">
     	<div class="col-lg-12 px-4 pt-4  border-top border-warning">
-    		<div class="pt-4 container text-center" style="margin:auto">
+    		{#<div class="pt-4 container text-center" style="margin:auto">
     		{% for image in flat.images %}
                 	<img id="pension-image-tb-{{ loop.index0 }}"class="img-thumbnail {% if loop.index0 == 0 %}bg-main{% endif %}" src="{{ vich_uploader_asset(image,'imageFile') | imagine_filter('pension_thumbnail') }}" onclick="showCarouselImage({{ loop.index0 }})">
             {% endfor %}
-            </div>
-    		<div id="carouselExampleIndicators" class="carousel slide border-rounded-secondary py-4" data-ride="carousel">
+            </div>#}
+    		<div id="carouselExampleIndicators" class="carousel slide border-rounded-secondary py-4 img-show" data-ride="carousel">
     			<div class="carousel-inner">
     			{% for image in flat.images %}
     				<div class="carousel-item pension-show-image {% if loop.index0 == 0 %}active{% endif %}" data-slide-to="{{ loop.index0 }}">

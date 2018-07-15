@@ -6,7 +6,7 @@
 {% set route_params = app.request.attributes.get('_route_params') %}
 {% set params = route_params|merge(app.request.query.all) %}
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light rounded" id="navbar">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#my-navbar" aria-controls="my-navbar" aria-expanded="false" aria-label="Toggle navigation">
     	<span class="navbar-toggler-icon"></span>
     </button>
@@ -18,11 +18,18 @@
     			<a class="nav-link" href="{{ path('core_homepage') }}">{{ 'gi.menu.home'|trans|upper }}<span class="sr-only"></span></a>
     		</li>
     		{% endif %}
-    		{% if navbar.about %}
-    		<li class="nav-item {% if menu is defined and menu == 'about' %}active{% endif %}">
-    			<a class="nav-link" href="#">{{ 'gi.menu.about'|trans|upper }}</a>
-    		</li>
-    		{% endif %}
+    		{% if navbar.company %}
+    		<li class="nav-item dropdown {% if menu is defined and menu == 'company' %}active{% endif %}">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					{{ 'gi.menu.company'|trans|upper }}
+				</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+			        {% if navbar.team %}<a class="dropdown-item" href="{{ path('core_team') }}">{{ 'gi.menu.team'|trans|upper }}</a>{% endif %}
+			        {% if navbar.administration %}<a class="dropdown-item" href="{{ path('core_administration') }}">{{ 'gi.menu.administration'|trans|upper }}</a>{% endif %}
+			        {% if navbar.project %}<a class="dropdown-item" href="{{ path('core_project') }}">{{ 'gi.menu.project'|trans|upper }}</a>{% endif %}
+				</div>
+			</li>  
+			{% endif %}
     		{% if navbar.flat %}
     		<li class="nav-item {% if menu is defined and menu == 'flat' %}active{% endif %}">
     			<a class="nav-link" href="{{ path('flat_list') }}">{{ 'gi.menu.flat'|trans|upper }}</a>	
@@ -38,9 +45,9 @@
 					{{ 'gi.menu.locale'|trans|upper }}
 				</a>
 				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-			        <a class="dropdown-item" href="{{ path(route, params|merge({ _locale: 'fr' })) }}">{{ 'gi.locale.fr'|trans|upper }}</a>
-			        <a class="dropdown-item" href="{{ path(route, params|merge({ _locale: 'en' })) }}">{{ 'gi.locale.en'|trans|upper }}</a>
-					<a class="dropdown-item" href="{{ path(route, params|merge({ _locale: 'es' })) }}">{{ 'gi.locale.es'|trans|upper }}</a>
+			        {% if navbar.locale.fr %}<a class="dropdown-item" href="{{ path(route, params|merge({ _locale: 'fr' })) }}">{{ 'gi.locale.fr'|trans|upper }}</a>{% endif %}
+			        {% if navbar.locale.en %}<a class="dropdown-item" href="{{ path(route, params|merge({ _locale: 'en' })) }}">{{ 'gi.locale.en'|trans|upper }}</a>{% endif %}
+					{% if navbar.locale.es %}<a class="dropdown-item" href="{{ path(route, params|merge({ _locale: 'es' })) }}">{{ 'gi.locale.es'|trans|upper }}</a>{% endif %}
 				</div>
 			</li>    		
     	</ul>

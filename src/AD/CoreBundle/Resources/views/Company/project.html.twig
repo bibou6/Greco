@@ -1,0 +1,15 @@
+{% extends "CoreBundle:Core:menu.html.twig" %}
+
+{% block title %}{{ parent() }} - Index{% endblock %}
+
+
+{% block body %}
+	<div class="container main-content" style="">
+		<div class="mt-5 mb-5">
+    		<h1 class="text-center title">{{ 'gi.company.project.title'|trans }}</h1>
+            <div class="text-justify container">
+                {{ 'gi.company.project.pension.information'|trans|raw }}
+            </div>
+    	</div>
+	</div>
+{% endblock %}

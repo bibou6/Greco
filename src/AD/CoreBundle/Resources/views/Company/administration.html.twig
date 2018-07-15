@@ -1,0 +1,21 @@
+{% extends "CoreBundle:Core:menu.html.twig" %}
+
+{% block title %}{{ parent() }} - Index{% endblock %}
+
+{% block style %}
+<style>
+	body{
+		background-image: url({{ asset('bundles/core/img/background/abstracto.jpg') }});
+	}
+	.main-content{
+		background-color: rgba(0, 0, 0, .2);
+		color:white;
+	}
+</style>
+{% endblock %}
+
+{% block body %}
+	<div class="container main-content" style="">
+	<h1>{{ 'gi.company.administration.titlen'|trans }}</h1>
+	</div>
+{% endblock %}
