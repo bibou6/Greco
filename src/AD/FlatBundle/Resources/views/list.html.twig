@@ -30,7 +30,7 @@
 			<div class="row border-top border-bottom">
 				<div class="col">
 					$
-					{{ flat.price }}
+					{{ flat.price|number_format(0, '.', '.') }}
 				</div>
 			</div>
 			<div class="text-justify container mt-3 pension-description">
