@@ -24,9 +24,9 @@
 					{{ 'gi.menu.company'|trans|upper }}
 				</a>
 				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-			        <a class="dropdown-item" href="{{ path('core_team') }}">{{ 'gi.menu.team'|trans|upper }}</a>
-			        <a class="dropdown-item" href="{{ path('core_project') }}">{{ 'gi.menu.project'|trans|upper }}</a>
-					<a class="dropdown-item" href="{{ path('core_administration') }}">{{ 'gi.menu.administration'|trans|upper }}</a>
+			        {% if navbar.team %}<a class="dropdown-item" href="{{ path('core_team') }}">{{ 'gi.menu.team'|trans|upper }}</a>{% endif %}
+			        {% if navbar.administration %}<a class="dropdown-item" href="{{ path('core_administration') }}">{{ 'gi.menu.administration'|trans|upper }}</a>{% endif %}
+			        {% if navbar.project %}<a class="dropdown-item" href="{{ path('core_project') }}">{{ 'gi.menu.project'|trans|upper }}</a>{% endif %}
 				</div>
 			</li>  
 			{% endif %}
