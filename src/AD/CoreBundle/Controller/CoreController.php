@@ -19,8 +19,22 @@ class CoreController extends Controller
     
     public function projectAction()
     {
-    	return $this->render('CoreBundle:Project:project.html.twig',array(
-    			'menu' => 'project'
+    	return $this->render('CoreBundle:Company:project.html.twig',array(
+    			'menu' => 'company'
+    	));
+    }
+    
+    public function teamAction()
+    {
+    	return $this->render('CoreBundle:Company:team.html.twig',array(
+    			'menu' => 'company'
+    	));
+    }
+    
+    public function administrationAction()
+    {
+    	return $this->render('CoreBundle:Company:administration.html.twig',array(
+    			'menu' => 'company'
     	));
     }
     
@@ -31,4 +45,12 @@ class CoreController extends Controller
     			'menu' => 'home'
     	));
     }
+    
+    public function termsAction()
+    {
+    	return $this->render('CoreBundle:Core:terms.html.twig',array(
+    			'menu' => 'home'
+    	));
+    }
+    
 }

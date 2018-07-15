@@ -18,11 +18,18 @@
     			<a class="nav-link" href="{{ path('core_homepage') }}">{{ 'gi.menu.home'|trans|upper }}<span class="sr-only"></span></a>
     		</li>
     		{% endif %}
-    		{% if navbar.project %}
-    		<li class="nav-item {% if menu is defined and menu == 'project' %}active{% endif %}">
-    			<a class="nav-link" href="{{ path('core_project') }}">{{ 'gi.menu.about'|trans|upper }}</a>
-    		</li>
-    		{% endif %}
+    		{% if navbar.company %}
+    		<li class="nav-item dropdown {% if menu is defined and menu == 'company' %}active{% endif %}">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					{{ 'gi.menu.company'|trans|upper }}
+				</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+			        <a class="dropdown-item" href="{{ path('core_team') }}">{{ 'gi.menu.team'|trans|upper }}</a>
+			        <a class="dropdown-item" href="{{ path('core_project') }}">{{ 'gi.menu.project'|trans|upper }}</a>
+					<a class="dropdown-item" href="{{ path('core_administration') }}">{{ 'gi.menu.administration'|trans|upper }}</a>
+				</div>
+			</li>  
+			{% endif %}
     		{% if navbar.flat %}
     		<li class="nav-item {% if menu is defined and menu == 'flat' %}active{% endif %}">
     			<a class="nav-link" href="{{ path('flat_list') }}">{{ 'gi.menu.flat'|trans|upper }}</a>	

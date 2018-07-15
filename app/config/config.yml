@@ -17,6 +17,7 @@ parameters:
     app.path.flat_images: /uploads/images/flats
     navbar:
       home: true
+      company: true
       project: true
       flat: true
       pension: true
