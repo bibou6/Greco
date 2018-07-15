@@ -12,6 +12,8 @@ class FlatController extends Controller
 {
 	public function listAction()
 	{
+		$backgroundUrl=$this->container->get('assets.packages')->getUrl("bundles/core/img/background/ABS4.jpg");
+		
 		$em = $this->getDoctrine()->getManager();
 		$flats = $em->getRepository('FlatBundle:Flat')->findBy(array(
 				'enabled' => true
@@ -20,19 +22,23 @@ class FlatController extends Controller
 		 
 		return $this->render('FlatBundle::list.html.twig', array(
 				'menu' => 'flat',
-				'flats' => $flats
+				'flats' => $flats,
+    			'backgroundUrl' => $backgroundUrl
 		));
 	}
 	
 	public function showAction(Flat $flat)
 	{
+		$backgroundUrl=$this->container->get('assets.packages')->getUrl("bundles/core/img/background/ABS6.jpg");
+		
 		if($flat == null || !$flat->getEnabled()){
 			return $this->redirectToRoute('pension_list');
 		}
 		 
 		return $this->render('FlatBundle::show.html.twig', array(
 				'menu' => 'flat',
-				'flat' => $flat
+				'flat' => $flat,
+    			'backgroundUrl' => $backgroundUrl
 		));
 	}
     

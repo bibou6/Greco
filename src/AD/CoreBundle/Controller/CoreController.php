@@ -9,9 +9,6 @@ class CoreController extends Controller
 {
     public function indexAction(Request $request)
     {
-    	
-    	
-    	
         return $this->redirectToRoute('core_homepage',array(
         		'_locale' => $request->getLocale()
         ));
@@ -19,35 +16,49 @@ class CoreController extends Controller
     
     public function projectAction()
     {
+    	
+    	$backgroundUrl=$this->container->get('assets.packages')->getUrl("bundles/core/img/background/abstracto.jpg");
+    	
     	return $this->render('CoreBundle:Company:project.html.twig',array(
-    			'menu' => 'company'
+    			'menu' => 'company',
+    			'backgroundUrl' => $backgroundUrl
     	));
     }
     
     public function teamAction()
     {
+    	$backgroundUrl=$this->container->get('assets.packages')->getUrl("bundles/core/img/background/abstracto.jpg");
+    	
     	return $this->render('CoreBundle:Company:team.html.twig',array(
-    			'menu' => 'company'
+    			'menu' => 'company',
+    			'backgroundUrl' => $backgroundUrl
     	));
     }
     
     public function administrationAction()
     {
+    	$backgroundUrl=$this->container->get('assets.packages')->getUrl("bundles/core/img/background/abstracto.jpg");
+    	
     	return $this->render('CoreBundle:Company:administration.html.twig',array(
-    			'menu' => 'company'
+    			'menu' => 'company',
+    			'backgroundUrl' => $backgroundUrl
     	));
     }
     
     public function indexWithLocaleAction()
     {
+    	$backgroundUrl=$this->container->get('assets.packages')->getUrl("bundles/core/img/background/abstracto.jpg");
     	 
+    	
     	return $this->render('CoreBundle:Core:index.html.twig',array(
-    			'menu' => 'home'
+    			'menu' => 'home',
+    			'backgroundUrl' => $backgroundUrl
     	));
     }
     
     public function termsAction()
     {
+    	
     	return $this->render('CoreBundle:Core:terms.html.twig',array(
     			'menu' => 'home'
     	));

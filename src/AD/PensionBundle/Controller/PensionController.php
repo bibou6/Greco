@@ -13,6 +13,8 @@ class PensionController extends Controller
 {
     public function listAction()
     {
+    	$backgroundUrl=$this->container->get('assets.packages')->getUrl("bundles/core/img/background/ACC2.jpg");
+    	
     	$em = $this->getDoctrine()->getManager();
     	$pensions = $em->getRepository('PensionBundle:Pension')->findBy(array(
             'enabled' => true
@@ -21,19 +23,23 @@ class PensionController extends Controller
     	
         return $this->render('PensionBundle::list.html.twig', array(
         		'menu' => 'pension',
-        		'pensions' => $pensions
+        		'pensions' => $pensions,
+    			'backgroundUrl' => $backgroundUrl
         ));
     }
     
     public function showAction(Pension $pension)
     {
+    	$backgroundUrl=$this->container->get('assets.packages')->getUrl("bundles/core/img/background/ADD.jpg");
+    	
     	if($pension == null || !$pension->getEnabled()){
     		return $this->redirectToRoute('pension_list');
     	}
     	
     	return $this->render('PensionBundle::show.html.twig', array(
     			'menu' => 'pension',
-    			'pension' => $pension
+    			'pension' => $pension,
+    			'backgroundUrl' => $backgroundUrl
     	));
     }
     

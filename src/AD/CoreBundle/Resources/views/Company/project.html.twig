@@ -2,20 +2,14 @@
 
 {% block title %}{{ parent() }} - Index{% endblock %}
 
-{% block style %}
-<style>
-	body{
-		background-image: url({{ asset('bundles/core/img/background/abstracto.jpg') }});
-	}
-	.main-content{
-		background-color: rgba(0, 0, 0, .2);
-		color:white;
-	}
-</style>
-{% endblock %}
 
 {% block body %}
 	<div class="container main-content" style="">
-	
+		<div class="mt-5 mb-5">
+    		<h1 class="text-center title">{{ 'gi.company.project.title'|trans }}</h1>
+            <div class="text-justify container">
+                {{ 'gi.company.project.pension.information'|trans|raw }}
+            </div>
+    	</div>
 	</div>
 {% endblock %}
