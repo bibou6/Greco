@@ -1,6 +1,10 @@
-flat_list:
-    path:     /
-    defaults: { _controller: 'FlatBundle:Flat:list' }
+flat_list_sale:
+    path:     /sale
+    defaults: { _controller: 'FlatBundle:Flat:listSale' }
+    
+flat_list_rent:
+    path:     /rent
+    defaults: { _controller: 'FlatBundle:Flat:listRent' }
     
 flat_show:
     path:     /{id}
