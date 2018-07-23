@@ -79,6 +79,7 @@ easy_admin:
                     - { type: 'group', label: 'flat.information', css_class: 'col-sm-6' }
                     - { property: 'name', label: 'flat.property.name' }
                     - { property: 'price', label: 'flat.property.price',type: 'money', type_options: { currency: 'CLP' } }
+                    - { property: 'forSale', label: 'flat.property.forSale' }
                     - { type: 'group', label: 'flat.images', css_class: 'col-sm-6' }
                     - { property: 'imageFile', type: 'vich_image', label: 'flat.property.imageFile' }
                     - { type: 'group', label: 'flat.description' }
@@ -97,6 +98,7 @@ easy_admin:
                     - { name: 'delete', icon: 'trash', label: false }
                 fields:
                     - { property: 'enabled', label: 'flat.property.enabled' }
+                    - { property: 'forSale', label: 'flat.property.forSale' }
                     - { property: 'image', type: 'image', base_path: '%app.path.flat_images%', label: 'flat.property.image' }
                     - { property: 'name', label: 'flat.property.name' }
                     - { property: 'price',label: 'flat.property.price' }
