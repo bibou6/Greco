@@ -10,13 +10,14 @@ use AD\FlatBundle\Entity\FlatImage;
 use Symfony\Component\HttpFoundation\JsonResponse;
 class FlatController extends Controller
 {
-	public function listAction()
+	public function listSaleAction()
 	{
 		$backgroundUrl=$this->container->get('assets.packages')->getUrl("bundles/core/img/background/ABS4.jpg");
 		
 		$em = $this->getDoctrine()->getManager();
 		$flats = $em->getRepository('FlatBundle:Flat')->findBy(array(
-				'enabled' => true
+				'enabled' => true,
+				'forSale' => true
 		));
 		 
 		 
@@ -24,6 +25,24 @@ class FlatController extends Controller
 				'menu' => 'flat',
 				'flats' => $flats,
     			'backgroundUrl' => $backgroundUrl
+		));
+	}
+	
+	public function listRentAction()
+	{
+		$backgroundUrl=$this->container->get('assets.packages')->getUrl("bundles/core/img/background/ABS4.jpg");
+	
+		$em = $this->getDoctrine()->getManager();
+		$flats = $em->getRepository('FlatBundle:Flat')->findBy(array(
+				'enabled' => true,
+				'forSale' => false
+		));
+			
+			
+		return $this->render('FlatBundle::list.html.twig', array(
+				'menu' => 'flat',
+				'flats' => $flats,
+				'backgroundUrl' => $backgroundUrl
 		));
 	}
 	

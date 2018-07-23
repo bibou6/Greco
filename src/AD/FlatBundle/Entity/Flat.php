@@ -44,6 +44,13 @@ class Flat
      * @ORM\Column(name="isEnabled", type="boolean")
      */
     private $enabled;
+    
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="isForSale", type="boolean")
+     */
+    private $forSale;
 
     /**
      * @var string
@@ -410,5 +417,29 @@ class Flat
     public function getDescriptionFrench()
     {
         return $this->descriptionFrench;
+    }
+
+    /**
+     * Set forSale
+     *
+     * @param boolean $forSale
+     *
+     * @return Flat
+     */
+    public function setForSale($forSale)
+    {
+        $this->forSale = $forSale;
+
+        return $this;
+    }
+
+    /**
+     * Get forSale
+     *
+     * @return boolean
+     */
+    public function getForSale()
+    {
+        return $this->forSale;
     }
 }

@@ -31,9 +31,15 @@
 			</li>  
 			{% endif %}
     		{% if navbar.flat %}
-    		<li class="nav-item {% if menu is defined and menu == 'flat' %}active{% endif %}">
-    			<a class="nav-link" href="{{ path('flat_list') }}">{{ 'gi.menu.flat'|trans|upper }}</a>	
-    		</li>
+    		<li class="nav-item dropdown {% if menu is defined and menu == 'flat' %}active{% endif %}">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	                {{ 'gi.menu.flat.title'|trans|upper }}
+				</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="nav-link" href="{{ path('flat_list_rent') }}">{{ 'gi.menu.flat.rent'|trans|upper }}</a>
+			        <a class="nav-link" href="{{ path('flat_list_sale') }}">{{ 'gi.menu.flat.sale'|trans|upper }}</a>	
+				</div>
+			</li>
     		{% endif %}
     		{% if navbar.pension %}
     		<li class="nav-item {% if menu is defined and menu == 'pension' %}active{% endif %}">

@@ -13,8 +13,9 @@ gi:
     es: Español
   contact:
     title: Contactanos
-    number: +56 9 4212 1029 
-    number_second: +56 9 6336 3246
+    number: +56 9 4212 1029 - Dixiana Arancibia 
+    number_second: +56 9 6336 3246 - Giselle Greco
+    number_third: +56 9 6350 7484 - Fabiola León
     email: gestioninmobiliaria.greco@gmail.com
   information: 
     text: > 
@@ -27,7 +28,10 @@ gi:
     project: Proyectos
     administration: Administraciones
     about: Proyectos
-    flat: Propiedades
+    flat:
+      title: Propiedades
+      sale: Ventas
+      rent: Arriendos
     pension: Pensiones
     locale: Idioma
     
