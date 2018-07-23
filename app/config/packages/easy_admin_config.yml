@@ -50,7 +50,7 @@ easy_admin:
                     - { property: 'name', label: 'pension.property.name' }
                     - { property: 'minimumPrice',label: 'pension.property.minimumPrice' }
                     - { property: 'maximumPrice', label: 'pension.property.maximumPrice' }
-                    - { property: 'images', type: 'AD\PensionBundle\Entity\PensionImage', label: 'pension.property.images', template: 'images_list.html.twig' }
+                    #- { property: 'images', type: 'AD\PensionBundle\Entity\PensionImage', label: 'pension.property.images', template: 'images_list.html.twig' }
             # SEARCH
             search:
                 fields:
@@ -102,7 +102,7 @@ easy_admin:
                     - { property: 'image', type: 'image', base_path: '%app.path.flat_images%', label: 'flat.property.image' }
                     - { property: 'name', label: 'flat.property.name' }
                     - { property: 'price',label: 'flat.property.price' }
-                    - { property: 'images', type: 'AD\FlatBundle\Entity\FlatImage', label: 'flat.property.images', template: 'images_list.html.twig' }
+                    #- { property: 'images', type: 'AD\FlatBundle\Entity\FlatImage', label: 'flat.property.images', template: 'images_list.html.twig' }
             # SEARCH
             search: 
                 fields:
