@@ -26,7 +26,7 @@ parameters:
       pension: true
       locale:
         es: true
-        fr: false
+        fr: true
         en: true
 
 framework:

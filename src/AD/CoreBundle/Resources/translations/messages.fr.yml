@@ -1,49 +1,95 @@
 gi:
-  slogan: Prend la vie comme elle vient!
-  legal: Mentions Légales
+  slogan: ""
+  legal: Mentions légale
   facebook:
    share: Partager
-   url: http://grecoinmobiliaria.com/fr/
-   title: Greco Inmobiliaria - Valparaíso
-   description: Necesitas arendar un depto o una habitación en Valpo, aquí lo encontrarás
-   image: http://grecoinmobiliaria.com/media/cache/my_banner/bundles/core/img/greco_logo.png
+   url: http://grecoinmobiliaria.com/es/pension/
+   title: Arrienda tu habitación aquí!
+   description: Espectaculares Habitaciones desde $85.000 en casonas ubicadas en los mejores sectores de Valparaíso. Visita nuestra pagina y elije tu nuevo hogar.
+   image: http://grecoinmobiliaria.com/bundles/core/img/logo_small_rounded_200x200.png
   locale:
     fr: Français
     en: English
     es: Español
   contact:
-    title: Nous joindre
-    number: +56 9 4212 1029 
-    number_second: +56 9 6336 3246
+    title: Contacte nous!
+    number: +56 9 4212 1029 - Dixiana Arancibia 
+    number_second: +56 9 6336 3246 - Giselle Greco
+    number_third: +56 9 6350 7484 - Fabiola León
     email: gestioninmobiliaria.greco@gmail.com
   information: 
-    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra finibus nunc non consequat. Phasellus in ornare velit. Maecenas lobortis mi arcu, at porttitor enim mattis at. Integer tempor pretium nisi et tempor. Nulla eget velit dapibus, ultricies enim nec, lobortis turpis. Fusce auctor lacus in justo eleifend dictum. Fusce maximus sem mauris, ut pulvinar sapien sagittis ac. Nullam auctor dolor at libero blandit congue.
+    text: >
+        Greco Inmobiliaria détient une vaste exprérience dans le domaine de l'immobilier. Nous travaillons dans le domaine des ventes, des locatations, d'administration de propriété avec une grande spécialisation dans les pensions étudiantes.<br><br>
+        Notre objectif est de rentabiliser les propriété en identifiant et en exploitant leur potentie en accord à leur caratéristique structureles, leur localisation, leur positionnement, nous permettant d'offrir à des prix compétitifs. Le tout donnant une forte plus-value face aux demandes spécifiques du marché immobilier actuel. 
   menu:
     home: Accueil
-    about: A propos
-    flat: Appartements
+    company: Entreprise
+    team: Equipe
+    project: Projets
+    administration: Administrations
+    about: Projets
+    flat:
+      title: Propriétés
+      sale: A vendre
+      rent: A louer
     pension: Pensions
-    locale: Langue
+    locale: Langues
     
+  company:
+    team:
+      title: Equipe
+      giselle:
+        name: Giselle Greco
+        information: Administratrice
+      dixiana:
+        name: Dixiana Arancibia
+        information: Administratrice<br>Agente Immobilière externe
+      fabiola:
+        name: Fabiola Leon
+        information: Agente Immobilière externe
+      information: >
+          Greco Inmobiliaria détient une vaste exprérience dans le domaine de l'immobilier. Nous travaillons dans le domaine des ventes, des locatations, d'administration de propriété avec une grande spécialisation dans les pensions étudiantes.<br><br>
+          Notre objectif est de rentabiliser les propriété en identifiant et en exploitant leur potentie en accord à leur caratéristique structureles, leur localisation, leur positionnement, nous permettant d'offrir à des prix compétitifs. Le tout donnant une forte plus-value face aux demandes spécifiques du marché immobilier actuel.
+    project:
+      title: Proyectos
+      pension:
+        information: >
+          Como equipo de profesionales gestores de negocios del área inmobiliaria, hemos descubierto un nicho de mercado,  al identificar la gran demanda de estudiantes en la Ciudad de Valparaíso y Viña del Mar provenientes de todas las regiones del país,  cliente meta que requiere de una vivienda accesible y con los requerimientos básicos a sus necesidades estudiantiles.<br><br> 
+          De acuerdo a esto, cuando identificamos una propiedad con las condiciones ideales nos proponemos como empresa, entregar la posibilidad al propietario de rentabilizar sus ingresos creando un modelo de negocio que satisfaga dicha demanda.<br><br>
+          El modelo de negocio es un proyecto con requerimiento de capitales accesibles, con visión en la estabilidad, seguridad y garantía en el cuidado del patrimonio.<br><br>
+          Como empresa creamos y administramos 6 casas de estudiantes,  nos apoyamos en un equipo sólido con profesionales en el área contable, financiera,  administración de negocios,  y agentes del área inmobiliaria, conocimientos que se compenetran para desarrollar un proyecto viable en el tiempo con constantes retribuciones económicas.<br><br>
+          Cada uno de estos proyectos,  fueron fruto de una investigación de mercado, con un análisis FODA de sus  fortalezas, oportunidades, debilidades y amenazas, con un trabajo en el mejoramiento de su imagen,  renovación y  mantención de la propiedad, equipamiento completo y adecuación a las necesidades del cliente meta. Cada propiedad está bien posicionada y compite fuertemente en precios siempre manteniendo una calidad en los servicios entregados a sus clientes y con una plena tranquilidad para el dueño  en la administración,  finanzas, herramientas legales y entrega confiable de los ingresos mensuales y estados financieros anuales.
+      3d:
+        information: >
+          Actualmente existen en Valparaíso y Viña del Mar, propiedades espectaculares con las características idóneas para realizar un proyecto de pensión de estudiante, sin embargo, en ocasiones nos encontramos con la dificultad de imaginar cómo podría desarrollarse el proyecto, y para esto,  hemos complementado el diseño 3D para visualizar de forma más sustancial y  consolidar la seguridad del cliente en el proyecto.
+    administration:
+      title: Administaciones de pension
+      information: >
+        Como equipo de profesionales gestores de negocios del área inmobiliaria, hemos descubierto un nicho de mercado,  al identificar la gran demanda de estudiantes en la Ciudad de Valparaíso y Viña del Mar provenientes de todas las regiones del país,  cliente meta que requiere de una vivienda accesible y con los requerimientos básicos a sus necesidades estudiantiles.<br><br> 
+        De acuerdo a esto, cuando identificamos una propiedad con las condiciones ideales nos proponemos como empresa, entregar la posibilidad al propietario de rentabilizar sus ingresos creando un modelo de negocio que satisfaga dicha demanda.<br><br>
+        El modelo de negocio es un proyecto con requerimiento de capitales accesibles, con visión en la estabilidad, seguridad y garantía en el cuidado del patrimonio.<br><br>
+        Como empresa creamos y administramos 5 casas de estudiantes,  nos apoyamos en un equipo sólido con profesionales en el área contable, financiera,  administración de negocios,  y agentes del área inmobiliaria, conocimientos que se compenetran para desarrollar un proyecto viable en el tiempo con constantes retribuciones económicas.<br><br>
+        Cada uno de estos proyectos,  fueron fruto de una investigación de mercado, con un análisis FODA de sus  fortalezas, oportunidades, debilidades y amenazas, con un trabajo en el mejoramiento de su imagen,  renovación y  mantención de la propiedad, equipamiento completo y adecuación a las necesidades del cliente meta. Cada propiedad está bien posicionada y compite fuertemente en precios siempre manteniendo una calidad en los servicios entregados a sus clientes y con una plena tranquilidad para el dueño  en la administración,  finanzas, herramientas legales y entrega confiable de los ingresos mensuales y estados financieros anuales.
+      
   pension:
     title: Pensions
     see: Viens voir nos pensions!
-    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra finibus nunc non consequat. Phasellus in ornare velit. Maecenas lobortis mi arcu, at porttitor enim mattis at. Integer tempor pretium nisi et tempor. Nulla eget velit dapibus, ultricies enim nec, lobortis turpis. Fusce auctor lacus in justo eleifend dictum. Fusce maximus sem mauris, ut pulvinar sapien sagittis ac. Nullam auctor dolor at libero blandit congue.
+    test: Connait nos pensions, elles sont toutes stratégiquement situées proche des universités de la ville de Valparaiso, incluant les services comme, l'electricité, l'eau, le gaz, le Wifi et un service de nettoyage.
     maximumPrice:
       label: Prix maximum
     minimumPrice:
-      label: Prix minimum
+      label: Prix minimumo
     labels:
       description: Description
       information: Information
-      price: Prix
+      price: ¨Prix
     button:
       information: Plus d'information
-      
+            
   flat:
-    title: Appartements
-    see: Clique ici pour voir nos appartements!
-    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra finibus nunc non consequat. Phasellus in ornare velit. Maecenas lobortis mi arcu, at porttitor enim mattis at. Integer tempor pretium nisi et tempor. Nulla eget velit dapibus, ultricies enim nec, lobortis turpis. Fusce auctor lacus in justo eleifend dictum. Fusce maximus sem mauris, ut pulvinar sapien sagittis ac. Nullam auctor dolor at libero blandit congue.
+    title: Propriété
+    see: Click ici pour voir nos propriétés
+    text: Découvre nos propriété, très bien située et proche des transports en commun à des prix comptétitifs sur le marché. Les places autour, les parcs, les pistes-cyclable, les cafés, les restaurants et les écoles proches en font un lieu où il fait bon vivre. 
     price:
       label: Prix
     labels:
@@ -57,4 +103,4 @@ gi:
     flat:
       information: Plus d'information
     information:
-      see: Nous connaître!
+      see: Connait nous!
