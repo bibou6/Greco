@@ -27,7 +27,7 @@ parameters:
       locale:
         es: true
         fr: false
-        en: false
+        en: true
 
 framework:
     #esi: ~
