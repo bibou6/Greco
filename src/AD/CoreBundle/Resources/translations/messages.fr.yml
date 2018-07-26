@@ -78,7 +78,7 @@ gi:
     maximumPrice:
       label: Prix maximum
     minimumPrice:
-      label: Prix minimumo
+      label: Prix minimum
     labels:
       description: Description
       information: Information
