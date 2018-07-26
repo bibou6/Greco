@@ -74,7 +74,7 @@ gi:
   pension:
     title: Pensions
     see: Viens voir nos pensions!
-    test: Connait nos pensions, elles sont toutes stratégiquement situées proche des universités de la ville de Valparaiso, incluant les services comme, l'electricité, l'eau, le gaz, le Wifi et un service de nettoyage.
+    text: Connait nos pensions, elles sont toutes stratégiquement situées proche des universités de la ville de Valparaiso, incluant les services comme, l'electricité, l'eau, le gaz, le Wifi et un service de nettoyage.
     maximumPrice:
       label: Prix maximum
     minimumPrice:
@@ -89,7 +89,7 @@ gi:
   flat:
     title: Propriété
     see: Click ici pour voir nos propriétés
-    text: Découvre nos propriété, très bien située et proche des transports en commun à des prix comptétitifs sur le marché. Les places autour, les parcs, les pistes-cyclable, les cafés, les restaurants et les écoles proches en font un lieu où il fait bon vivre. 
+    text: Découvre nos propriétés, très bien située et proche des transports en commun à des prix comptétitifs sur le marché. Les places autour, les parcs, les pistes-cyclable, les cafés, les restaurants et les écoles proches en font un lieu où il fait bon vivre. 
     price:
       label: Prix
     labels:
