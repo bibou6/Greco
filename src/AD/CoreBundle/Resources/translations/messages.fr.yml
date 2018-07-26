@@ -1,6 +1,6 @@
 gi:
   slogan: ""
-  legal: Mentions légale
+  legal: Mentions légales
   facebook:
    share: Partager
    url: http://grecoinmobiliaria.com/es/pension/
@@ -20,7 +20,7 @@ gi:
   information: 
     text: >
         Greco Inmobiliaria détient une vaste exprérience dans le domaine de l'immobilier. Nous travaillons dans le domaine des ventes, des locatations, d'administration de propriété avec une grande spécialisation dans les pensions étudiantes.<br><br>
-        Notre objectif est de rentabiliser les propriété en identifiant et en exploitant leur potentie en accord à leur caratéristique structureles, leur localisation, leur positionnement, nous permettant d'offrir à des prix compétitifs. Le tout donnant une forte plus-value face aux demandes spécifiques du marché immobilier actuel. 
+        Notre objectif est de rentabiliser les propriétés en identifiant et en exploitant leur potentiel en accord à leurs caratéristiques structurelles, leur localisation, leur positionnement, nous permettant d'avoir des prix compétitifs. Le tout donnant une forte plus-value face aux demandes spécifiques du marché immobilier actuel. 
   menu:
     home: Accueil
     company: Entreprise
@@ -82,7 +82,7 @@ gi:
     labels:
       description: Description
       information: Information
-      price: ¨Prix
+      price: Prix
     button:
       information: Plus d'information
             
