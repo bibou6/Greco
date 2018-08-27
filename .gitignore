@@ -37,6 +37,7 @@
 /web/config.php
 /src/AD/CoreBundle/Resources/public/img/background/*
 /src/AD/CoreBundle/Resources/public/img/team/*
+/src/AD/CoreBundle/Resources/public/img/renders/*
 
 # PHPUnit
 /app/phpunit.xml
