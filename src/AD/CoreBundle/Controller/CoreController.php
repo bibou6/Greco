@@ -17,7 +17,8 @@ class CoreController extends Controller
     public function projectAction()
     {
     	
-    	$backgroundUrl=$this->container->get('assets.packages')->getUrl("bundles/core/img/background/abstracto.jpg");
+    	$backgroundUrl=$this->container->get('assets.packages')->getUrl("bundles/core/img/background/ABS3.jpg");
+    	
     	
     	return $this->render('CoreBundle:Company:project.html.twig',array(
     			'menu' => 'company',
@@ -27,17 +28,18 @@ class CoreController extends Controller
     
     public function teamAction()
     {
-    	$backgroundUrl=$this->container->get('assets.packages')->getUrl("bundles/core/img/background/abstracto.jpg");
+    	$backgroundUrl=$this->container->get('assets.packages')->getUrl("bundles/core/img/background/ABS3.jpg");
     	
     	return $this->render('CoreBundle:Company:team.html.twig',array(
     			'menu' => 'company',
-    			'backgroundUrl' => $backgroundUrl
+    			'backgroundUrl' => $backgroundUrl,
+    			'pictures' => false
     	));
     }
     
     public function administrationAction()
     {
-    	$backgroundUrl=$this->container->get('assets.packages')->getUrl("bundles/core/img/background/abstracto.jpg");
+    	$backgroundUrl=$this->container->get('assets.packages')->getUrl("bundles/core/img/background/ABS3.jpg");
     	
     	return $this->render('CoreBundle:Company:administration.html.twig',array(
     			'menu' => 'company',

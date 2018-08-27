@@ -4,9 +4,6 @@
 
 {% block style %}
 <style>
-	body{
-		background-image: url({{ asset('bundles/core/img/background/abstracto.jpg') }});
-	}
 	.main-content{
 		background-color: rgba(0, 0, 0, .2);
 		color:white;
@@ -16,6 +13,35 @@
 
 {% block body %}
 	<div class="container main-content" style="">
-	<h1>{{ 'gi.company.administration.titlen'|trans }}</h1>
+		<div class="row">
+    		<div class="col-lg-8 col-md-12 px-4 text-justify">
+    			<h1 class="text-center title">{{ 'gi.company.administration.title'|trans }}</h1>
+    			{{ 'gi.company.administration.information'|trans|raw }}
+    		</div>
+    		<div class="col-lg-4 col-md-12 px-4 text-justify">
+    			<h1 class="text-center title">{{ 'gi.company.administration.team.title'|trans }}</h1>
+    			{{ 'gi.company.administration.team.text'|trans|raw }}
+    		</div>
+    		<div class="col-lg-8 px-4 my-4 text-justify">
+    			<h1 class="text-center title">{{ 'gi.company.administration.function.title'|trans }}</h1>
+    			<ul>
+        			<li>{{ 'gi.company.administration.function.list.1'|trans }}</li>
+        			<li>{{ 'gi.company.administration.function.list.2'|trans }}</li>
+        			<li>{{ 'gi.company.administration.function.list.3'|trans }}</li>
+        			<li>{{ 'gi.company.administration.function.list.4'|trans }}</li>
+        			<li>{{ 'gi.company.administration.function.list.5'|trans }}</li>
+        			<li>{{ 'gi.company.administration.function.list.6'|trans }}</li>
+        			<li>{{ 'gi.company.administration.function.list.7'|trans }}</li>
+        			<li>{{ 'gi.company.administration.function.list.8'|trans }}</li>
+        			<li>{{ 'gi.company.administration.function.list.9'|trans }}</li>
+        			<li>{{ 'gi.company.administration.function.list.10'|trans }}</li>
+        			<li>{{ 'gi.company.administration.function.list.11'|trans }}</li>
+    			</ul>
+    		</div>
+    		<div class="col-lg-4 col-md-12 my-4 px-4 text-justify">
+    			<h1 class="text-center title">{{ 'gi.company.administration.hire.title'|trans }}</h1>
+    			{{ 'gi.company.administration.hire.text'|trans|raw }}
+    		</div>
+		</div>
 	</div>
 {% endblock %}

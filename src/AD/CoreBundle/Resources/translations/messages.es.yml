@@ -17,6 +17,7 @@ gi:
     number_second: +56 9 6336 3246 - Giselle Greco
     number_third: +56 9 6350 7484 - Fabiola León
     email: gestioninmobiliaria.greco@gmail.com
+    direction: Condell 1338 Oficina 9<br>Valparaiso
   information: 
     text: > 
         Greco Inmobiliaria cuenta con una vasta experiencia en el rubro inmobiliario, trabajamos el área de ventas, arriendos, administraciónes de propiedades con gran especialización en pensiones de estudiantes y hospedaje.<br><br>
@@ -46,31 +47,61 @@ gi:
         information: Administradora<br>Corredora externa
       fabiola:
         name: Fabiola Leon
-        information: Corredora externa
+        information: Administradora<br>Corredora externa
       information: >
           Greco Inmobiliaria cuenta con una vasta experiencia en el rubro inmobiliario, trabajamos el área de ventas, arriendos, administración de propiedades con gran especialización en pensiones de estudiantes y hospedaje.<br><br>
           Nuestro objetivo es rentabilizar las propiedades identificando y explotando el potencial propio del inmueble, de acuerdo a sus características estructurales, localización, posicionamiento y una correcta competencia de precios entre otras características que le entregan una valorización frente a los requerimientos específicos de la demanda actual del mercado inmobiliario.
+    administration:
+      title: Administación de pensiones
+      information: >
+        Si actualmente eres dueño/a de una casa de estudiantes, te proponemos contratar nuestros servicios como administradores. Sabemos que es un giro duro,  con grandes complejidades y desafíos, que pueden ocupar gran parte de tu tiempo, energía  y en oportunidades a pesar del esfuerzo, se cae en perfiles de arrendatarios erróneos,  cobranzas sin éxito, retiros de personas sin cancelar,  sobreconsumos en los servicios, indisciplina en la normativas deseadas,  entre muchos otros obstáculos del rubro que bajan la rentabilidad del negocio y amenazan el crecimiento del negocio en el mercado.<br><br>
+        Hoy por hoy vivimos y podemos disfrutar de un mundo profesional basado en las especializaciones y nosotros como empresa inmobiliaria nos especializamos en administrar casas de estudiantes, con orientación a una óptima organización  de los recursos,  gestión en el área publicitaria, captación del correcto perfil de arrendatario y cumplimiento de las normativas de cada pensión  con objetivos comerciales y financieros claros.<br><br>
+        Nuestro objetivo es disminuir la carga laboral que conlleva el negocio para que usted como dueño pueda maximizar sus ganancias, disminuir  el riesgo legal, bajar el  costo de mantención,  lograr posicionamiento en el mercado, tener la oportunidad de crear nuevas pensiones estudiantiles y por supuesto optimizar su tiempo personal.
+      team:
+        title: Profesionales a cargo
+        text: Contamos con administradores calificados, con especialización en administración de negocios del área inmobiliaria, administradores de edificio, área residencial y comercial y agentes especializados en ventas, disponemos además con apoyo legal,  apoyo en servicio de aseo y  empresas del área de gasfitería, electricidad, y construcción  para la mantención de todas las áreas en perfecto estado.
+      function:
+        title: 'Nuestras funciones son las siguientes:'
+        list:
+          1: Reubicación de arrendatarios a través de cartera de clientes actuales de la empresa junto con actualizados sistemas de promoción y publicidad.
+          2: Entrevista y análisis de perfil del arrendatario junto estudio de documentación financiera, para una captación adecuada, que permitirá mejor convivencia entre arrendatarios,  menor riesgo a la propiedad y mayor seguridad en los pagos.
+          3: Previo ingreso a la propiedad, gestión de firma de contrato de arrendamiento, creado específicamente para velar por los derechos del arrendador y protección de su propiedad.
+          4: Cuidar y vigilar los bienes y servicios comunes, como la marcha y funcionamiento general de la propiedad.
+          5: Administrar y cancelar los servicios de luz, agua, gas e internet entre otros necesarios.
+          6: Disponer las revisiones y reparaciones que fueren menester en los equipos e instalaciones y en especial preocuparse de sus mantenciones periódicas.
+          7: Solucionar todos los problemas derivados del uso de la propiedad por parte de los clientes en relación a los daños y deterioros causados por éstos.
+          8: Administrar los artículos de consumo adquiridos para la mantención de la propiedad.
+          9: Control de la normativa interna del inmueble y mediación frente a problemáticas de convivencia entre arrendatarios y/o con el entorno. 
+          10: Control periódico a través de visitas a la propiedad lo que permitirá reducir los costos en los servicios básicos junto  con mantener el orden y seguridad de la pensión.
+          11: Entrega mensual de un balance financiero con el detalle completo de todos los ingreso y egresos,  pagos de arriendos, multas, sobreconsumo, la rentabilidad actual y futura.
+      hire:
+        title: ¿Por qué debería contratarnos?
+        text: >
+          Existen varias razones, por la que es una buena opción tener administradores externos, pero las más relevantes son: La disminución del riesgo legal, la sobrecarga laboral que requiere y el aumento en la rentabilidad y seguridad del negocio.<br><br>
+          Por último, como bien sabemos en Chile tenemos espacios legales que no protegen al propietario, por lo que, el ingresar una persona a su propiedad sin tener los contratos adecuados,  sin apoyo legal,  puede crearse la gran inconveniencia de tener un posible ocupa en su propiedad,  o futuros procesos legales como juicios, es por esto, que es de gran importancia, contar con una empresa apoyada en abogados, para tener acceso a herramientas de defensa y protección legal.
     project:
-      title: Proyectos
       pension:
-        information: >
+        title: Creación de proyecto pensión de estudiante
+        text: >
           Como equipo de profesionales gestores de negocios del área inmobiliaria, hemos descubierto un nicho de mercado,  al identificar la gran demanda de estudiantes en la Ciudad de Valparaíso y Viña del Mar provenientes de todas las regiones del país,  cliente meta que requiere de una vivienda accesible y con los requerimientos básicos a sus necesidades estudiantiles.<br><br> 
           De acuerdo a esto, cuando identificamos una propiedad con las condiciones ideales nos proponemos como empresa, entregar la posibilidad al propietario de rentabilizar sus ingresos creando un modelo de negocio que satisfaga dicha demanda.<br><br>
           El modelo de negocio es un proyecto con requerimiento de capitales accesibles, con visión en la estabilidad, seguridad y garantía en el cuidado del patrimonio.<br><br>
-          Como empresa creamos y administramos 6 casas de estudiantes,  nos apoyamos en un equipo sólido con profesionales en el área contable, financiera,  administración de negocios,  y agentes del área inmobiliaria, conocimientos que se compenetran para desarrollar un proyecto viable en el tiempo con constantes retribuciones económicas.<br><br>
+          Como empresa creamos y administramos 5 casas de estudiantes,  nos apoyamos en un equipo sólido con profesionales en el área contable, financiera,  administración de negocios,  y agentes del área inmobiliaria, conocimientos que se compenetran para desarrollar un proyecto viable en el tiempo con constantes retribuciones económicas.<br><br>
           Cada uno de estos proyectos,  fueron fruto de una investigación de mercado, con un análisis FODA de sus  fortalezas, oportunidades, debilidades y amenazas, con un trabajo en el mejoramiento de su imagen,  renovación y  mantención de la propiedad, equipamiento completo y adecuación a las necesidades del cliente meta. Cada propiedad está bien posicionada y compite fuertemente en precios siempre manteniendo una calidad en los servicios entregados a sus clientes y con una plena tranquilidad para el dueño  en la administración,  finanzas, herramientas legales y entrega confiable de los ingresos mensuales y estados financieros anuales.
       3d:
-        information: >
+        title: Visualización del Proyecto 3D
+        text: >
           Actualmente existen en Valparaíso y Viña del Mar, propiedades espectaculares con las características idóneas para realizar un proyecto de pensión de estudiante, sin embargo, en ocasiones nos encontramos con la dificultad de imaginar cómo podría desarrollarse el proyecto, y para esto,  hemos complementado el diseño 3D para visualizar de forma más sustancial y  consolidar la seguridad del cliente en el proyecto.
-    administration:
-      title: Administaciones de pension
-      information: >
-        Como equipo de profesionales gestores de negocios del área inmobiliaria, hemos descubierto un nicho de mercado,  al identificar la gran demanda de estudiantes en la Ciudad de Valparaíso y Viña del Mar provenientes de todas las regiones del país,  cliente meta que requiere de una vivienda accesible y con los requerimientos básicos a sus necesidades estudiantiles.<br><br> 
-        De acuerdo a esto, cuando identificamos una propiedad con las condiciones ideales nos proponemos como empresa, entregar la posibilidad al propietario de rentabilizar sus ingresos creando un modelo de negocio que satisfaga dicha demanda.<br><br>
-        El modelo de negocio es un proyecto con requerimiento de capitales accesibles, con visión en la estabilidad, seguridad y garantía en el cuidado del patrimonio.<br><br>
-        Como empresa creamos y administramos 5 casas de estudiantes,  nos apoyamos en un equipo sólido con profesionales en el área contable, financiera,  administración de negocios,  y agentes del área inmobiliaria, conocimientos que se compenetran para desarrollar un proyecto viable en el tiempo con constantes retribuciones económicas.<br><br>
-        Cada uno de estos proyectos,  fueron fruto de una investigación de mercado, con un análisis FODA de sus  fortalezas, oportunidades, debilidades y amenazas, con un trabajo en el mejoramiento de su imagen,  renovación y  mantención de la propiedad, equipamiento completo y adecuación a las necesidades del cliente meta. Cada propiedad está bien posicionada y compite fuertemente en precios siempre manteniendo una calidad en los servicios entregados a sus clientes y con una plena tranquilidad para el dueño  en la administración,  finanzas, herramientas legales y entrega confiable de los ingresos mensuales y estados financieros anuales.
-      
+      business:
+        title: Estudio del Modelo de Negocio
+        text: >
+          <b>Planificación estratégica, análisis comercial y financiero del proyecto.</b><br><br>
+          Una vez identificado el potencial real de la propiedad de acuerdo a sus condiciones estructurales, tales como cantidad de habitaciones existentes o potenciales,  espacios de generales de la propiedad, su ubicación, posicionamiento con respecto a las necesidades del cliente meta, entre otros factores de relevancia, se hace de inmediato un análisis comercial  con la identificación del capital inicial a requerir, para arreglos y equipamiento necesario, junto con una planificación estratégica de posibles precios competitivos, posicionamiento en el mercado y sistemas de publicidad , terminado con un análisis financiero a través de datos informatizados para identificar la rentabilidad del proyecto futuro y su viabilidad.
+      fixing:
+        title: Renovación y equipamiento
+        text: >
+          La renovación de la propiedad es realizada con un previo estudio de la estructura de la propiedad, sus sistemas eléctricos, gasfitería, imagen de la propiedad, para dar con un informe de las necesidades y soluciones prácticas y con bajos costos a realizar, manteniendo como prioridad la seguridad del futuro cliente. Contamos con  profesionales de electricidad y gasfitería certificados y con apoyo en profesionales de la construcción capacitados.<br><br>
+          El trabajo de equipamiento, se basa en la experiencia de los proyectos ya realizados,  identificando las necesidades reales, aplicables a cada propiedad, con materiales durables, enfocados a la practicidad y satisfacción del cliente meta,  contamos con conocimiento de empresas que trabajan productos de calidad y bajo costo para lograr disminuir en lo máximo posible el capital inicial.
   pension:
     title: Pensiones
     see: Ven a ver nuestras pensiones!

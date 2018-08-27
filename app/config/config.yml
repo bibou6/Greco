@@ -17,7 +17,7 @@ parameters:
     app.path.flat_images: /uploads/images/flats
     navbar:
       home: true
-      company: false
+      company: true
       team: true
       project: true
       administration: true

@@ -5,11 +5,30 @@
 
 {% block body %}
 	<div class="container main-content" style="">
-		<div class="mt-5 mb-5">
-    		<h1 class="text-center title">{{ 'gi.company.project.title'|trans }}</h1>
-            <div class="text-justify container">
-                {{ 'gi.company.project.pension.information'|trans|raw }}
-            </div>
-    	</div>
+		<div class="row">
+    		<div class="col-lg-12 col-md-12 px-4 py-4 text-justify">
+    			<h1 class="text-center title">{{ 'gi.company.project.pension.title'|trans }}</h1>
+    			{{ 'gi.company.project.pension.text'|trans|raw }}
+    		</div>
+    		<div class="col-lg-12 col-md-12 px-4 py-4 text-justify">
+    			<h1 class="text-center title">{{ 'gi.company.project.3d.title'|trans }}</h1>
+    			{{ 'gi.company.project.3d.text'|trans|raw }}
+    			<div class="row">
+    			{% for i in 1..17 %}
+        			<div class="col-lg-4 col-md-4 col-sm-6 py-2">
+        				<img src='{{ asset("bundles/core/img/renders/cocina_#{i}.jpg") }}' style="width:100%" />
+        			</div>
+        		{% endfor %}
+    			</div>
+    		</div>
+    		<div class="col-lg-12 col-md-12 px-4 py-4 text-justify">
+    			<h1 class="text-center title">{{ 'gi.company.project.business.title'|trans }}</h1>
+    			{{ 'gi.company.project.business.text'|trans|raw }}
+    		</div>
+    		<div class="col-lg-12 col-md-12 px-4 py-4 text-justify">
+    			<h1 class="text-center title">{{ 'gi.company.project.fixing.title'|trans }}</h1>
+    			{{ 'gi.company.project.fixing.text'|trans|raw }}
+    		</div>
+		</div>
 	</div>
 {% endblock %}
