@@ -17,8 +17,7 @@ class PensionController extends Controller
     	
     	$em = $this->getDoctrine()->getManager();
     	$pensions = $em->getRepository('PensionBundle:Pension')->findBy(array(
-            'enabled' => true,
-    		'summer' => false
+            'enabled' => true
     	));
     	
     	
