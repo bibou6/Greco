@@ -14,6 +14,7 @@ parameters:
     locale: 'es'
     app.path.user_images: /uploads/images/users
     app.path.pension_images: /uploads/images/pensions
+    app.path.summer_pension_images: /uploads/images/pensions
     app.path.flat_images: /uploads/images/flats
     navbar:
       home: true
@@ -24,6 +25,7 @@ parameters:
       project: true
       flat: true
       pension: true
+      summerFlat: true
       locale:
         es: true
         fr: true

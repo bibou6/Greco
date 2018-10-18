@@ -32,6 +32,7 @@ gi:
       title: Propriétés
       sale: A vendre
       rent: A louer
+      summer: été
     pension: Pensions
     locale: Langues
     
@@ -130,6 +131,8 @@ gi:
             
   flat:
     title: Propriété
+    summer:
+      title: Appartement à louer l'été !
     see: Click ici pour voir nos propriétés
     text: Découvre nos propriétés, très bien situées et proche des transports en commun à des prix comptétitifs sur le marché. Les places autour, les parcs, les pistes-cyclable, les cafés, les restaurants et les écoles proches en font un lieu où il fait bon vivre. 
     price:

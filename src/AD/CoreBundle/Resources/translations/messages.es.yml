@@ -33,6 +33,7 @@ gi:
       title: Propiedades
       sale: Ventas
       rent: Arriendos
+      summer: Verano
     pension: Pensiones
     locale: Idioma
     
@@ -119,6 +120,8 @@ gi:
       
   flat:
     title: Propiedades
+    summer:
+      title: Propiedades para arandar el verano !
     see: Haz click aquí para ver nuestras pensiones
     text: Descubre nuestras propiedades con excelente ubicación y conectividad,  precios competitivos al mercado, con espacios que te permiten tener una mejor calidad de vida, tales como  ciclovías, plazas, cafés, restaurantes y colegios.
     price:
