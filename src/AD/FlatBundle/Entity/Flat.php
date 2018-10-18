@@ -48,6 +48,13 @@ class Flat
     /**
      * @var boolean
      *
+     * @ORM\Column(name="summer", type="boolean")
+     */
+    private $summer;
+    
+    /**
+     * @var boolean
+     *
      * @ORM\Column(name="isForSale", type="boolean")
      */
     private $forSale;
@@ -345,6 +352,30 @@ class Flat
     public function getEnabled()
     {
         return $this->enabled;
+    }
+    
+    /**
+     * Set summer
+     *
+     * @param boolean $summer
+     *
+     * @return Flat
+     */
+    public function setSummer($summer)
+    {
+    	$this->summer = $summer;
+    
+    	return $this;
+    }
+    
+    /**
+     * Get summer
+     *
+     * @return boolean
+     */
+    public function getSummer()
+    {
+    	return $this->summer;
     }
 
     /**

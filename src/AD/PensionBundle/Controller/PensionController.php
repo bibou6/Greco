@@ -17,7 +17,8 @@ class PensionController extends Controller
     	
     	$em = $this->getDoctrine()->getManager();
     	$pensions = $em->getRepository('PensionBundle:Pension')->findBy(array(
-            'enabled' => true
+            'enabled' => true,
+    		'summer' => false
     	));
     	
     	
@@ -42,6 +43,7 @@ class PensionController extends Controller
     			'backgroundUrl' => $backgroundUrl
     	));
     }
+
     
     /**
      * @Security("has_role('ROLE_ADMIN')")
