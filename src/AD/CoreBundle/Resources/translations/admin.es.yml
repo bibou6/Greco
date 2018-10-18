@@ -97,6 +97,7 @@ flat:
     image: Imagen
     name: Nombre
     enabled: Activado
+    summer: Verano
     forSale: En venta
     description_spanish: Descripción en español
     description_english: Descripción en inglés

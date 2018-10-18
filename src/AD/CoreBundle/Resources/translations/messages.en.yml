@@ -32,6 +32,7 @@ gi:
       title: Propriety
       sale: Sell
       rent: Rent
+      summer: Summer flat
     pension: Pensions
     locale: Language
     
@@ -130,6 +131,8 @@ gi:
       
   flat:
     title: Propriety
+    summer:
+      title: Rent a place for summer !
     see: Click here to see our Propriety
     text: Discover our well located propriety and conectivity, competitive price on the market, spaces that allow you a better quality of life, such as parks, bikeways, coffees, restaurants and schools. 
     price:

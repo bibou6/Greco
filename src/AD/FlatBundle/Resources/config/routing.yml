@@ -27,3 +27,12 @@ admin_flatimage_sort:
     defaults: { _controller: 'FlatBundle:Flat:sort' }
     methods:  GET
 
+summer_flat_list_rent:
+    path:     /summer/rent
+    defaults: { _controller: 'FlatBundle:Flat:listSummerRent' }
+    
+summer_flat_show:
+    path:     /summer/{id}
+    defaults: { _controller: 'FlatBundle:Flat:showSummer' }
+    requirements:
+        id: \d+

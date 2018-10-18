@@ -98,6 +98,7 @@ easy_admin:
                     - { name: 'delete', icon: 'trash', label: false }
                 fields:
                     - { property: 'enabled', label: 'flat.property.enabled' }
+                    - { property: 'summer', label: 'flat.property.summer' }
                     - { property: 'forSale', label: 'flat.property.forSale' }
                     - { property: 'image', type: 'image', base_path: '%app.path.flat_images%', label: 'flat.property.image' }
                     - { property: 'name', label: 'flat.property.name' }

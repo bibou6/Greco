@@ -46,6 +46,11 @@
     			<a class="nav-link" href="{{ path('pension_list') }}">{{ 'gi.menu.pension'|trans|upper }}</a>
     		</li>
     		{% endif %}
+    		{% if navbar.pension %}
+    		<li class="nav-item {% if menu is defined and menu == 'summer_flat' %}active{% endif %}">
+    			<a class="nav-link" href="{{ path('summer_flat_list_rent') }}">{{ 'gi.menu.flat.summer'|trans|upper }}</a>
+    		</li>
+    		{% endif %}
 			<li class="nav-item dropdown">
 				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					{{ 'gi.menu.locale'|trans|upper }}
