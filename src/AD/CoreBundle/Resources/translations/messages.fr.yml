@@ -137,6 +137,8 @@ gi:
     text: Découvre nos propriétés, très bien situées et proche des transports en commun à des prix comptétitifs sur le marché. Les places autour, les parcs, les pistes-cyclable, les cafés, les restaurants et les écoles proches en font un lieu où il fait bon vivre. 
     price:
       label: Prix
+    dailyPrice:
+      label: Prix journalier
     labels:
       description: Description
       information: Information
