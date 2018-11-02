@@ -153,7 +153,7 @@ class FlatController extends Controller
     	));
     		
     		
-    	return $this->render('FlatBundle::list.html.twig', array(
+    	return $this->render('FlatBundle::summer_list.html.twig', array(
     			'menu' => 'summer_flat',
     			'flats' => $flats,
     			'backgroundUrl' => $backgroundUrl
@@ -168,7 +168,7 @@ class FlatController extends Controller
     		return $this->redirectToRoute('pension_list');
     	}
     		
-    	return $this->render('FlatBundle::show.html.twig', array(
+    	return $this->render('FlatBundle::summer_show.html.twig', array(
     			'menu' => 'summer_flat',
     			'flat' => $flat,
     			'backgroundUrl' => $backgroundUrl
