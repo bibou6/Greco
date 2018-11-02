@@ -137,6 +137,8 @@ gi:
     text: Discover our well located propriety and conectivity, competitive price on the market, spaces that allow you a better quality of life, such as parks, bikeways, coffees, restaurants and schools. 
     price:
       label: Price
+    dailyPrice:
+      label: Daily price
     labels:
       description: Description
       information: Information

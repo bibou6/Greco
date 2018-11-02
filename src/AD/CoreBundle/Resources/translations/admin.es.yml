@@ -105,6 +105,7 @@ flat:
     isFull: Lleno?
     id: Id
     price: Precio
+    dailyPrice: Precio Diario
     updatedAt: Actualizado
     imageFile: Archivo Imagen
     images: Imagenes

@@ -39,6 +39,13 @@ class Flat
     private $price;
     
     /**
+     * @var int
+     *
+     * @ORM\Column(name="daily_price", type="integer", nullable=true)
+     */
+    private $dailyPrice;
+    
+    /**
      * @var boolean
      *
      * @ORM\Column(name="isEnabled", type="boolean")
@@ -184,6 +191,30 @@ class Flat
     public function getPrice()
     {
         return $this->price;
+    }
+    
+    /**
+     * Set dailyPrice
+     *
+     * @param integer $dailyPrice
+     *
+     * @return Flat
+     */
+    public function setDailyPrice($price)
+    {
+    	$this->dailyPrice = dailyPrice;
+    
+    	return $this;
+    }
+    
+    /**
+     * Get dailyPrice
+     *
+     * @return int
+     */
+    public function getDailyPrice()
+    {
+    	return $this->dailyPrice;
     }
 
 

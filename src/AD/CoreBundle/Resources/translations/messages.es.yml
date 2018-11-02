@@ -126,6 +126,8 @@ gi:
     text: Descubre nuestras propiedades con excelente ubicación y conectividad,  precios competitivos al mercado, con espacios que te permiten tener una mejor calidad de vida, tales como  ciclovías, plazas, cafés, restaurantes y colegios.
     price:
       label: Precio
+    dailyPrice:
+      label: Precio diario
     labels:
       description: Descripción
       information: Información
