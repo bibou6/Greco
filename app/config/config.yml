@@ -10,7 +10,7 @@ imports:
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
-    version: 1.4.2
+    version: 1.4.3
     locale: 'es'
     app.path.user_images: /uploads/images/users
     app.path.pension_images: /uploads/images/pensions
