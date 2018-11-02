@@ -9,7 +9,7 @@
 {% block body %}
 <div class="container main-content">
 	<h1 class="text-center display-4 text-underlign title">
-		{{ 'gi.flat.verano.title'|trans }}
+		{{ 'gi.flat.summer.title'|trans }}
 	</h1>
 	<div class="row border-top border-warning pt-4">
 		{% for flat in flats %}
@@ -45,7 +45,7 @@
 				{% endif %}
 			</div>
 			<div class="text-right">
-				<a href="{{ path('flat_show',{'id': flat.id}) }}"
+				<a href="{{ path('summer_flat_show',{'id': flat.id}) }}"
 					class="btn btn-md btn-primary col-lg-4 col-sm-6 col-12 mt-3">{{ 'gi.button.flat.information'|trans }}</a>
 			</div>
 		</div>

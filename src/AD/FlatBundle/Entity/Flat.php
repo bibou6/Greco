@@ -200,9 +200,9 @@ class Flat
      *
      * @return Flat
      */
-    public function setDailyPrice($price)
+    public function setDailyPrice($dailyPrice)
     {
-    	$this->dailyPrice = dailyPrice;
+    	$this->dailyPrice = $dailyPrice;
     
     	return $this;
     }
