@@ -97,6 +97,7 @@ flat:
     image: Imagen
     name: Nombre
     enabled: Activado
+    rented: Arrendado
     summer: Verano
     forSale: En venta
     description_spanish: Descripción en español

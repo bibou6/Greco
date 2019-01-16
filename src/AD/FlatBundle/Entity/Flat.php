@@ -55,6 +55,13 @@ class Flat
     /**
      * @var boolean
      *
+     * @ORM\Column(name="isRented", type="boolean")
+     */
+    private $rented;
+    
+    /**
+     * @var boolean
+     *
      * @ORM\Column(name="summer", type="boolean")
      */
     private $summer;
@@ -288,6 +295,30 @@ class Flat
     public function getIsFull()
     {
         return $this->isFull;
+    }
+    
+    /**
+     * Set rented
+     *
+     * @param boolean $rented
+     *
+     * @return Flat
+     */
+    public function setRented($rented)
+    {
+    	$this->rented = $rented;
+    	
+    	return $this;
+    }
+    
+    /**
+     * Get rented
+     *
+     * @return bool
+     */
+    public function getRented()
+    {
+    	return $this->rented;
     }
     
     public function setImageFile(File $image = null)
