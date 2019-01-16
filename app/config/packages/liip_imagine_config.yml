@@ -1,13 +1,7 @@
 liip_imagine:
     resolvers:
         default:
-            web_path:
-                web_root: "%kernel.root_dir%/../web"
-                cache_prefix: "/media/cache"
-    loaders:
-        default:
-            filesystem:
-                data_root: "%kernel.root_dir%/../web"
+            web_path: ~
     filter_sets:
         cache: ~
         pension_thumbnail:
@@ -29,3 +23,33 @@ liip_imagine:
             filters:
                 relative_resize:
                     heighten: 400
+        rented_es:
+            filters:
+                # use and setup the "watermark" filter
+                watermark:
+                    # path to the watermark file (prepended with "%kernel.root_dir%")
+                    image: ../web/bundles/flat/img/rented_es.png
+                    # size of the water mark relative to the input image
+                    size: 1
+                    # set the position of the watermark
+                    position: center
+        rented_en:
+            filters:
+                # use and setup the "watermark" filter
+                watermark:
+                    # path to the watermark file (prepended with "%kernel.root_dir%")
+                    image: ../web/bundles/flat/img/rented_en.png
+                    # size of the water mark relative to the input image
+                    size: 1
+                    # set the position of the watermark
+                    position: center
+        rented_fr:
+            filters:
+                # use and setup the "watermark" filter
+                watermark:
+                    # path to the watermark file (prepended with "%kernel.root_dir%")
+                    image: ../web/bundles/flat/img/rented_fr.png
+                    # size of the water mark relative to the input image
+                    size: 1
+                    # set the position of the watermark
+                    position: center

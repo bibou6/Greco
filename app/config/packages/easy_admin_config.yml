@@ -81,6 +81,7 @@ easy_admin:
                     - { property: 'price', label: 'flat.property.price',type: 'money', type_options: { currency: 'CLP' } }
                     - { property: 'dailyPrice', label: 'flat.property.dailyPrice',type: 'money', type_options: { currency: 'CLP' } }
                     - { property: 'forSale', label: 'flat.property.forSale' }
+                    - { property: 'rented', label: 'flat.property.rented' }
                     - { property: 'summer', label: 'flat.property.summer' }
                     - { type: 'group', label: 'flat.images', css_class: 'col-sm-6' }
                     - { property: 'imageFile', type: 'vich_image', label: 'flat.property.imageFile' }
@@ -101,6 +102,7 @@ easy_admin:
                 fields:
                     - { property: 'enabled', label: 'flat.property.enabled' }
                     - { property: 'summer', label: 'flat.property.summer' }
+                    - { property: 'rented', label: 'flat.property.rented' }
                     - { property: 'forSale', label: 'flat.property.forSale' }
                     - { property: 'image', type: 'image', base_path: '%app.path.flat_images%', label: 'flat.property.image' }
                     - { property: 'name', label: 'flat.property.name' }
