@@ -28,7 +28,7 @@
 				{% endif %}
         	{% else %}
 			<img class="mw-100 px-4 py-4 rounded img-list"
-				src="{{ vich_uploader_asset(flat,'imageFile') }}" style="border: 3px solid white;"/>
+				src="{{ vich_uploader_asset(flat,'imageFile') | imagine_filter('pension_list_height') }}" style="border: 3px solid white;"/>
 			{% endif %}
 			<div class="text-center mt-3">
 				<h4 class="display-4 title">

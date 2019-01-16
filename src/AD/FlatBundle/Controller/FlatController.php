@@ -18,6 +18,8 @@ class FlatController extends Controller
 		$flats = $em->getRepository('FlatBundle:Flat')->findBy(array(
 				'enabled' => true,
 				'forSale' => true
+		),array(
+				'rented' => 'ASC'
 		));
 		 
 		 
@@ -36,6 +38,8 @@ class FlatController extends Controller
 		$flats = $em->getRepository('FlatBundle:Flat')->findBy(array(
 				'enabled' => true,
 				'forSale' => false
+		),array(
+				'rented' => 'ASC'
 		));
 			
 			
@@ -150,6 +154,8 @@ class FlatController extends Controller
     			'enabled' => true,
     			'forSale' => false,
     			'summer' => true
+    	),array(
+    			'rented' => 'ASC'
     	));
     		
     		

@@ -16,40 +16,52 @@ liip_imagine:
         pension_list_height:
             quality: 80
             filters:
-                relative_resize:
-                    heighten: 250
+                scale:
+                    # input 1200x1600px -> output 750x1000px (relative down-scale)
+                    dim: [ 500, 350 ]
         pension_show_height:
             quality: 100
             filters:
                 relative_resize:
                     heighten: 400
         rented_es:
+            quality: 80
             filters:
                 # use and setup the "watermark" filter
                 watermark:
                     # path to the watermark file (prepended with "%kernel.root_dir%")
-                    image: ../web/bundles/flat/img/rented_es.png
+                    image: ../web/bundles/flat/img/rented_arrow_es.png
                     # size of the water mark relative to the input image
                     size: 1
                     # set the position of the watermark
-                    position: center
+                    position: topleft
+                scale:
+
+                    # input 1200x1600px -> output 750x1000px (relative down-scale)
+                    dim: [ 500, 350 ]
         rented_en:
             filters:
                 # use and setup the "watermark" filter
                 watermark:
                     # path to the watermark file (prepended with "%kernel.root_dir%")
-                    image: ../web/bundles/flat/img/rented_en.png
+                    image: ../web/bundles/flat/img/rented_arrow_en.png
                     # size of the water mark relative to the input image
                     size: 1
                     # set the position of the watermark
-                    position: center
+                    position: topleft
+                scale:
+                    # input 1200x1600px -> output 750x1000px (relative down-scale)
+                    dim: [ 500, 350 ]
         rented_fr:
             filters:
                 # use and setup the "watermark" filter
                 watermark:
                     # path to the watermark file (prepended with "%kernel.root_dir%")
-                    image: ../web/bundles/flat/img/rented_fr.png
+                    image: ../web/bundles/flat/img/rented_arrow_fr.png
                     # size of the water mark relative to the input image
                     size: 1
-                    # set the position of the watermark
-                    position: center
+                    # set the position of the wposition: topleft
+                    position: topleft
+                scale:
+                    # input 1200x1600px -> output 750x1000px (relative down-scale)
+                    dim: [ 500, 350 ]
