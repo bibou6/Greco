@@ -16,19 +16,40 @@
 		<div
 			class="col-lg-12 col-xl-6 text-center px-4 pt-4 {% if loop.index0 is divisible by(2) and loop.index < loop.length %} p-right-2x-padding p-border-right {% endif %} {% if loop.index < loop.length %} lg-screen-border-bottom {% endif %}">
 			{% if flat.rented %}
-				{% if app.request.getLocale() == 'fr' %}
-        			<img class="mw-100 px-4 py-4 rounded img-list"
-        				src="{{ vich_uploader_asset(flat,'imageFile')| imagine_filter('rented_fr') }}" style="border: 3px solid white;"/>
-        		{% elseif app.request.getLocale() == 'en' %}
-        			<img class="mw-100 px-4 py-4 rounded img-list"
-        				src="{{ vich_uploader_asset(flat,'imageFile')| imagine_filter('rented_en') }}" style="border: 3px solid white;"/>
-        		{% elseif app.request.getLocale() == 'es' %}
-        			<img class="mw-100 px-4 py-4 rounded img-list"
-        				src="{{ vich_uploader_asset(flat,'imageFile')| imagine_filter('rented_es') }}" style="border: 3px solid white;"/>
-				{% endif %}
-        	{% else %}
+			{% if flat.forSale %}
+			{% if app.request.getLocale() == 'fr' %}
 			<img class="mw-100 px-4 py-4 rounded img-list"
-				src="{{ vich_uploader_asset(flat,'imageFile') | imagine_filter('pension_list_height') }}" style="border: 3px solid white;"/>
+				src="{{ vich_uploader_asset(flat,'imageFile')| imagine_filter('sold_fr') }}"
+				style="border: 3px solid white;" />
+			{% elseif app.request.getLocale() == 'en' %}
+			<img class="mw-100 px-4 py-4 rounded img-list"
+				src="{{ vich_uploader_asset(flat,'imageFile')| imagine_filter('sold_en') }}"
+				style="border: 3px solid white;" />
+			{% elseif app.request.getLocale() == 'es' %}
+			<img class="mw-100 px-4 py-4 rounded img-list"
+				src="{{ vich_uploader_asset(flat,'imageFile')| imagine_filter('sold_es') }}"
+				style="border: 3px solid white;" />
+			{% endif %}
+
+			{% else %}
+			{% if app.request.getLocale() == 'fr' %}
+			<img class="mw-100 px-4 py-4 rounded img-list"
+				src="{{ vich_uploader_asset(flat,'imageFile')| imagine_filter('rented_fr') }}"
+				style="border: 3px solid white;" />
+			{% elseif app.request.getLocale() == 'en' %}
+			<img class="mw-100 px-4 py-4 rounded img-list"
+				src="{{ vich_uploader_asset(flat,'imageFile')| imagine_filter('rented_en') }}"
+				style="border: 3px solid white;" />
+			{% elseif app.request.getLocale() == 'es' %}
+			<img class="mw-100 px-4 py-4 rounded img-list"
+				src="{{ vich_uploader_asset(flat,'imageFile')| imagine_filter('rented_es') }}"
+				style="border: 3px solid white;" />
+			{% endif %}
+			{% endif %}
+			{% else %}
+			<img class="mw-100 px-4 py-4 rounded img-list"
+				src="{{ vich_uploader_asset(flat,'imageFile') | imagine_filter('pension_list_height') }}"
+				style="border: 3px solid white;" />
 			{% endif %}
 			<div class="text-center mt-3">
 				<h4 class="display-4 title">
