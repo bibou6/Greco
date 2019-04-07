@@ -65,3 +65,45 @@ liip_imagine:
                 scale:
                     # input 1200x1600px -> output 750x1000px (relative down-scale)
                     dim: [ 500, 350 ]
+        sold_es:
+            quality: 80
+            filters:
+                # use and setup the "watermark" filter
+                watermark:
+                    # path to the watermark file (prepended with "%kernel.root_dir%")
+                    image: ../web/bundles/flat/img/sold_arrow_es.png
+                    # size of the water mark relative to the input image
+                    size: 1
+                    # set the position of the watermark
+                    position: topleft
+                scale:
+
+                    # input 1200x1600px -> output 750x1000px (relative down-scale)
+                    dim: [ 500, 350 ]
+        sold_en:
+            filters:
+                # use and setup the "watermark" filter
+                watermark:
+                    # path to the watermark file (prepended with "%kernel.root_dir%")
+                    image: ../web/bundles/flat/img/sold_arrow_en.png
+                    # size of the water mark relative to the input image
+                    size: 1
+                    # set the position of the watermark
+                    position: topleft
+                scale:
+                    # input 1200x1600px -> output 750x1000px (relative down-scale)
+                    dim: [ 500, 350 ]
+        sold_fr:
+            filters:
+                # use and setup the "watermark" filter
+                watermark:
+                    # path to the watermark file (prepended with "%kernel.root_dir%")
+                    image: ../web/bundles/flat/img/sold_arrow_fr.png
+                    # size of the water mark relative to the input image
+                    size: 1
+                    # set the position of the wposition: topleft
+                    position: topleft
+                scale:
+                    # input 1200x1600px -> output 750x1000px (relative down-scale)
+                    dim: [ 500, 350 ]
+                    
