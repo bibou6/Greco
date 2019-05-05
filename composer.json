@@ -5,7 +5,7 @@
 	"autoload" : {
 		"psr-4" : {
 			"" : "src/",
-			"vendor" : "vendor/"
+			"vendor\\" : "vendor/"
 		},
 		"classmap" : [
 			"app/AppKernel.php",
@@ -40,7 +40,12 @@
 		"symfony/monolog-bundle" : "^3.1.0",
 		"symfony/polyfill-apcu" : "^1.0",
 		"symfony/swiftmailer-bundle" : "^2.3.10",
-		"symfony/symfony" : "3.3.*",
+		"symfony/symfony" : "3.4.*",
+		"setasign/fpdf" : "1.8.1",
+		"setasign/fpdi" : "^2.1",
+		"setasign/fpdi-fpdf" : "2.2",
+		"setasign/fpdi-tcpdf" : "^2.1",
+		"setasign/fpdi-tfpdf" : "^2.1",
 		"twig/twig" : "^1.0||^2.0",
 		"vich/uploader-bundle" : "^1.4"
 	},

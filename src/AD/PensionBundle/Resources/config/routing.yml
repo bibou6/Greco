@@ -22,3 +22,11 @@ admin_pensionimage_sort:
     path:     /image/sort/{id}/{position}
     defaults: { _controller: 'PensionBundle:Pension:sort' }
     methods:  GET
+
+pension_publish:
+    path:     /publish
+    defaults: { _controller: 'PensionBundle:Pension:publish' }
+    
+pension_pdf_details:
+    path:     /pdf/details
+    defaults: { _controller: 'PensionBundle:Pension:pdfDetails' }

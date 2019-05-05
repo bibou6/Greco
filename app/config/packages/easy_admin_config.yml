@@ -25,12 +25,14 @@ easy_admin:
                 fields:
                     - { type: 'group', label: 'pension.information', css_class: 'col-sm-6' }
                     - { property: 'name', label: 'pension.property.name' }
+                    - { property: 'title', label: 'pension.property.title' }
                     - { property: 'minimumPrice', label: 'pension.property.minimumPrice',type: 'money', type_options: { currency: 'CLP' } }
                     - { property: 'maximumPrice', label: 'pension.property.maximumPrice',type: 'money', type_options: { currency: 'CLP' } }
                     - { property: 'roomAmount', label: 'pension.property.roomAmount'}
                     - { type: 'group', label: 'pension.images', css_class: 'col-sm-6' }
                     - { property: 'imageFile', type: 'vich_image', label: 'pension.property.imageFile' }
                     - { type: 'group', label: 'pension.description' }
+                    - { property: 'privateInformation', type: 'ckeditor', label: 'pension.property.privateInformation' }
                     - { property: 'description_spanish', type: 'ckeditor', label: 'pension.property.description_spanish' }
                     - { property: 'description_english', type: 'ckeditor', label: 'pension.property.description_english' }
                     - { property: 'description_french', type: 'ckeditor', label: 'pension.property.description_french' }
@@ -59,9 +61,11 @@ easy_admin:
             show:
                 fields:
                     - { property: 'name', label: 'pension.property.name' }
+                    - { property: 'title', label: 'pension.property.title' }
                     - { property: 'minimumPrice',label: 'pension.property.minimumPrice' }
                     - { property: 'maximumPrice', label: 'pension.property.maximumPrice' }
                     - { property: 'image', type: 'image', base_path: '%app.path.pension_images%', label: 'pension.property.image' }
+                    - { property: 'privateInformation', label: 'pension.property.privateInformation' }
                     - { property: 'description_spanish', label: 'pension.property.description_spanish' }
                     - { property: 'description_english', label: 'pension.property.description_english' }
                     - { property: 'description_french', label: 'pension.property.description_french' }
@@ -78,6 +82,7 @@ easy_admin:
                 fields:
                     - { type: 'group', label: 'flat.information', css_class: 'col-sm-6' }
                     - { property: 'name', label: 'flat.property.name' }
+                    - { property: 'title', label: 'flat.property.title' }
                     - { property: 'price', label: 'flat.property.price',type: 'money', type_options: { currency: 'CLP' } }
                     - { property: 'dailyPrice', label: 'flat.property.dailyPrice',type: 'money', type_options: { currency: 'CLP' } }
                     - { property: 'forSale', label: 'flat.property.forSale' }
@@ -86,6 +91,7 @@ easy_admin:
                     - { type: 'group', label: 'flat.images', css_class: 'col-sm-6' }
                     - { property: 'imageFile', type: 'vich_image', label: 'flat.property.imageFile' }
                     - { type: 'group', label: 'flat.description' }
+                    - { property: 'privateInformation', type: 'ckeditor', label: 'flat.property.privateInformation' }
                     - { property: 'description_spanish', type: 'ckeditor', label: 'flat.property.description_spanish' }
                     - { property: 'description_english', type: 'ckeditor', label: 'flat.property.description_english' }
                     - { property: 'description_french', type: 'ckeditor', label: 'flat.property.description_french' }
@@ -117,8 +123,10 @@ easy_admin:
             show:
                 fields:
                     - { property: 'name', label: 'flat.property.name' }
+                    - { property: 'title', label: 'flat.property.title' }
                     - { property: 'price', label: 'flat.property.price' }
                     - { property: 'image', type: 'image', base_path: '%app.path.flat_images%', label: 'flat.property.image' }
+                    - { property: 'privateInformation', label: 'flat.property.privateInformation' }
                     - { property: 'description_spanish', label: 'flat.property.description_spanish' }
                     - { property: 'description_english', label: 'flat.property.description_english' }
                     - { property: 'description_french', label: 'flat.property.description_french' }

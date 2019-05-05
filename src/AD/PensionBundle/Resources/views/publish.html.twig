@@ -1,0 +1,7 @@
+{% block body %}
+{% for pension in pensions %}
+<div class="title">{{ pension.title }}</div>
+<div class="price">{{ pension.minimumPrice }}</div>
+<div class="description">{{ pension.descriptionSpanish|raw  }}</div>
+{% endfor %}
+{% endblock %}
