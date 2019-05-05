@@ -97,23 +97,9 @@ class Flat
     /**
      * @var string
      *
-     * @ORM\Column(name="privateInformation", type="text", nullable=true)
-     */
-    private $privateInformation;
-    
-    /**
-     * @var string
-     *
      * @ORM\Column(name="name", type="string", length=255)
      */
     private $name;
-    
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="title", type="string", length=255)
-     */
-    private $title;
 
     /**
      * @var int
@@ -548,53 +534,5 @@ class Flat
     public function getForSale()
     {
         return $this->forSale;
-    }
-
-    /**
-     * Set title.
-     *
-     * @param string $title
-     *
-     * @return Flat
-     */
-    public function setTitle($title)
-    {
-        $this->title = $title;
-
-        return $this;
-    }
-
-    /**
-     * Get title.
-     *
-     * @return string
-     */
-    public function getTitle()
-    {
-        return $this->title;
-    }
-
-    /**
-     * Set privateInformation.
-     *
-     * @param string|null $privateInformation
-     *
-     * @return Flat
-     */
-    public function setPrivateInformation($privateInformation = null)
-    {
-        $this->privateInformation = $privateInformation;
-
-        return $this;
-    }
-
-    /**
-     * Get privateInformation.
-     *
-     * @return string|null
-     */
-    public function getPrivateInformation()
-    {
-        return $this->privateInformation;
     }
 }

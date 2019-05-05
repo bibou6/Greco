@@ -36,7 +36,7 @@
 			<attribute name="composer" value="vendor"/>
 		</attributes>
 	</buildpathentry>
-	<buildpathentry kind="src" path="vendor/doctrine/annotations/lib/Doctrine/Common/Annotations">
+	<buildpathentry kind="src" path="vendor/doctrine/annotations/lib">
 		<attributes>
 			<attribute name="composer" value="vendor"/>
 		</attributes>
@@ -46,7 +46,7 @@
 			<attribute name="composer" value="vendor"/>
 		</attributes>
 	</buildpathentry>
-	<buildpathentry kind="src" path="vendor/doctrine/collections/lib/Doctrine/Common/Collections">
+	<buildpathentry kind="src" path="vendor/doctrine/collections/lib">
 		<attributes>
 			<attribute name="composer" value="vendor"/>
 		</attributes>
@@ -56,12 +56,12 @@
 			<attribute name="composer" value="vendor"/>
 		</attributes>
 	</buildpathentry>
-	<buildpathentry kind="src" path="vendor/doctrine/data-fixtures/lib/Doctrine/Common/DataFixtures">
+	<buildpathentry kind="src" path="vendor/doctrine/data-fixtures/lib">
 		<attributes>
 			<attribute name="composer" value="vendor"/>
 		</attributes>
 	</buildpathentry>
-	<buildpathentry kind="src" path="vendor/doctrine/dbal/lib/Doctrine/DBAL">
+	<buildpathentry kind="src" path="vendor/doctrine/dbal/lib">
 		<attributes>
 			<attribute name="composer" value="vendor"/>
 		</attributes>
@@ -81,12 +81,7 @@
 			<attribute name="composer" value="vendor"/>
 		</attributes>
 	</buildpathentry>
-	<buildpathentry kind="src" path="vendor/doctrine/event-manager/lib/Doctrine/Common">
-		<attributes>
-			<attribute name="composer" value="vendor"/>
-		</attributes>
-	</buildpathentry>
-	<buildpathentry kind="src" path="vendor/doctrine/inflector/lib/Doctrine/Common/Inflector">
+	<buildpathentry kind="src" path="vendor/doctrine/inflector/lib">
 		<attributes>
 			<attribute name="composer" value="vendor"/>
 		</attributes>
@@ -101,17 +96,7 @@
 			<attribute name="composer" value="vendor"/>
 		</attributes>
 	</buildpathentry>
-	<buildpathentry kind="src" path="vendor/doctrine/orm/lib/Doctrine/ORM">
-		<attributes>
-			<attribute name="composer" value="vendor"/>
-		</attributes>
-	</buildpathentry>
-	<buildpathentry kind="src" path="vendor/doctrine/persistence/lib/Doctrine/Common">
-		<attributes>
-			<attribute name="composer" value="vendor"/>
-		</attributes>
-	</buildpathentry>
-	<buildpathentry kind="src" path="vendor/doctrine/reflection/lib/Doctrine/Common">
+	<buildpathentry kind="src" path="vendor/doctrine/orm/lib">
 		<attributes>
 			<attribute name="composer" value="vendor"/>
 		</attributes>
@@ -191,7 +176,12 @@
 			<attribute name="composer" value="vendor"/>
 		</attributes>
 	</buildpathentry>
-	<buildpathentry kind="src" path="vendor/pagerfanta/pagerfanta/src/Pagerfanta">
+	<buildpathentry kind="src" path="vendor/pagerfanta/pagerfanta/src">
+		<attributes>
+			<attribute name="composer" value="vendor"/>
+		</attributes>
+	</buildpathentry>
+	<buildpathentry kind="src" path="vendor/paragonie/random_compat/lib">
 		<attributes>
 			<attribute name="composer" value="vendor"/>
 		</attributes>
@@ -241,27 +231,7 @@
 			<attribute name="composer" value="vendor"/>
 		</attributes>
 	</buildpathentry>
-	<buildpathentry kind="src" path="vendor/sensiolabs/security-checker/SensioLabs/Security">
-		<attributes>
-			<attribute name="composer" value="vendor"/>
-		</attributes>
-	</buildpathentry>
-	<buildpathentry kind="src" path="vendor/setasign/fpdf">
-		<attributes>
-			<attribute name="composer" value="vendor"/>
-		</attributes>
-	</buildpathentry>
-	<buildpathentry kind="src" path="vendor/setasign/fpdi/src">
-		<attributes>
-			<attribute name="composer" value="vendor"/>
-		</attributes>
-	</buildpathentry>
-	<buildpathentry excluding="font/unifont/" kind="src" path="vendor/setasign/tfpdf">
-		<attributes>
-			<attribute name="composer" value="vendor"/>
-		</attributes>
-	</buildpathentry>
-	<buildpathentry kind="src" path="vendor/setasign/tfpdf/font/unifont">
+	<buildpathentry kind="src" path="vendor/sensiolabs/security-checker">
 		<attributes>
 			<attribute name="composer" value="vendor"/>
 		</attributes>
@@ -292,11 +262,6 @@
 		</attributes>
 	</buildpathentry>
 	<buildpathentry kind="src" path="vendor/symfony/polyfill-apcu">
-		<attributes>
-			<attribute name="composer" value="vendor"/>
-		</attributes>
-	</buildpathentry>
-	<buildpathentry kind="src" path="vendor/symfony/polyfill-ctype">
 		<attributes>
 			<attribute name="composer" value="vendor"/>
 		</attributes>
@@ -376,26 +341,6 @@
 			<attribute name="composer" value="source"/>
 		</attributes>
 	</buildpathentry>
-	<buildpathentry kind="src" path="vendor/tecnickcom/tcpdf/config">
-		<attributes>
-			<attribute name="composer" value="vendor"/>
-		</attributes>
-	</buildpathentry>
-	<buildpathentry excluding="config/|include/" kind="src" path="vendor/tecnickcom/tcpdf">
-		<attributes>
-			<attribute name="composer" value="vendor"/>
-		</attributes>
-	</buildpathentry>
-	<buildpathentry excluding="barcodes/" kind="src" path="vendor/tecnickcom/tcpdf/include">
-		<attributes>
-			<attribute name="composer" value="vendor"/>
-		</attributes>
-	</buildpathentry>
-	<buildpathentry kind="src" path="vendor/tecnickcom/tcpdf/include/barcodes">
-		<attributes>
-			<attribute name="composer" value="vendor"/>
-		</attributes>
-	</buildpathentry>
 	<buildpathentry kind="src" path="vendor/twig/extensions/lib">
 		<attributes>
 			<attribute name="composer" value="vendor"/>
@@ -412,11 +357,6 @@
 		</attributes>
 	</buildpathentry>
 	<buildpathentry kind="src" path="vendor/twig/twig/src">
-		<attributes>
-			<attribute name="composer" value="vendor"/>
-		</attributes>
-	</buildpathentry>
-	<buildpathentry excluding="behat/transliterator/src/|composer/|coresphere/console-bundle/|doctrine/annotations/lib/Doctrine/Common/Annotations/|doctrine/cache/lib/Doctrine/Common/Cache/|doctrine/collections/lib/Doctrine/Common/Collections/|doctrine/common/lib/Doctrine/Common/|doctrine/data-fixtures/lib/Doctrine/Common/DataFixtures/|doctrine/dbal/lib/Doctrine/DBAL/|doctrine/doctrine-bundle/|doctrine/doctrine-cache-bundle/|doctrine/doctrine-fixtures-bundle/|doctrine/event-manager/lib/Doctrine/Common/|doctrine/inflector/lib/Doctrine/Common/Inflector/|doctrine/instantiator/src/Doctrine/Instantiator/|doctrine/lexer/lib/|doctrine/orm/lib/Doctrine/ORM/|doctrine/persistence/lib/Doctrine/Common/|doctrine/reflection/lib/Doctrine/Common/|easycorp/easyadmin-bundle/legacy/|easycorp/easyadmin-bundle/src/|egeloen/ckeditor-bundle/|egeloen/json-builder/src/|fig/link-util/src/|friendsofsymfony/user-bundle/|gedmo/doctrine-extensions/lib/Gedmo/|imagine/imagine/lib/|incenteev/composer-parameter-handler/|jdorn/sql-formatter/lib/|jms/metadata/src/|kriswallsmith/assetic/src/|leafo/scssphp/src/|liip/imagine-bundle/|monolog/monolog/src/Monolog/|pagerfanta/pagerfanta/src/Pagerfanta/|patchwork/jsqueeze/class/|psr/cache/src/|psr/container/src/|psr/link/src/|psr/log/Psr/Log/|psr/simple-cache/src/|sensio/distribution-bundle/|sensio/framework-extra-bundle/|sensio/generator-bundle/|sensiolabs/security-checker/SensioLabs/Security/|setasign/fpdf/|setasign/fpdi/src/|setasign/tfpdf/|stof/doctrine-extensions-bundle/|swiftmailer/swiftmailer/lib/|symfony/assetic-bundle/|symfony/monolog-bundle/|symfony/phpunit-bridge/|symfony/polyfill-apcu/|symfony/polyfill-ctype/|symfony/polyfill-intl-icu/|symfony/polyfill-mbstring/|symfony/polyfill-php56/|symfony/polyfill-php70/|symfony/polyfill-util/|symfony/swiftmailer-bundle/|symfony/symfony/src/Symfony/Bridge/Doctrine/|symfony/symfony/src/Symfony/Bridge/Monolog/|symfony/symfony/src/Symfony/Bridge/ProxyManager/|symfony/symfony/src/Symfony/Bridge/Twig/|symfony/symfony/src/Symfony/Bundle/|symfony/symfony/src/Symfony/Component/|tecnickcom/tcpdf/|twig/extensions/lib/|twig/extensions/src/|twig/twig/lib/|twig/twig/src/|vich/uploader-bundle/" kind="src" path="vendor">
 		<attributes>
 			<attribute name="composer" value="vendor"/>
 		</attributes>

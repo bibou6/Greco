@@ -2,14 +2,12 @@
 
 namespace AD\FlatBundle\Controller;
 
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use AD\FlatBundle\Entity\Flat;
 use AD\FlatBundle\Entity\FlatImage;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
-
 class FlatController extends Controller
 {
 	public function listSaleAction()
@@ -181,45 +179,6 @@ class FlatController extends Controller
     			'flat' => $flat,
     			'backgroundUrl' => $backgroundUrl
     	));
-    }
-    
-    public function publishAction(){
-    	$em = $this->getDoctrine()->getManager();
-    	$flats = $em->getRepository('FlatBundle:Flat')->findBy(array(
-    			'enabled' => true,
-    			'summer' => false
-    	),array(
-    			'rented' => 'ASC'
-    	));
-    	
-    	
-    	return $this->render('FlatBundle::publish.html.twig', array(
-    			'flats' => $flats
-    	));
-    }
-    
-    /**
-     * @Security("has_role('ROLE_ADMIN')")
-     */
-    public function pdfDetailsAction(){
-    	$em = $this->getDoctrine()->getManager();
-    	$flats = $em->getRepository('FlatBundle:Flat')->findBy(array(
-    			'enabled' => true,
-    			'summer' => false
-    	),array(
-    			'rented' => 'ASC'
-    	));
-    	
-    	$pdfService = $this->get ( 'flat_bundle.pdf' );
-    	$options = $pdfService->getOptions($flats);
-    	
-    	$pdf = $pdfService->generateRecapPdf($options);
-    	
-    	return new Response($pdf->Output(null,"Inventario_departamento_Greco.pdf",
-    			true), 200, array(
-    					'Content-Type' => 'application/pdf')
-    			);
-    	
     }
     
     
