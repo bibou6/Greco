@@ -8,8 +8,6 @@ use AD\FlatBundle\Service\PdfFlatService;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
-use AD\FlatBundle\Entity\Flat;
-use AD\FlatBundle\Entity\FlatImage;
 use Symfony\Component\HttpFoundation\JsonResponse;
 class FlatController extends Controller
 {
