@@ -8,9 +8,7 @@ use AD\PensionBundle\Service\PdfPensionService;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
-use AD\PensionBundle\Entity\PensionImage;
 use Symfony\Component\HttpFoundation\JsonResponse;
-use AD\PensionBundle\Entity\Pension;
 
 class PensionController extends Controller
 {
