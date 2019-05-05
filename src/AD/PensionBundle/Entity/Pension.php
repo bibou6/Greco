@@ -3,6 +3,7 @@
 namespace AD\PensionBundle\Entity;
 
 use AD\PensionBundle\Entity\PensionImage;
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
@@ -73,6 +74,13 @@ class Pension
      * @ORM\Column(name="descriptionFrench", type="text", nullable=true)
      */
     private $descriptionFrench;
+    
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="privateInformation", type="text", nullable=true)
+     */
+    private $privateInformation;
 
     /**
      * @var string
@@ -81,6 +89,13 @@ class Pension
      */
     private $name;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="title", type="string", length=255)
+     */
+    private $title;
+    
     /**
      * @var int
      *
@@ -444,5 +459,53 @@ class Pension
     public function getDescriptionFrench()
     {
         return $this->descriptionFrench;
+    }
+
+    /**
+     * Set title.
+     *
+     * @param string $title
+     *
+     * @return Pension
+     */
+    public function setTitle($title)
+    {
+        $this->title = $title;
+
+        return $this;
+    }
+
+    /**
+     * Get title.
+     *
+     * @return string
+     */
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
+    /**
+     * Set privateInformation.
+     *
+     * @param string|null $privateInformation
+     *
+     * @return Pension
+     */
+    public function setPrivateInformation($privateInformation = null)
+    {
+        $this->privateInformation = $privateInformation;
+
+        return $this;
+    }
+
+    /**
+     * Get privateInformation.
+     *
+     * @return string|null
+     */
+    public function getPrivateInformation()
+    {
+        return $this->privateInformation;
     }
 }
