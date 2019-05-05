@@ -34,6 +34,7 @@ class PdfFlatService {
 
 		$this->addTitle ( $pdf, $options, $flat->getName () );
 		$this->addSubtitleTitle ( $pdf, $options, "Descripción" );
+		$this->addText($pdf, $options, "Título: ".$flat->getTitle());
 		$this->addText ( $pdf, $options, $this->WriteHTML ($pdf,$options, $flat->getDescriptionSpanish () ) );
 
 		$this->addSubtitleTitle ( $pdf, $options, "Información privada" );

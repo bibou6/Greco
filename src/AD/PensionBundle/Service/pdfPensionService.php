@@ -34,6 +34,7 @@ class PdfPensionService {
 
 		$this->addTitle ( $pdf, $options, $pension->getName () );
 		$this->addSubtitleTitle ( $pdf, $options, "Descripción" );
+		$this->addText($pdf, $options, "Título: ".$pension->getTitle());
 		$this->addText ( $pdf, $options, $this->WriteHTML ($pdf,$options, $pension->getDescriptionSpanish () ) );
 
 		$this->addSubtitleTitle ( $pdf, $options, "Información privada" );

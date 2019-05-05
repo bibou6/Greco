@@ -50,9 +50,7 @@ pension:
     roomAmount: Numero de habitaciones
     image: Imagen
     name: Nombre
-    title: Titulo (para publicar)
     enabled: Activado
-    privateInformation: Información privada
     description_spanish: Descripción en español
     description_english: Descripción en inglés
     description_french: Descripción en francés
@@ -98,12 +96,10 @@ flat:
   property:
     image: Imagen
     name: Nombre
-    title: Titulo (para publicar)
     enabled: Activado
     rented: Arrendado
     summer: Verano
     forSale: En venta
-    privateInformation: Información privada
     description_spanish: Descripción en español
     description_english: Descripción en inglés
     description_french: Descripción en francés

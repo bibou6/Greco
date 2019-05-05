@@ -4,12 +4,11 @@ namespace AD\FlatBundle\Controller;
 
 use AD\FlatBundle\Entity\Flat;
 use AD\FlatBundle\Entity\FlatImage;
+use AD\FlatBundle\Service\PdfFlatService;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
-
+use Symfony\Component\HttpFoundation\JsonResponse;
 class FlatController extends Controller
 {
 	public function listSaleAction()
@@ -187,9 +186,8 @@ class FlatController extends Controller
     	$em = $this->getDoctrine()->getManager();
     	$flats = $em->getRepository('FlatBundle:Flat')->findBy(array(
     			'enabled' => true,
-    			'summer' => false
-    	),array(
-    			'rented' => 'ASC'
+    			'summer' => false,
+    			'rented' => false
     	));
     	
     	
@@ -205,9 +203,8 @@ class FlatController extends Controller
     	$em = $this->getDoctrine()->getManager();
     	$flats = $em->getRepository('FlatBundle:Flat')->findBy(array(
     			'enabled' => true,
-    			'summer' => false
-    	),array(
-    			'rented' => 'ASC'
+    			'summer' => false,
+    			'rented' => false
     	));
     	
     	$pdfService = $this->get ( 'flat_bundle.pdf' );
