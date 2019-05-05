@@ -60,7 +60,18 @@
 			        {% if navbar.locale.en %}<a class="dropdown-item" href="{{ path(route, params|merge({ _locale: 'en' })) }}">{{ 'gi.locale.en'|trans|upper }}</a>{% endif %}
 					{% if navbar.locale.es %}<a class="dropdown-item" href="{{ path(route, params|merge({ _locale: 'es' })) }}">{{ 'gi.locale.es'|trans|upper }}</a>{% endif %}
 				</div>
-			</li>    		
+			</li>  
+			{% if is_granted('ROLE_ADMIN') %}
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					{{ 'Inventario'|upper }}
+				</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+			        <a class="dropdown-item" target="_blank" href="{{ path('pension_pdf_details') }}">{{ 'Departamento'|upper }}</a>
+			        <a class="dropdown-item" target="_blank" href="{{ path('flat_pdf_details') }}">{{ 'Pension'|upper }}</a>
+				</div>
+			</li>   
+			{% endif %} 		  		
     	</ul>
 	</div>
 	

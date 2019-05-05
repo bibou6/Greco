@@ -4,11 +4,12 @@ namespace AD\PensionBundle\Controller;
 
 use AD\PensionBundle\Entity\Pension;
 use AD\PensionBundle\Entity\PensionImage;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use AD\PensionBundle\Service\PdfPensionService;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\Request;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class PensionController extends Controller
 {
@@ -124,4 +125,43 @@ class PensionController extends Controller
 		
 		
 	}
+	
+	public function publishAction()
+	{
+		
+		$em = $this->getDoctrine()->getManager();
+		$pensions = $em->getRepository('PensionBundle:Pension')->findBy(array(
+				'enabled' => true,
+		));
+		
+		
+		return $this->render('PensionBundle::publish.html.twig', array(
+				'pensions' => $pensions,
+		));
+	}
+	
+	/**
+	 * @Security("has_role('ROLE_ADMIN')")
+	 */
+	public function pdfDetailsAction(){
+		$em = $this->getDoctrine()->getManager();
+		$flats = $em->getRepository('PensionBundle:Pension')->findBy(array(
+				'enabled' => true,
+		));
+		
+		$pdfService = $this->get ( 'pension_bundle.pdf' );
+		$options = $pdfService->getOptions($flats);
+		
+		$pdf = $pdfService->generateRecapPdf($options);
+		
+		return new Response($pdf->Output(null,"Inventario_departamento_Greco.pdf",
+				true), 200, array(
+						'Content-Type' => 'application/pdf')
+				);
+		
+	}
+	
+	
+	
+	
 }

@@ -2,3 +2,12 @@ services:
 #    pension.example:
 #        class: AD\PensionBundle\Example
 #        arguments: ["@service_id", "plain_value", "%parameter%"]
+
+  AD\FlatBundle\Service\PdfFlatService:
+    arguments: ["@translator"]
+    
+  flat_bundle.pdf:
+    alias: AD\FlatBundle\Service\PdfFlatService
+    public: true
+    autowire: true
+    
