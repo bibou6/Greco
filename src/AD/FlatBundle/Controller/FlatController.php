@@ -208,7 +208,7 @@ class FlatController extends Controller
     			'rented' => false
     	));
     	
-    	$pdfService = $this->get ( 'flat_bundle.pdf' );
+    	$pdfService = $this->container->get ( 'flat_bundle.pdf' );
     	$options = $pdfService->getOptions($flats);
     	
     	$pdf = $pdfService->generateRecapPdf($options);
