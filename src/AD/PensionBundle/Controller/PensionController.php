@@ -2,6 +2,9 @@
 
 namespace AD\PensionBundle\Controller;
 
+use AD\PensionBundle\Entity\Pension;
+use AD\PensionBundle\Entity\PensionImage;
+use AD\PensionBundle\Service\PdfPensionService;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
