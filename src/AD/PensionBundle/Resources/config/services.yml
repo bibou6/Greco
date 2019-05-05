@@ -2,3 +2,11 @@ services:
 #    pension.example:
 #        class: AD\PensionBundle\Example
 #        arguments: ["@service_id", "plain_value", "%parameter%"]
+
+  AD\PensionBundle\Service\PdfPensionService:
+    arguments: ["@translator"]
+    
+  pension_bundle.pdf:
+    alias: AD\PensionBundle\Service\PdfPensionService
+    public: true
+    autowire: true

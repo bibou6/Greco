@@ -36,3 +36,12 @@ summer_flat_show:
     defaults: { _controller: 'FlatBundle:Flat:showSummer' }
     requirements:
         id: \d+
+        
+flat_publish:
+    path:     /publish
+    defaults: { _controller: 'FlatBundle:Flat:publish' }
+    
+flat_pdf_details:
+    path:     /pdf/details
+    defaults: { _controller: 'FlatBundle:Flat:pdfDetails' }
+    

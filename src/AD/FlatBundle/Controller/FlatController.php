@@ -4,11 +4,12 @@ namespace AD\FlatBundle\Controller;
 
 use AD\FlatBundle\Entity\Flat;
 use AD\FlatBundle\Entity\FlatImage;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use AD\FlatBundle\Service\PdfFlatService;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\Request;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 class FlatController extends Controller
 {
 	public function listSaleAction()
