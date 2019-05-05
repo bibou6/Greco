@@ -25,7 +25,7 @@ admin_pensionimage_sort:
 
 pension_publish:
     path:     /publish
-    defaults: { _controller: 'PensionBundle:Flat:publish' }
+    defaults: { _controller: 'PensionBundle:Pension:publish' }
     
 pension_pdf_details:
     path:     /pdf/details
