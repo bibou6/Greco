@@ -149,7 +149,7 @@ class PensionController extends Controller
 				'enabled' => true,
 		));
 		
-		$pdfService = $this->get ( 'pension_bundle.pdf' );
+		$pdfService = $this->container->get ( 'pension_bundle.pdf' );
 		$options = $pdfService->getOptions($flats);
 		
 		$pdf = $pdfService->generateRecapPdf($options);
