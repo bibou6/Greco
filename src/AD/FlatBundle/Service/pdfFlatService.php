@@ -7,10 +7,6 @@ use Symfony\Component\Translation\TranslatorInterface;
 use setasign\Fpdi\Fpdi;
 
 class PdfFlatService {
-	private $translator;
-	public function __construct(TranslatorInterface $translator) {
-		$this->translator = $translator;
-	}
 
 	/*
 	 *
