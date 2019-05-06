@@ -148,7 +148,7 @@ class PdfPensionService {
 	 */
 	private function addText(Fpdi $pdf, $options, $text) {
 		$text = iconv('UTF-8', 'windows-1252', $text);
-		$pdf->Cell ( 0, $options ['textHeight'], $text, 0, 1, 'L', true );
+		$pdf->MultiCell(0, $options ['textHeight'],$text);
 	}
 
 	/**
