@@ -246,7 +246,7 @@ class PdfService {
 				$pdf->Ln ( 1 );
 				break;
 			case 'LI':
-				$pdf->Ln ( 1 );
+				$pdf->Ln ( 0 );
 				break;
 		}
 	}
