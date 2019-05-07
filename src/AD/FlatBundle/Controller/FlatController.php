@@ -192,6 +192,8 @@ class FlatController extends Controller
     			'rented' => false
     	));
     	
+    	shuffle($flats);
+    	
     	
     	return $this->render('FlatBundle::publish.html.twig', array(
     			'flats' => $flats
@@ -209,10 +211,10 @@ class FlatController extends Controller
     			'rented' => false
     	));
     	
-    	$pdfService = $this->container->get ( 'flat_bundle.pdf' );
-    	$options = $pdfService->getOptions($flats);
     	
-    	$pdf = $pdfService->generateRecapPdf($options);
+    	$pdfService = $this->container->get ( 'core_bundle.pdf' );
+    	
+    	$pdf = $pdfService->generateFlatRecapPdf($flats);
     	
     	return new Response($pdf->Output(null,"Inventario_departamento_Greco.pdf",
     			true), 200, array(
