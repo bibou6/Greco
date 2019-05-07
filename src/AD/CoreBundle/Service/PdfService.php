@@ -43,7 +43,9 @@ class PdfService {
 		$this->addTitle ( $pdf, $options, $flat->getName () );
 		$this->addSubtitleTitle ( $pdf, $options, "Descripción" );
 		$this->addText($pdf, $options, "Título: ".$flat->getTitle());
-		$this->addText($pdf, $options, "Precio: ".$flat->getPrice());
+		$this->addText($pdf, $options, "Precio: $".$this->printNumber($flat->getPrice()));
+		$this->addText($pdf, $options, "Ciudad: ".$flat->getCity());
+		
 		$this->addText ( $pdf, $options, $this->WriteHTML ($pdf,$options, $flat->getDescriptionSpanish () ) );
 
 		$this->addSubtitleTitle ( $pdf, $options, "Información privada" );
@@ -59,7 +61,9 @@ class PdfService {
 		$this->addTitle ( $pdf, $options, $pension->getName () );
 		$this->addSubtitleTitle ( $pdf, $options, "Descripción" );
 		$this->addText($pdf, $options, "Título: ".$pension->getTitle());
-		$this->addText($pdf, $options, "Precio: ".$pension->getMinimumPrice()." - ".$pension->getMaximumPrice());
+		$this->addText($pdf, $options, "Precio: $".$this->printNumber($pension->getMinimumPrice())." - $".$this->printNumber($pension->getMaximumPrice()));
+		$this->addText($pdf, $options, "Ciudad: ".$pension->getCity());
+		
 		$this->addText ( $pdf, $options, $this->WriteHTML ($pdf,$options, $pension->getDescriptionSpanish () ) );
 		
 		$this->addSubtitleTitle ( $pdf, $options, "Información privada" );
@@ -141,7 +145,7 @@ class PdfService {
 		$text = iconv('UTF-8', 'windows-1252', $text);
 		$pdf->SetFillColor ( 255, 255, 255 );
 		$pdf->SetTextColor ( 0, 0, 0 );
-		$pdf->SetFont ( $options ['font'] ['style'], $options ['font'] ['bold'], $options ['font'] ['title-2'] );
+		$pdf->SetFont ( $options ['font'] ['style'], $options ['font'] ['bold'], $options ['font'] ['title-1'] );
 		$pdf->Cell ( 0, $options ['titleHeight'], $text, 0, 1, 'C', true );
 		$pdf->SetTextColor ( 0, 0, 0 );
 		$pdf->SetFillColor ( 255, 255, 255 );
@@ -160,11 +164,19 @@ class PdfService {
 	 */
 	private function addSubtitleTitle(Fpdi $pdf, $options, $text) {
 		$text = iconv('UTF-8', 'windows-1252', $text);
-		$pdf->SetFont ( $options ['font'] ['style'], $options ['font'] ['bold'], $options ['font'] ['title-3'] );
+		$pdf->SetFont ( $options ['font'] ['style'], $options ['font'] ['bold'], $options ['font'] ['title-2'] );
 		$pdf->Cell ( 0, $options ['titleHeight'], $text, 0, 1, 'L', true );
 		$pdf->SetFont ( $options ['font'] ['style'], null, $options ['font'] ['text'] );
 		$pdf->ln ( 2 );
 	}
+	
+	private function addBoldText(Fpdi $pdf, $options, $text,$ln) {
+		$text = iconv('UTF-8', 'windows-1252', $text);
+		$pdf->SetFont ( $options ['font'] ['style'], $options ['font'] ['bold'], $options ['textHeight'] );
+		$pdf->Cell ( 0, $options ['textHeight'], $text, 0, $ln, 'L', true );
+		$pdf->SetFont ( $options ['font'] ['style'], null, $options ['font'] ['text'] );
+	}
+	
 
 	/**
 	 * Add text to a section
@@ -192,7 +204,7 @@ class PdfService {
 				'font' => array (
 						'style' => 'Arial',
 						'title-1' => 20,
-						'title-2' => 18,
+						'title-2' => 16,
 						'title-3' => 12,
 						'text' => 11,
 						'bold' => 'B',
@@ -234,7 +246,11 @@ class PdfService {
 		}
 	}
 	function OpenTag($pdf,$options,$tag) {
-		
+		// Opening tag
+		switch ($tag) {
+			case 'LI':
+				break;
+		}
 	}
 	function CloseTag($pdf,$options,$tag) {
 		// Opening tag
@@ -246,8 +262,8 @@ class PdfService {
 				$pdf->Ln ( 1 );
 				break;
 			case 'LI':
-				$pdf->Ln ( 0 );
 				break;
 		}
 	}
+	
 }
