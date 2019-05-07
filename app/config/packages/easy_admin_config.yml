@@ -25,6 +25,7 @@ easy_admin:
                 fields:
                     - { type: 'group', label: 'pension.information', css_class: 'col-sm-6' }
                     - { property: 'name', label: 'pension.property.name' }
+                    - { property: 'title', label: 'pension.property.title' }
                     - { property: 'city', label: 'pension.property.city' }
                     - { property: 'minimumPrice', label: 'pension.property.minimumPrice',type: 'money', type_options: { currency: 'CLP' } }
                     - { property: 'maximumPrice', label: 'pension.property.maximumPrice',type: 'money', type_options: { currency: 'CLP' } }
@@ -61,6 +62,8 @@ easy_admin:
             show:
                 fields:
                     - { property: 'name', label: 'pension.property.name' }
+                    - { property: 'title', label: 'pension.property.title' }
+                    - { property: 'city', label: 'pension.property.city' }
                     - { property: 'minimumPrice',label: 'pension.property.minimumPrice' }
                     - { property: 'maximumPrice', label: 'pension.property.maximumPrice' }
                     - { property: 'image', type: 'image', base_path: '%app.path.pension_images%', label: 'pension.property.image' }
@@ -81,7 +84,7 @@ easy_admin:
                 fields:
                     - { type: 'group', label: 'flat.information', css_class: 'col-sm-6' }
                     - { property: 'name', label: 'flat.property.name' }
-                    - { property: 'city', label: 'pension.property.city' }
+                    - { property: 'title', label: 'pension.property.title' }
                     - { property: 'city', label: 'pension.property.city' }
                     - { property: 'price', label: 'flat.property.price',type: 'money', type_options: { currency: 'CLP' } }
                     - { property: 'dailyPrice', label: 'flat.property.dailyPrice',type: 'money', type_options: { currency: 'CLP' } }
@@ -123,6 +126,7 @@ easy_admin:
             show:
                 fields:
                     - { property: 'name', label: 'flat.property.name' }
+                    - { property: 'title', label: 'pension.property.title' }
                     - { property: 'city', label: 'pension.property.city' }
                     - { property: 'price', label: 'flat.property.price' }
                     - { property: 'image', type: 'image', base_path: '%app.path.flat_images%', label: 'flat.property.image' }
