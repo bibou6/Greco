@@ -50,6 +50,7 @@ pension:
     roomAmount: Numero de habitaciones
     image: Imagen
     name: Nombre
+    title: Titulo (Publicación)
     city: Ciudad
     enabled: Activado
     privateInformation: Información privada
@@ -98,6 +99,7 @@ flat:
   property:
     image: Imagen
     name: Nombre
+    title: Titulo (Publicación)
     city: Ciudad
     enabled: Activado
     rented: Arrendado
