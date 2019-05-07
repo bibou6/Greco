@@ -43,6 +43,7 @@ class PdfService {
 		$this->addTitle ( $pdf, $options, $flat->getName () );
 		$this->addSubtitleTitle ( $pdf, $options, "Descripción" );
 		$this->addText($pdf, $options, "Título: ".$flat->getTitle());
+		$this->addText($pdf, $options, "Precio: ".$flat->getPrice());
 		$this->addText ( $pdf, $options, $this->WriteHTML ($pdf,$options, $flat->getDescriptionSpanish () ) );
 
 		$this->addSubtitleTitle ( $pdf, $options, "Información privada" );
@@ -58,6 +59,7 @@ class PdfService {
 		$this->addTitle ( $pdf, $options, $pension->getName () );
 		$this->addSubtitleTitle ( $pdf, $options, "Descripción" );
 		$this->addText($pdf, $options, "Título: ".$pension->getTitle());
+		$this->addText($pdf, $options, "Precio: ".$pension->getMinimumPrice()." - ".$pension->getMaximumPrice());
 		$this->addText ( $pdf, $options, $this->WriteHTML ($pdf,$options, $pension->getDescriptionSpanish () ) );
 		
 		$this->addSubtitleTitle ( $pdf, $options, "Información privada" );
@@ -210,7 +212,7 @@ class PdfService {
 		return $options;
 	}
 	public function writeHtml($pdf, $options, $html) {
-		$html = strip_tags ( $html, "<p><br>" ); // supprime tous les tags sauf ceux reconnus
+		$html = strip_tags ( $html, "<p><br><li>" ); // supprime tous les tags sauf ceux reconnus
 		$html = html_entity_decode($html);
 		$html = str_replace ( "\n", ' ', $html ); // remplace retour à la ligne par un espace
 		$a = preg_split ( '/<(.*)>/U', $html, - 1, PREG_SPLIT_DELIM_CAPTURE ); // éclate la chaîne avec les balises
@@ -241,6 +243,9 @@ class PdfService {
 				$pdf->Ln ( 1 );
 				break;
 			case 'P' :
+				$pdf->Ln ( 1 );
+				break;
+			case 'LI':
 				$pdf->Ln ( 1 );
 				break;
 		}
