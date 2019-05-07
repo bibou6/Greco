@@ -134,6 +134,7 @@ class PensionController extends Controller
 				'enabled' => true,
 		));
 		
+		shuffle($pensions);
 		
 		return $this->render('PensionBundle::publish.html.twig', array(
 				'pensions' => $pensions,
@@ -145,14 +146,14 @@ class PensionController extends Controller
 	 */
 	public function pdfDetailsAction(){
 		$em = $this->getDoctrine()->getManager();
-		$flats = $em->getRepository('PensionBundle:Pension')->findBy(array(
+		$pensions = $em->getRepository('PensionBundle:Pension')->findBy(array(
 				'enabled' => true,
 		));
+	
 		
-		$pdfService = $this->container->get ( 'pension_bundle.pdf' );
-		$options = $pdfService->getOptions($flats);
+		$pdfService = $this->container->get ( 'core_bundle.pdf' );
 		
-		$pdf = $pdfService->generateRecapPdf($options);
+		$pdf = $pdfService->generatePensionRecapPdf($pensions);
 		
 		return new Response($pdf->Output(null,"Inventario_departamento_Greco.pdf",
 				true), 200, array(

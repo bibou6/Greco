@@ -7,6 +7,10 @@ gi:
    title: Arrienda tu habitación aquí!
    description: Espectaculares Habitaciones desde $85.000 en casonas ubicadas en los mejores sectores de Valparaíso. Visita nuestra pagina y elije tu nuevo hogar.
    image: http://grecoinmobiliaria.com/bundles/core/img/logo_small_rounded_200x200.png
+  publish:
+    visitUsFlat: Vista nuestra página al link http://grecoinmobiliaria.com/es/flat/rent y conoce todo las propiedades que tenemos a disposición.
+    visitUsPension: Vista nuestra página al link http://grecoinmobiliaria.com/es/pension y conoce todo las propiedades que tenemos a disposición.
+    contactUs: Cualquier consulta llamar o mandar Whatsapp al  +56942121029 o al +56963507484.
   locale:
     fr: Français
     en: English

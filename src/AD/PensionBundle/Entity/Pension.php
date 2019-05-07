@@ -95,6 +95,13 @@ class Pension
      * @ORM\Column(name="title", type="string", length=255)
      */
     private $title;
+    
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="city", type="string", length=255)
+     */
+    private $city;
 
     /**
      * @var int
@@ -507,5 +514,29 @@ class Pension
     public function getTitle()
     {
         return $this->title;
+    }
+
+    /**
+     * Set city.
+     *
+     * @param string $city
+     *
+     * @return Pension
+     */
+    public function setCity($city)
+    {
+        $this->city = $city;
+
+        return $this;
+    }
+
+    /**
+     * Get city.
+     *
+     * @return string
+     */
+    public function getCity()
+    {
+        return $this->city;
     }
 }
