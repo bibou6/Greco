@@ -216,8 +216,6 @@ class FlatController extends Controller
     	
     	$pdf = $pdfService->generateFlatRecapPdf($flats);
     	
-    	dump($pdf);
-    	
     	return new Response($pdf->Output(null,"Inventario_departamento_Greco.pdf",
     			true), 200, array(
     					'Content-Type' => 'application/pdf')

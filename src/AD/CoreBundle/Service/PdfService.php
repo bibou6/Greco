@@ -97,7 +97,6 @@ class PdfService {
 			$pdf->cell ( 0, 5, $numPage, 0, 1, 'R');
 		}
 		
-		dump($this->myLinks);
 	}
 	
 	
