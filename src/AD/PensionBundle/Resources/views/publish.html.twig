@@ -1,24 +1,9 @@
 {% block body %}
 
 {% for pension in pensions %}
-<div class="title">
-	{{ pension.title }}
-</div>
-<div class="price">
-	{{ pension.minimumPrice }}
-</div>
-<div class="city">
-	{{ pension.city }}
-</div>
-<div class="description">
-	{{ pension.descriptionSpanish|raw  }}
-	<p>
-		{{ 'gi.publish.visitUsPension' | trans }}
-	</p>
-	<p>
-		{{ 'gi.publish.contactUs' | trans }}
-		
-	</p>
-</div>
+<div class="title">{{ pension.title }}</div>
+<div class="price">{{ pension.minimumPrice }}</div>
+<div class="city">{{ pension.city }}</div>
+<div class="description">{{ pension.descriptionSpanish|raw  }}<br>{{ 'gi.publish.visitUsPension' | trans }}<br>{{ 'gi.publish.contactUs' | trans }}</div>
 {% endfor %}
 {% endblock %}
