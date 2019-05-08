@@ -1,24 +1,9 @@
 {% block body %}
 
 {% for flat in flats %}
-<div class="title">
-	{{ flat.title }}
-</div>
-<div class="price">
-	{{ flat.price }}
-</div>
-<div class="city">
-	{{ flat.city }}
-</div>
-<div class="description">
-	{{ flat.descriptionSpanish|raw  }}
-	<p>
-		{{ 'gi.publish.visitUsFlat' | trans }}
-	</p>
-	<p>
-		{{ 'gi.publish.contactUs' | trans }}
-
-	</p>
-</div>
+<div class="title">{{ flat.title }}</div>
+<div class="price">{{ flat.price }}</div>
+<div class="city">{{ flat.city }}</div>
+<div class="description">{{ flat.descriptionSpanish|raw  }}<br>{{ 'gi.publish.visitUsFlat' | trans }}<br>{{ 'gi.publish.contactUs' | trans }}</div>
 {% endfor %}
 {% endblock %}
