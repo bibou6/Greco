@@ -114,40 +114,30 @@ gi:
         text: >
           La renovación de la propiedad es realizada con un previo estudio de la estructura de la propiedad, sus sistemas eléctricos, gasfitería, imagen de la propiedad, para dar con un informe de las necesidades y soluciones prácticas y con bajos costos a realizar, manteniendo como prioridad la seguridad del futuro cliente. Contamos con  profesionales de electricidad y gasfitería certificados y con apoyo en profesionales de la construcción capacitados.<br><br>
           El trabajo de equipamiento, se basa en la experiencia de los proyectos ya realizados,  identificando las necesidades reales, aplicables a cada propiedad, con materiales durables, enfocados a la practicidad y satisfacción del cliente meta,  contamos con conocimiento de empresas que trabajan productos de calidad y bajo costo para lograr disminuir en lo máximo posible el capital inicial.
-  pension:
-    title: Pensions
-    see: Come see our pensions
-    text: Know our pensions, all estrategicaly located close to the universities of Valparaiso's city. With all services included such as lights, water, fuel, Wi-fi and cleaning services.
-    maximumPrice:
-      label: Minimum price
-    minimumPrice:
-      label: Maximum price
+  
+  
+  building:
+    pension:
+      title: Pensions
+      see: Come see our pensions
+      text: Know our pensions, all estrategicaly located close to the universities of Valparaiso's city. With all services included such as lights, water, fuel, Wi-fi and cleaning services.
+    flat:
+      title: Propriety
+      summer:
+        title: Rent a place for summer !
+      see: Click here to see our Propriety
+      text: Discover our well located propriety and conectivity, competitive price on the market, spaces that allow you a better quality of life, such as parks, bikeways, coffees, restaurants and schools. 
     labels:
+      maximumPrice: Maximum price
+      minimumPrice: Minimum price
+      price: Price
+      city: Town
       description: Description
       information: Information
-      price: Price
-    button:
-      information: More information
-      
-  flat:
-    title: Propriety
-    summer:
-      title: Rent a place for summer !
-    see: Click here to see our Propriety
-    text: Discover our well located propriety and conectivity, competitive price on the market, spaces that allow you a better quality of life, such as parks, bikeways, coffees, restaurants and schools. 
-    price:
-      label: Price
-    dailyPrice:
-      label: Daily price
-    labels:
-      description: Description
-      information: Information
-      price: Price
+  
     
   button:
-    pension:
-      information: More information
-    flat:
+    building:
       information: More information
     information:
       see: Know us!

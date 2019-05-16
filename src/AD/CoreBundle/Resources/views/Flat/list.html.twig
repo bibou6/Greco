@@ -1,0 +1,16 @@
+{% extends "CoreBundle:Core:menu.html.twig" %}
+
+{% block title %}{{ parent() }} - Index{% endblock %}
+
+
+{% block body %}
+<div class="container main-content">
+	<div class="row pt-4">
+		<div class="card-deck">
+	{% for flat in flats %}
+		{% include 'CoreBundle:Building/includes:building_item.html.twig' with {'building': flat,"isFlat": true} only %}
+	{% endfor %}
+		</div>
+	</div>
+</div>
+{% endblock %}

@@ -1,33 +1,61 @@
-{% extends "CoreBundle:Core:menu.html.twig" %}
+{% extends "CoreBundle:Core:layout_includes.html.twig" %}
 
-{% block title %}{{ parent() }} - Index{% endblock %}
+{% block title %}
+{{ parent() }}
+- Index
+{% endblock %}
 
 {% block body %}
-	<div class="container main-content" style="">
-		<div class="row">
-			<div class="col-sm-1 col-lg-2"></div>
-			<div class="col-12 col-sm-10 col-lg-8">
-				<div class="p-underligned text-justify">
-				<p>{#<i class="fa fa-info-circle fa-3x fa-pull-left" style="color:#04317a;"></i>#}{{ 'gi.information.text'|trans|raw }}</p>
-					<div class="text-right">
-{# 						<a href="{{ path('core_project') }}" class="btn btn-md btn-primary col-lg-4 col-sm-6 col-12">{{ 'gi.button.information.see'|trans }}</a>#}
-					</div>
-				</div>
-				
-				<div class="row">
-					<div class="col-lg-12 col-xl-6 p-right-padding p-border-right text-justify lg-screen-border-bottom">
-						<h2 class="text-center display-5 title">{{ 'gi.flat.title'|trans }}</h2>
-						<p>{{ 'gi.flat.text'|trans }}</p>
-						<a href="{{ path('flat_list_rent') }}" class="btn btn-md btn-primary col-12">{{ 'gi.button.flat.information'|trans|nl2br }}</a>
-					</div>
-					<div class="col-lg-12 col-xl-6 p-left-padding text-justify">
-						<h2 class="text-center display-5 title">{{ 'gi.pension.title'|trans }}</h2>
-						<p>{{ 'gi.pension.text'|trans }}</p>
-						<a href="{{ path('pension_list') }}" class="btn btn-md btn-primary col-12">{{ 'gi.button.pension.information'|trans|nl2br }}</a>
-					</div>
-				</div>
+<div>
+	<div class="row h-100" id="photo">
+		<div class="col-md-4 h-100">
+			<div class="card h-100">
+				<img class="card-img-top"
+					src="{{ asset('bundles/core/img/index/rent.jpg') }}"
+					style="height: 100%" alt="Card image">
+				<div class="card-img-overlay"></div>
 			</div>
-			<div class="col-sm-1 col-lg-2"></div>
+		</div>
+		<div class="col-md-4 h-100">
+			<div class="card h-100">
+				<img class="card-img-top"
+					src="{{ asset('bundles/core/img/index/sell.png') }}"
+					style="height: 100%" alt="Card image">
+				<div class="card-img-overlay"></div>
+			</div>
+		</div>
+		<div class="col-md-4 h-100">
+			<div class="card h-100">
+				<img class="card-img-top"
+					src="{{ asset('bundles/core/img/index/pension.jpg') }}"
+					style="height: 100%" alt="Card image">
+				<div class="card-img-overlay"></div>
+			</div>
 		</div>
 	</div>
+	<div id="logo" class="text-center">
+		<img
+			src="{{ asset('bundles/core/img/logo_small_rounded_192x192.png') }}" />
+		<div class="content-name">
+    		<div class="website-name">Greco Inmobiliaria</div>
+    		<div class="small-name">Servicios de Asesoria Inmobiliaria</div>
+		</div>
+	</div>
+	<div id="links">
+		<div class="row h-100">
+			<div class="col-xl-4 link">
+				<a href="{{ path('flat_list_rent') }}" class="h-100"><h1
+						class="h-100">Arriendos</h1></a>
+			</div>
+			<div class="col-xl-4 link">
+				<a href="{{ path('flat_list_sale') }}" class="h-100"><h1
+						class="h-100">Ventas</h1></a>
+			</div>
+			<div class="col-xl-4 link">
+				<a href="{{ path('pension_list') }}" class="h-100"><h1
+						class="h-100">Pensiones</h1></a>
+			</div>
+		</div>
+	</div>
+</div>
 {% endblock %}

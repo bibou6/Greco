@@ -1,0 +1,74 @@
+{# src/OC/PlatformBundle/Resources/views/layout.html.twig #}
+<html  xmlns:og="http://ogp.me/ns#"
+	xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, minimal-ui">
+<meta name="Description"
+	content="Sitio para encontrar una habitacion o un departamento en Valparaiso.">
+<meta name="theme-color" content="#d66e00" />
+<link rel="manifest" href="/manifest.json">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+	integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+	crossorigin="anonymous"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+	integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+	crossorigin="anonymous"></script>
+<title>{% block title %}Greco Inmobiliaria{% endblock %}</title>
+
+{% block style %}
+{% endblock %}
+</head>
+<body>
+	
+	{% block body %}
+	{% endblock %}
+	
+	<noscript id="deferred-styles">
+		<link rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+			crossorigin="anonymous">
+		{% stylesheets filter='cssrewrite,?scssphp' 'bundles/core/css/index/*' %}
+		<link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+		{% endstylesheets %}
+		<link
+			href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+			rel="stylesheet">
+	</noscript>
+	<script>
+		var loadDeferredStyles = function() {
+			var addStylesNode = document.getElementById("deferred-styles");
+			var replacement = document.createElement("div");
+			replacement.innerHTML = addStylesNode.textContent;
+			document.body.appendChild(replacement)
+			addStylesNode.parentElement.removeChild(addStylesNode);
+		};
+		var raf = window.requestAnimationFrame
+				|| window.mozRequestAnimationFrame
+				|| window.webkitRequestAnimationFrame
+				|| window.msRequestAnimationFrame;
+		if (raf)
+			raf(function() {
+				window.setTimeout(loadDeferredStyles, 0);
+			});
+		else
+			window.addEventListener('load', loadDeferredStyles);
+	</script>
+	{% block javascript %}
+
+	<script async
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+
+
+	{% javascripts filter='jsqueeze' 'bundles/core/js/*' %}
+	<script type="text/javascript" src="{{ asset_url }}"></script>
+	{% endjavascripts %}
+
+	{% endblock %}
+</body>
+</html>

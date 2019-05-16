@@ -1,6 +1,6 @@
 <?php
 
-namespace AD\PensionBundle\Repository;
+namespace AD\CoreBundle\Repository;
 
 /**
  * PensionImageRepository

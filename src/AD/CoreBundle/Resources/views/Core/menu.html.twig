@@ -36,8 +36,8 @@
 	                {{ 'gi.menu.flat.title'|trans|upper }}
 				</a>
 				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-					<a class="nav-link" href="{{ path('flat_list_rent') }}">{{ 'gi.menu.flat.rent'|trans|upper }}</a>
-			        <a class="nav-link" href="{{ path('flat_list_sale') }}">{{ 'gi.menu.flat.sale'|trans|upper }}</a>	
+					<a class="dropdown-item" href="{{ path('flat_list_rent') }}">{{ 'gi.menu.flat.rent'|trans|upper }}</a>
+			        <a class="dropdown-item" href="{{ path('flat_list_sale') }}">{{ 'gi.menu.flat.sale'|trans|upper }}</a>	
 				</div>
 			</li>
     		{% endif %}

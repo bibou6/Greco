@@ -4,22 +4,34 @@ liip_imagine:
             web_path: ~
     filter_sets:
         cache: ~
-        pension_thumbnail:
-            quality: 75
+        building_thumbnail:
+            quality: 100
             filters:
-                thumbnail: { size: [50, 50], mode: outbound }
+                scale:
+                    dim: [ 500, 410 ]
+        building_show:
+            quality: 100
+            filters:
+                thumbnail:
+                    size: [300, 300]
+                    # crop the input image, if required
+                    mode: outbound
+        building_thumbnail_bg:
+            quality: 70
+            filters:
+                scale:
+                    dim: [ 300, 210 ]
         my_banner:
             quality: 100
             filters:
                 relative_resize:
                     heighten: 100
-        pension_list_height:
+        building_list_height:
             quality: 80
             filters:
                 scale:
-                    # input 1200x1600px -> output 750x1000px (relative down-scale)
-                    dim: [ 500, 350 ]
-        pension_show_height:
+                    dim: [ 300, 210 ]
+        building_show_height:
             quality: 100
             filters:
                 relative_resize:
@@ -30,7 +42,7 @@ liip_imagine:
                 # use and setup the "watermark" filter
                 watermark:
                     # path to the watermark file (prepended with "%kernel.root_dir%")
-                    image: ../web/bundles/flat/img/rented_arrow_es.png
+                    image: ../web/bundles/core/img/rented_arrow_es.png
                     # size of the water mark relative to the input image
                     size: 1
                     # set the position of the watermark
@@ -44,7 +56,7 @@ liip_imagine:
                 # use and setup the "watermark" filter
                 watermark:
                     # path to the watermark file (prepended with "%kernel.root_dir%")
-                    image: ../web/bundles/flat/img/rented_arrow_en.png
+                    image: ../web/bundles/core/img/rented_arrow_en.png
                     # size of the water mark relative to the input image
                     size: 1
                     # set the position of the watermark
@@ -57,7 +69,7 @@ liip_imagine:
                 # use and setup the "watermark" filter
                 watermark:
                     # path to the watermark file (prepended with "%kernel.root_dir%")
-                    image: ../web/bundles/flat/img/rented_arrow_fr.png
+                    image: ../web/bundles/core/img/rented_arrow_fr.png
                     # size of the water mark relative to the input image
                     size: 1
                     # set the position of the wposition: topleft
@@ -71,7 +83,7 @@ liip_imagine:
                 # use and setup the "watermark" filter
                 watermark:
                     # path to the watermark file (prepended with "%kernel.root_dir%")
-                    image: ../web/bundles/flat/img/sold_arrow_es.png
+                    image: ../web/bundles/core/img/sold_arrow_es.png
                     # size of the water mark relative to the input image
                     size: 1
                     # set the position of the watermark
@@ -85,7 +97,7 @@ liip_imagine:
                 # use and setup the "watermark" filter
                 watermark:
                     # path to the watermark file (prepended with "%kernel.root_dir%")
-                    image: ../web/bundles/flat/img/sold_arrow_en.png
+                    image: ../web/bundles/core/img/sold_arrow_en.png
                     # size of the water mark relative to the input image
                     size: 1
                     # set the position of the watermark
@@ -98,7 +110,7 @@ liip_imagine:
                 # use and setup the "watermark" filter
                 watermark:
                     # path to the watermark file (prepended with "%kernel.root_dir%")
-                    image: ../web/bundles/flat/img/sold_arrow_fr.png
+                    image: ../web/bundles/core/img/sold_arrow_fr.png
                     # size of the water mark relative to the input image
                     size: 1
                     # set the position of the wposition: topleft

@@ -8,8 +8,8 @@ gi:
    description: Espectaculares Habitaciones desde $85.000 en casonas ubicadas en los mejores sectores de Valparaíso. Visita nuestra pagina y elije tu nuevo hogar.
    image: http://grecoinmobiliaria.com/bundles/core/img/logo_small_rounded_200x200.png
   publish:
-    visitUsFlat: Vista nuestra página al link http://grecoinmobiliaria.com/es/flat/rent y conoce todo las propiedades que tenemos a disposición.
-    visitUsPension: Vista nuestra página al link http://grecoinmobiliaria.com/es/pension y conoce todo las propiedades que tenemos a disposición.
+    visitUsFlat: Visita nuestra página al link http://grecoinmobiliaria.com/es/flat/rent y conoce todo las propiedades que tenemos a disposición.
+    visitUsPension: Visita nuestra página al link http://grecoinmobiliaria.com/es/pension y conoce todo las propiedades que tenemos a disposición.
     contactUs: Cualquier consulta llamar o mandar Whatsapp al  +56942121029 o al +56963507484.
   locale:
     fr: Français
@@ -107,40 +107,30 @@ gi:
         text: >
           La renovación de la propiedad es realizada con un previo estudio de la estructura de la propiedad, sus sistemas eléctricos, gasfitería, imagen de la propiedad, para dar con un informe de las necesidades y soluciones prácticas y con bajos costos a realizar, manteniendo como prioridad la seguridad del futuro cliente. Contamos con  profesionales de electricidad y gasfitería certificados y con apoyo en profesionales de la construcción capacitados.<br><br>
           El trabajo de equipamiento, se basa en la experiencia de los proyectos ya realizados,  identificando las necesidades reales, aplicables a cada propiedad, con materiales durables, enfocados a la practicidad y satisfacción del cliente meta,  contamos con conocimiento de empresas que trabajan productos de calidad y bajo costo para lograr disminuir en lo máximo posible el capital inicial.
-  pension:
-    title: Pensiones
-    see: Ven a ver nuestras pensiones!
-    text: Conoce nuestras casas pensiones, todas ubicadas estratégicamente cercanas a centros de estudios de la ciudad de Valparaíso, con todos los servicios incluidos de luz, agua, gas y WiFi y servicio de aseo.
-    maximumPrice:
-      label: Precio maximo
-    minimumPrice:
-      label: Precio minimo
+  
+  
+  building:
+    pension:
+      title: Pensiones
+      see: Ven a ver nuestras pensiones!
+      text: Conoce nuestras casas pensiones, todas ubicadas estratégicamente cercanas a centros de estudios de la ciudad de Valparaíso, con todos los servicios incluidos de luz, agua, gas y WiFi y servicio de aseo.
+    flat:
+      title: Propiedades
+      summer:
+        title: Propiedades para arrendar en el verano !
+      see: Haz click aquí para ver nuestras pensiones
+      text: Descubre nuestras propiedades con excelente ubicación y conectividad,  precios competitivos al mercado, con espacios que te permiten tener una mejor calidad de vida, tales como  ciclovías, plazas, cafés, restaurantes y colegios.
     labels:
+      maximumPrice: Precio maximo
+      minimumPrice: Precio minimo
+      price: Precio
+      city: Ciudad
       description: Descripción
       information: Información
-      price: Precio
-    button:
-      information: Más información
-      
-  flat:
-    title: Propiedades
-    summer:
-      title: Propiedades para arrendar en el verano !
-    see: Haz click aquí para ver nuestras pensiones
-    text: Descubre nuestras propiedades con excelente ubicación y conectividad,  precios competitivos al mercado, con espacios que te permiten tener una mejor calidad de vida, tales como  ciclovías, plazas, cafés, restaurantes y colegios.
-    price:
-      label: Precio
-    dailyPrice:
-      label: Precio diario
-    labels:
-      description: Descripción
-      information: Información
-      price: Precio
+  
     
   button:
-    pension:
-      information: Más información
-    flat:
+    building:
       information: Más información
     information:
       see: Conozcanos!
