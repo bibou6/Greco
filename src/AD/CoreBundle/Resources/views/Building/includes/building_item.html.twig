@@ -1,0 +1,47 @@
+<div class="col-xl-4 col-md-6 col-sm-12">
+
+	<div class="card">
+		{% if isFlat %}
+		<a href="{{ path('flat_show', {'id': building.id }) }}"
+			class="stretched-link"> 
+		{% else %}
+		<a href="{{ path('pension_show', {'id': building.id }) }}"
+			class="stretched-link"> 
+		{% endif %}
+		{% if isFlat and building.rented %}
+			<img class="card-img-top"
+			src="{{ vich_uploader_asset(building,'imageFile') | imagine_filter('sold_es') }}"
+			alt="Card image" style="height: 200px" />
+		{% else %}
+    		<img class="card-img-top"
+    			src="{{ vich_uploader_asset(building,'imageFile') | imagine_filter('building_thumbnail') }}"
+    			alt="Card image" style="height: 200px" />
+		{% endif %}
+		</a>
+		<div class="card-body">
+			<h4 class="card-title title-secondary">
+				{{ building.name }}
+			</h4>
+			<p class="card-text">
+				{% if building.minimumPrice is defined %}
+				{{ 'gi.building.labels.price'|trans }}
+				: $
+				{{ building.minimumPrice|number_format(0, '.', '.') }}
+				- $
+				{{ building.maximumPrice|number_format(0, '.', '.') }}
+				{% elseif building.price is defined %}
+				{{ 'gi.building.labels.price'|trans }}
+				: $
+				{{ building.price|number_format(0, '.', '.') }}
+				{% endif %}
+			</p>
+			<p>
+				{{ 'gi.building.labels.city' | trans }}: {{ building.city }}
+			</p>
+			<p>
+				{{ building.description(app.request.getLocale())|length > 150 ? building.description(app.request.getLocale())|striptags|truncate(150, true, "...")|raw : building.description(app.request.getLocale())|raw }}
+			</p>
+		</div>
+	</div>
+</div>
+

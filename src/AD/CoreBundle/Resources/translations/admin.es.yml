@@ -86,7 +86,10 @@ pensionImage:
 #####################################
 Flat: Depto
 flat:
-  label: Deptos
+  labels: 
+   name: Deptos
+   activated: Deptos Activos
+   deactivated: Deptos Deactivos
   help:
   images: Imagenes
   information: Información

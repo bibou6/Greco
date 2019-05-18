@@ -4,106 +4,45 @@ liip_imagine:
             web_path: ~
     filter_sets:
         cache: ~
-        pension_thumbnail:
-            quality: 75
+        building_thumbnail:
+            quality: 100
             filters:
-                thumbnail: { size: [50, 50], mode: outbound }
+                scale:
+                    dim: [ 300  , 200 ]
+        building_show:
+            quality: 100
+            filters:
+                thumbnail:
+                    size: [400, 400]
+                    # crop the input image, if required
+                    mode: outbound
+                    
+        thumbnail:
+            quality: 70
+            filters:
+                thumbnail:
+                    size: [50, 50]
+                    mode: outbound
+        building_thumbnail_bg:
+            quality: 70
+            filters:
+                scale:
+                    dim: [ 200, 322 ]
         my_banner:
             quality: 100
             filters:
                 relative_resize:
                     heighten: 100
-        pension_list_height:
-            quality: 80
-            filters:
-                scale:
-                    # input 1200x1600px -> output 750x1000px (relative down-scale)
-                    dim: [ 500, 350 ]
-        pension_show_height:
+
+        sold_es:
             quality: 100
             filters:
-                relative_resize:
-                    heighten: 400
-        rented_es:
-            quality: 80
-            filters:
+                scale:
+                    dim: [ 300  , 200 ]
                 # use and setup the "watermark" filter
                 watermark:
                     # path to the watermark file (prepended with "%kernel.root_dir%")
-                    image: ../web/bundles/flat/img/rented_arrow_es.png
+                    image: ../web/bundles/core/img/stamps/sold_es.png
                     # size of the water mark relative to the input image
-                    size: 1
                     # set the position of the watermark
-                    position: topleft
-                scale:
-
-                    # input 1200x1600px -> output 750x1000px (relative down-scale)
-                    dim: [ 500, 350 ]
-        rented_en:
-            filters:
-                # use and setup the "watermark" filter
-                watermark:
-                    # path to the watermark file (prepended with "%kernel.root_dir%")
-                    image: ../web/bundles/flat/img/rented_arrow_en.png
-                    # size of the water mark relative to the input image
-                    size: 1
-                    # set the position of the watermark
-                    position: topleft
-                scale:
-                    # input 1200x1600px -> output 750x1000px (relative down-scale)
-                    dim: [ 500, 350 ]
-        rented_fr:
-            filters:
-                # use and setup the "watermark" filter
-                watermark:
-                    # path to the watermark file (prepended with "%kernel.root_dir%")
-                    image: ../web/bundles/flat/img/rented_arrow_fr.png
-                    # size of the water mark relative to the input image
-                    size: 1
-                    # set the position of the wposition: topleft
-                    position: topleft
-                scale:
-                    # input 1200x1600px -> output 750x1000px (relative down-scale)
-                    dim: [ 500, 350 ]
-        sold_es:
-            quality: 80
-            filters:
-                # use and setup the "watermark" filter
-                watermark:
-                    # path to the watermark file (prepended with "%kernel.root_dir%")
-                    image: ../web/bundles/flat/img/sold_arrow_es.png
-                    # size of the water mark relative to the input image
-                    size: 1
-                    # set the position of the watermark
-                    position: topleft
-                scale:
-
-                    # input 1200x1600px -> output 750x1000px (relative down-scale)
-                    dim: [ 500, 350 ]
-        sold_en:
-            filters:
-                # use and setup the "watermark" filter
-                watermark:
-                    # path to the watermark file (prepended with "%kernel.root_dir%")
-                    image: ../web/bundles/flat/img/sold_arrow_en.png
-                    # size of the water mark relative to the input image
-                    size: 1
-                    # set the position of the watermark
-                    position: topleft
-                scale:
-                    # input 1200x1600px -> output 750x1000px (relative down-scale)
-                    dim: [ 500, 350 ]
-        sold_fr:
-            filters:
-                # use and setup the "watermark" filter
-                watermark:
-                    # path to the watermark file (prepended with "%kernel.root_dir%")
-                    image: ../web/bundles/flat/img/sold_arrow_fr.png
-                    # size of the water mark relative to the input image
-                    size: 1
-                    # set the position of the wposition: topleft
-                    position: topleft
-                scale:
-                    # input 1200x1600px -> output 750x1000px (relative down-scale)
-                    dim: [ 500, 350 ]
-                    
+                    position: center

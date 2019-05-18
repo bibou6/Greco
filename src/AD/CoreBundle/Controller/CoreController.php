@@ -33,7 +33,7 @@ class CoreController extends Controller
     	return $this->render('CoreBundle:Company:team.html.twig',array(
     			'menu' => 'company',
     			'backgroundUrl' => $backgroundUrl,
-    			'pictures' => false
+    			'pictures' => true
     	));
     }
     

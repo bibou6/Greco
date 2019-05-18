@@ -1,0 +1,33 @@
+{% extends "CoreBundle:Core:menu.html.twig" %}
+
+{% block title %}{{ parent() }} - Index{% endblock %}
+
+{% block body %}
+	<div class="container main-content" style="">
+		<div class="row">
+			<div class="col-sm-1 col-lg-2"></div>
+			<div class="col-12 col-sm-10 col-lg-8">
+				<div class="p-underligned text-justify">
+				<p>{#<i class="fa fa-info-circle fa-3x fa-pull-left" style="color:#04317a;"></i>#}{{ 'gi.information.text'|trans|raw }}</p>
+					<div class="text-right">
+{# 						<a href="{{ path('core_project') }}" class="btn btn-md btn-primary col-lg-4 col-sm-6 col-12">{{ 'gi.button.information.see'|trans }}</a>#}
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-lg-12 col-xl-6 p-right-padding p-border-right text-justify lg-screen-border-bottom">
+						<h2 class="text-center display-5 title">{{ 'gi.building.flat.title'|trans }}</h2>
+						<p>{{ 'gi.building.flat.text'|trans }}</p>
+						<a href="{{ path('flat_list_rent') }}" class="btn btn-md btn-primary col-12">{{ 'gi.button.building.information'|trans|nl2br }}</a>
+					</div>
+					<div class="col-lg-12 col-xl-6 p-left-padding text-justify">
+						<h2 class="text-center display-5 title">{{ 'gi.building.pension.title'|trans }}</h2>
+						<p>{{ 'gi.building.pension.text'|trans }}</p>
+						<a href="{{ path('pension_list') }}" class="btn btn-md btn-primary col-12">{{ 'gi.button.building.information'|trans|nl2br }}</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-1 col-lg-2"></div>
+		</div>
+	</div>
+{% endblock %}

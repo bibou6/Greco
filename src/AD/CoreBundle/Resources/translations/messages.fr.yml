@@ -114,40 +114,29 @@ gi:
         text: >
           La renovación de la propiedad es realizada con un previo estudio de la estructura de la propiedad, sus sistemas eléctricos, gasfitería, imagen de la propiedad, para dar con un informe de las necesidades y soluciones prácticas y con bajos costos a realizar, manteniendo como prioridad la seguridad del futuro cliente. Contamos con  profesionales de electricidad y gasfitería certificados y con apoyo en profesionales de la construcción capacitados.<br><br>
           El trabajo de equipamiento, se basa en la experiencia de los proyectos ya realizados,  identificando las necesidades reales, aplicables a cada propiedad, con materiales durables, enfocados a la practicidad y satisfacción del cliente meta,  contamos con conocimiento de empresas que trabajan productos de calidad y bajo costo para lograr disminuir en lo máximo posible el capital inicial.
-  pension:
-    title: Pensions
-    see: Viens voir nos pensions!
-    text: Connait nos pensions, elles sont toutes stratégiquement situées proche des universités de la ville de Valparaiso, incluant les services comme, l'electricité, l'eau, le gaz, le Wifi et un service de nettoyage.
-    maximumPrice:
-      label: Prix maximum
-    minimumPrice:
-      label: Prix minimum
-    labels:
-      description: Description
-      information: Information
-      price: Prix
-    button:
-      information: Plus d'information
-            
-  flat:
-    title: Propriété
-    summer:
-      title: Appartement à louer l'été !
-    see: Click ici pour voir nos propriétés
-    text: Découvre nos propriétés, très bien situées et proche des transports en commun à des prix comptétitifs sur le marché. Les places autour, les parcs, les pistes-cyclable, les cafés, les restaurants et les écoles proches en font un lieu où il fait bon vivre. 
-    price:
-      label: Prix
-    dailyPrice:
-      label: Prix journalier
-    labels:
-      description: Description
-      information: Information
-      price: Prix
-    
-  button:
+  
+  building:
     pension:
-      information: Plus d'information
+      title: Pensions
+      see: Viens voir nos pensions!
+      text: Connait nos pensions, elles sont toutes stratégiquement situées proche des universités de la ville de Valparaiso, incluant les services comme, l'electricité, l'eau, le gaz, le Wifi et un service de nettoyage.
     flat:
+      title: Propriété
+      summer:
+         title: Appartement à louer l'été !
+      see: Click ici pour voir nos propriétés
+      text: Découvre nos propriétés, très bien situées et proche des transports en commun à des prix comptétitifs sur le marché. Les places autour, les parcs, les pistes-cyclable, les cafés, les restaurants et les écoles proches en font un lieu où il fait bon vivre. 
+    labels:
+      maximumPrice: Prix maximum
+      minimumPrice: Prix minimum
+      price: Prix
+      city: Ville
+      description: Description
+      information: Information
+  
+  
+  button:
+    building:
       information: Plus d'information
     information:
       see: Connait nous!

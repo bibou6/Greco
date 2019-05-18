@@ -22,8 +22,6 @@ class AppKernel extends Kernel
         	new EasyCorp\Bundle\EasyAdminBundle\EasyAdminBundle(),
         	new Vich\UploaderBundle\VichUploaderBundle(),
         	new Liip\ImagineBundle\LiipImagineBundle(),
-            new AD\PensionBundle\PensionBundle(),
-        	new AD\FlatBundle\FlatBundle(),
         	new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
         	new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
         		

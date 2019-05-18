@@ -1,7 +1,11 @@
 easy_admin:
     site_name: 'Greco Inmobiliaria'
+    formats:
+        date:     'd/m/Y'
+        time:     'H:i'
+        datetime: 'd/m/Y H:i:s'
     design:
-        menu: ['Pension', 'Flat', 'User']
+        menu: ['FlatActivated', 'FlatDeactivated','Flat','Pension', 'User']
         brand_color: '#d66e00'
         color_scheme: 'dark'
         form_theme: 'vertical'
@@ -14,71 +18,12 @@ easy_admin:
                 - '/bundles/core/js/sortable.js'
     entities:
         #############################################
-        #         PENSION CONFIGURATION             #
-        #############################################
-        Pension:
-            class: AD\PensionBundle\Entity\Pension
-            translation_domain: 'admin'
-            label: pension.label
-            # FORM
-            form:
-                fields:
-                    - { type: 'group', label: 'pension.information', css_class: 'col-sm-6' }
-                    - { property: 'name', label: 'pension.property.name' }
-                    - { property: 'title', label: 'pension.property.title' }
-                    - { property: 'city', label: 'pension.property.city' }
-                    - { property: 'minimumPrice', label: 'pension.property.minimumPrice',type: 'money', type_options: { currency: 'CLP' } }
-                    - { property: 'maximumPrice', label: 'pension.property.maximumPrice',type: 'money', type_options: { currency: 'CLP' } }
-                    - { property: 'roomAmount', label: 'pension.property.roomAmount'}
-                    - { type: 'group', label: 'pension.images', css_class: 'col-sm-6' }
-                    - { property: 'imageFile', type: 'vich_image', label: 'pension.property.imageFile' }
-                    - { type: 'group', label: 'pension.description' }
-                    - { property: 'privateInformation', type: 'ckeditor', label: 'pension.property.privateInformation' }
-                    - { property: 'description_spanish', type: 'ckeditor', label: 'pension.property.description_spanish' }
-                    - { property: 'description_english', type: 'ckeditor', label: 'pension.property.description_english' }
-                    - { property: 'description_french', type: 'ckeditor', label: 'pension.property.description_french' }
-                    - { type: 'group', label: 'pension.attachment' }
-                    - { property: 'images', type: 'collection', type_options: { entry_type: 'AD\PensionBundle\Form\PensionImageType', by_reference: false } }
-            # LIST
-            list:
-                title: pension.list.label
-                max_results: '10'
-                actions: 
-                    - { name: 'show', icon: 'search', label: false }
-                    - { name: 'edit', icon: 'pencil', label: false }  
-                    - { name: 'delete', icon: 'trash', label: false }
-                fields:
-                    - { property: 'enabled', label: 'pension.property.enabled' }
-                    - { property: 'image', type: 'image', base_path: '%app.path.pension_images%', label: 'pension.property.image' }
-                    - { property: 'name', label: 'pension.property.name' }
-                    - { property: 'minimumPrice',label: 'pension.property.minimumPrice' }
-                    - { property: 'maximumPrice', label: 'pension.property.maximumPrice' }
-                    #- { property: 'images', type: 'AD\PensionBundle\Entity\PensionImage', label: 'pension.property.images', template: 'images_list.html.twig' }
-            # SEARCH
-            search:
-                fields:
-                    - { property: 'name', label: 'pension.property.name' }
-            # SHOW
-            show:
-                fields:
-                    - { property: 'name', label: 'pension.property.name' }
-                    - { property: 'title', label: 'pension.property.title' }
-                    - { property: 'city', label: 'pension.property.city' }
-                    - { property: 'minimumPrice',label: 'pension.property.minimumPrice' }
-                    - { property: 'maximumPrice', label: 'pension.property.maximumPrice' }
-                    - { property: 'image', type: 'image', base_path: '%app.path.pension_images%', label: 'pension.property.image' }
-                    - { property: 'privateInformation', label: 'pension.property.privateInformation' }
-                    - { property: 'description_spanish', label: 'pension.property.description_spanish' }
-                    - { property: 'description_english', label: 'pension.property.description_english' }
-                    - { property: 'description_french', label: 'pension.property.description_french' }
-                    - { property: 'images', type: 'AD\PensionBundle\Entity\PensionImage', label: 'pension.property.images', template: 'images_list_upload.html.twig' }
-        #############################################
-        #            FLAT CONFIGURATION             #
+        #        FLAT CONFIGURATION ACTIVATED       #
         #############################################
         Flat:
-            class: AD\FlatBundle\Entity\Flat
+            class: AD\CoreBundle\Entity\Flat
             translation_domain: 'admin'
-            label: flat.label
+            label: flat.labels.name
             # FORM
             form:
                 fields:
@@ -99,7 +44,7 @@ easy_admin:
                     - { property: 'description_english', type: 'ckeditor', label: 'flat.property.description_english' }
                     - { property: 'description_french', type: 'ckeditor', label: 'flat.property.description_french' }
                     - { type: 'group', label: 'flat.attachment' }
-                    - { property: 'images', type: 'collection', type_options: { entry_type: 'AD\FlatBundle\Form\FlatImageType', by_reference: false } }
+                    - { property: 'images', type: 'collection', type_options: { entry_type: 'AD\CoreBundle\Form\FlatImageType', by_reference: false } }
             # LIST
             list:
                 title: flat.list.label
@@ -117,7 +62,7 @@ easy_admin:
                     - { property: 'name', label: 'flat.property.name' }
                     - { property: 'price',label: 'flat.property.price' }
                     - { property: 'dailyPrice',label: 'flat.property.dailyPrice' }
-                    #- { property: 'images', type: 'AD\FlatBundle\Entity\FlatImage', label: 'flat.property.images', template: 'images_list.html.twig' }
+                    #- { property: 'images', type: 'AD\CoreBundle\Entity\FlatImage', label: 'flat.property.images', template: 'images_list.html.twig' }
             # SEARCH
             search: 
                 fields:
@@ -134,7 +79,185 @@ easy_admin:
                     - { property: 'description_spanish', label: 'flat.property.description_spanish' }
                     - { property: 'description_english', label: 'flat.property.description_english' }
                     - { property: 'description_french', label: 'flat.property.description_french' }
-                    - { property: 'images', type: 'AD\FlatBundle\Entity\FlatImage', label: 'flat.property.images', template: 'images_list_upload.html.twig' }
+                    - { property: 'images', type: 'AD\CoreBundle\Entity\FlatImage', label: 'flat.property.images', template: 'images_list_upload.html.twig' }
+        
+        FlatActivated:
+            class: AD\CoreBundle\Entity\Flat
+            translation_domain: 'admin'
+            label: flat.labels.activated
+            list:
+                dql_filter: "entity.enabled = true and entity.rented = false"
+                max_results: '10'
+                actions: 
+                    - { name: 'show', icon: 'search', label: false }
+                    - { name: 'edit', icon: 'pencil', label: false }  
+                    - { name: 'delete', icon: 'trash', label: false }
+                fields:
+                    - { property: 'enabled', label: 'flat.property.enabled' }
+                    - { property: 'summer', label: 'flat.property.summer' }
+                    - { property: 'rented', label: 'flat.property.rented' }
+                    - { property: 'forSale', label: 'flat.property.forSale' }
+                    - { property: 'image', type: 'image', base_path: '%app.path.flat_images%', label: 'flat.property.image' }
+                    - { property: 'name', label: 'flat.property.name' }
+                    - { property: 'price',label: 'flat.property.price' }
+                    - { property: 'dailyPrice',label: 'flat.property.dailyPrice' }
+            # FORM
+            form:
+                fields:
+                    - { type: 'group', label: 'flat.information', css_class: 'col-sm-6' }
+                    - { property: 'name', label: 'flat.property.name' }
+                    - { property: 'title', label: 'pension.property.title' }
+                    - { property: 'city', label: 'pension.property.city' }
+                    - { property: 'price', label: 'flat.property.price',type: 'money', type_options: { currency: 'CLP' } }
+                    - { property: 'dailyPrice', label: 'flat.property.dailyPrice',type: 'money', type_options: { currency: 'CLP' } }
+                    - { property: 'forSale', label: 'flat.property.forSale' }
+                    - { property: 'rented', label: 'flat.property.rented' }
+                    - { property: 'summer', label: 'flat.property.summer' }
+                    - { type: 'group', label: 'flat.images', css_class: 'col-sm-6' }
+                    - { property: 'imageFile', type: 'vich_image', label: 'flat.property.imageFile' }
+                    - { type: 'group', label: 'flat.description' }
+                    - { property: 'privateInformation', type: 'ckeditor', label: 'flat.property.privateInformation' }
+                    - { property: 'description_spanish', type: 'ckeditor', label: 'flat.property.description_spanish' }
+                    - { property: 'description_english', type: 'ckeditor', label: 'flat.property.description_english' }
+                    - { property: 'description_french', type: 'ckeditor', label: 'flat.property.description_french' }
+                    - { type: 'group', label: 'flat.attachment' }
+                    - { property: 'images', type: 'collection', type_options: { entry_type: 'AD\CoreBundle\Form\FlatImageType', by_reference: false } }
+             # SEARCH
+            search: 
+                fields:
+                    - { property: 'name', label: 'flat.property.name' }
+            # SHOW
+            show:
+                fields:
+                    - { property: 'name', label: 'flat.property.name' }
+                    - { property: 'title', label: 'pension.property.title' }
+                    - { property: 'city', label: 'pension.property.city' }
+                    - { property: 'price', label: 'flat.property.price' }
+                    - { property: 'image', type: 'image', base_path: '%app.path.flat_images%', label: 'flat.property.image' }
+                    - { property: 'privateInformation', label: 'pension.property.privateInformation' }
+                    - { property: 'description_spanish', label: 'flat.property.description_spanish' }
+                    - { property: 'description_english', label: 'flat.property.description_english' }
+                    - { property: 'description_french', label: 'flat.property.description_french' }
+                    - { property: 'images', type: 'AD\CoreBundle\Entity\FlatImage', label: 'flat.property.images', template: 'images_list_upload.html.twig' }
+                
+        FlatDeactivated:
+            class: AD\CoreBundle\Entity\Flat
+            translation_domain: 'admin'
+            label: flat.labels.deactivated
+            list:
+                dql_filter: "entity.enabled = false"
+                max_results: '10'
+                actions: 
+                    - { name: 'show', icon: 'search', label: false }
+                    - { name: 'edit', icon: 'pencil', label: false }  
+                    - { name: 'delete', icon: 'trash', label: false }
+                fields:
+                    - { property: 'enabled', label: 'flat.property.enabled' }
+                    - { property: 'summer', label: 'flat.property.summer' }
+                    - { property: 'rented', label: 'flat.property.rented' }
+                    - { property: 'forSale', label: 'flat.property.forSale' }
+                    - { property: 'image', type: 'image', base_path: '%app.path.flat_images%', label: 'flat.property.image' }
+                    - { property: 'name', label: 'flat.property.name' }
+                    - { property: 'price',label: 'flat.property.price' }
+                    - { property: 'dailyPrice',label: 'flat.property.dailyPrice' }
+            # FORM
+            form:
+                fields:
+                    - { type: 'group', label: 'flat.information', css_class: 'col-sm-6' }
+                    - { property: 'name', label: 'flat.property.name' }
+                    - { property: 'title', label: 'pension.property.title' }
+                    - { property: 'city', label: 'pension.property.city' }
+                    - { property: 'price', label: 'flat.property.price',type: 'money', type_options: { currency: 'CLP' } }
+                    - { property: 'dailyPrice', label: 'flat.property.dailyPrice',type: 'money', type_options: { currency: 'CLP' } }
+                    - { property: 'forSale', label: 'flat.property.forSale' }
+                    - { property: 'rented', label: 'flat.property.rented' }
+                    - { property: 'summer', label: 'flat.property.summer' }
+                    - { type: 'group', label: 'flat.images', css_class: 'col-sm-6' }
+                    - { property: 'imageFile', type: 'vich_image', label: 'flat.property.imageFile' }
+                    - { type: 'group', label: 'flat.description' }
+                    - { property: 'privateInformation', type: 'ckeditor', label: 'flat.property.privateInformation' }
+                    - { property: 'description_spanish', type: 'ckeditor', label: 'flat.property.description_spanish' }
+                    - { property: 'description_english', type: 'ckeditor', label: 'flat.property.description_english' }
+                    - { property: 'description_french', type: 'ckeditor', label: 'flat.property.description_french' }
+                    - { type: 'group', label: 'flat.attachment' }
+                    - { property: 'images', type: 'collection', type_options: { entry_type: 'AD\CoreBundle\Form\FlatImageType', by_reference: false } }
+             # SEARCH
+            search: 
+                fields:
+                    - { property: 'name', label: 'flat.property.name' }
+            # SHOW
+            show:
+                fields:
+                    - { property: 'name', label: 'flat.property.name' }
+                    - { property: 'title', label: 'pension.property.title' }
+                    - { property: 'city', label: 'pension.property.city' }
+                    - { property: 'price', label: 'flat.property.price' }
+                    - { property: 'image', type: 'image', base_path: '%app.path.flat_images%', label: 'flat.property.image' }
+                    - { property: 'privateInformation', label: 'pension.property.privateInformation' }
+                    - { property: 'description_spanish', label: 'flat.property.description_spanish' }
+                    - { property: 'description_english', label: 'flat.property.description_english' }
+                    - { property: 'description_french', label: 'flat.property.description_french' }
+                    - { property: 'images', type: 'AD\CoreBundle\Entity\FlatImage', label: 'flat.property.images', template: 'images_list_upload.html.twig' }
+              
+        #############################################
+        #         PENSION CONFIGURATION             #
+        #############################################
+        Pension:
+            class: AD\CoreBundle\Entity\Pension
+            translation_domain: 'admin'
+            label: pension.label
+            # FORM
+            form:
+                fields:
+                    - { type: 'group', label: 'pension.information', css_class: 'col-sm-6' }
+                    - { property: 'name', label: 'pension.property.name' }
+                    - { property: 'title', label: 'pension.property.title' }
+                    - { property: 'city', label: 'pension.property.city' }
+                    - { property: 'minimumPrice', label: 'pension.property.minimumPrice',type: 'money', type_options: { currency: 'CLP' } }
+                    - { property: 'maximumPrice', label: 'pension.property.maximumPrice',type: 'money', type_options: { currency: 'CLP' } }
+                    - { property: 'roomAmount', label: 'pension.property.roomAmount'}
+                    - { type: 'group', label: 'pension.images', css_class: 'col-sm-6' }
+                    - { property: 'imageFile', type: 'vich_image', label: 'pension.property.imageFile' }
+                    - { type: 'group', label: 'pension.description' }
+                    - { property: 'privateInformation', type: 'ckeditor', label: 'pension.property.privateInformation' }
+                    - { property: 'description_spanish', type: 'ckeditor', label: 'pension.property.description_spanish' }
+                    - { property: 'description_english', type: 'ckeditor', label: 'pension.property.description_english' }
+                    - { property: 'description_french', type: 'ckeditor', label: 'pension.property.description_french' }
+                    - { type: 'group', label: 'pension.attachment' }
+                    - { property: 'images', type: 'collection', type_options: { entry_type: 'AD\CoreBundle\Form\PensionImageType', by_reference: false } }
+            # LIST
+            list:
+                title: pension.list.label
+                max_results: '10'
+                actions: 
+                    - { name: 'show', icon: 'search', label: false }
+                    - { name: 'edit', icon: 'pencil', label: false }  
+                    - { name: 'delete', icon: 'trash', label: false }
+                fields:
+                    - { property: 'enabled', label: 'pension.property.enabled' }
+                    - { property: 'image', type: 'image', base_path: '%app.path.pension_images%', label: 'pension.property.image' }
+                    - { property: 'name', label: 'pension.property.name' }
+                    - { property: 'minimumPrice',label: 'pension.property.minimumPrice' }
+                    - { property: 'maximumPrice', label: 'pension.property.maximumPrice' }
+                    #- { property: 'images', type: 'AD\CoreBundle\Entity\PensionImage', label: 'pension.property.images', template: 'images_list.html.twig' }
+            # SEARCH
+            search:
+                fields:
+                    - { property: 'name', label: 'pension.property.name' }
+            # SHOW
+            show:
+                fields:
+                    - { property: 'name', label: 'pension.property.name' }
+                    - { property: 'title', label: 'pension.property.title' }
+                    - { property: 'city', label: 'pension.property.city' }
+                    - { property: 'minimumPrice',label: 'pension.property.minimumPrice' }
+                    - { property: 'maximumPrice', label: 'pension.property.maximumPrice' }
+                    - { property: 'image', type: 'image', base_path: '%app.path.pension_images%', label: 'pension.property.image' }
+                    - { property: 'privateInformation', label: 'pension.property.privateInformation' }
+                    - { property: 'description_spanish', label: 'pension.property.description_spanish' }
+                    - { property: 'description_english', label: 'pension.property.description_english' }
+                    - { property: 'description_french', label: 'pension.property.description_french' }
+                    - { property: 'images', type: 'AD\CoreBundle\Entity\PensionImage', label: 'pension.property.images', template: 'images_list_upload.html.twig' }
         #############################################
         #            USER CONFIGURATION             #
         #############################################

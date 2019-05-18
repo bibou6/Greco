@@ -191,7 +191,7 @@ var Dropzone = function (_Emitter) {
          *
          * See [chunksUploaded](#config-chunksUploaded) for the callback to finalise an upload.
          */
-        chunking: false,
+        chunking: true,
 
         /**
          * If `chunking` is enabled, this defines whether **every** file should be chunked,
@@ -225,7 +225,7 @@ var Dropzone = function (_Emitter) {
          * the event `maxfilesexceeded` will be called. The dropzone element gets the
          * class `dz-max-files-reached` accordingly so you can provide visual feedback.
          */
-        maxFilesize: 256,
+        maxFilesize: 512,
 
         /**
          * The name of the file param that gets transferred.
@@ -369,7 +369,7 @@ var Dropzone = function (_Emitter) {
          * already uploading) the file. The `dictCancelUpload`, `dictCancelUploadConfirmation`
          * and `dictRemoveFile` options are used for the wording.
          */
-        addRemoveLinks: false,
+        addRemoveLinks: true,
 
         /**
          * Defines where to display the file previews – if `null` the

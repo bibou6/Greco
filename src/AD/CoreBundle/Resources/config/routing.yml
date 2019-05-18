@@ -56,7 +56,7 @@ _liip_imagine:
 
 #Pension Section
 pension:
-    resource: "@PensionBundle/Resources/config/routing.yml"
+    resource: "@CoreBundle/Resources/config/routing_pension.yml"
     prefix: /{_locale}/pension
     requirements:
       _locale: en|fr|es 
@@ -68,7 +68,8 @@ easy_admin_bundle:
       
 #Flat Section
 flat:
-    resource: "@FlatBundle/Resources/config/routing.yml"
+    resource: "@CoreBundle/Resources/config/routing_flat.yml"
     prefix: /{_locale}/flat
     requirements:
       _locale: en|fr|es 
+      
