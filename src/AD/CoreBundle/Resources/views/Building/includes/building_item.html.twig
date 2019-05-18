@@ -1,6 +1,6 @@
-<div class="col-xl-4">
+<div class="col-xl-4 col-md-6 col-sm-12">
 
-	<div class="card {% if isFlat and building.rented %}bg-rented{% endif %}">
+	<div class="card">
 		{% if isFlat %}
 		<a href="{{ path('flat_show', {'id': building.id }) }}"
 			class="stretched-link"> 
@@ -8,9 +8,15 @@
 		<a href="{{ path('pension_show', {'id': building.id }) }}"
 			class="stretched-link"> 
 		{% endif %}
+		{% if isFlat and building.rented %}
 			<img class="card-img-top"
-			src="{{ vich_uploader_asset(building,'imageFile') | imagine_filter('building_thumbnail') }}"
+			src="{{ vich_uploader_asset(building,'imageFile') | imagine_filter('sold_es') }}"
 			alt="Card image" style="height: 200px" />
+		{% else %}
+    		<img class="card-img-top"
+    			src="{{ vich_uploader_asset(building,'imageFile') | imagine_filter('building_thumbnail') }}"
+    			alt="Card image" style="height: 200px" />
+		{% endif %}
 		</a>
 		<div class="card-body">
 			<h4 class="card-title title-secondary">

@@ -9,21 +9,29 @@
 <div class="container main-content">
 	<div class="row pt-4">
 		<div class="col-md-6 mb-5">
-			<div id="carouselExampleIndicators"
-				class="carousel slide mw-100" data-ride="carousel">
+			<div id="carouselExampleIndicators" class="carousel slide mw-100"
+				data-ride="carousel">
 				<div class="carousel-inner text-center">
 					{% for image in building.images %}
 					<div
-						class="carousel-item pension-show-image {% if loop.index0 == 0 %}active{% endif %}"
+						class="carousel-item {% if loop.index0 == 0 %}active{% endif %}"
 						data-slide-to="{{ loop.index0 }}">
-						<img class="d-block mw-100"
+						<img class="d-block mw-100 img-responsive"
 							src="{{ vich_uploader_asset(image,'imageFile') | imagine_filter('building_show') }}"
 							alt="">
 					</div>
 					{% endfor %}
 				</div>
 			</div>
-
+			<div class="pt-4 container text-center" style="margin: auto">
+				{% for image in building.images %}
+				<img id="pension-image-tb-{{ loop.index0 }}"
+					class="img-thumbnail {% if loop.index0 == 0 %}bg-main{% endif %}"
+					src="{{ vich_uploader_asset(image,'imageFile') | imagine_filter('thumbnail') }}"
+					onclick="showCarouselImage({{
+loop.index0 }})">
+				{% endfor %}
+			</div>
 
 		</div>
 
@@ -79,13 +87,12 @@
 
 
 
-
-{#}<div class="container main-content"> <h1 class="text-center display-4
-text-underlign title">{{ building.name }}</h1> <div class="row"> <div
+{# <div class="container main-content"> <h1 class="text-center display-4
+text-underlign title"> {{ building.name }} </h1> <div class="row"> <div
 class="col-lg-12 px-4 pt-4 border-top border-warning"> <div class="pt-4
-container text-center" style="margin:auto"> {% for image in
-building.images %} <img id="pension-image-tb-{{ loop.index0
-}}"class="img-thumbnail {% if loop.index0 == 0 %}bg-main{% endif %}"
+container text-center" style="margin: auto"> {% for image in
+building.images %} <img id="pension-image-tb-{{ loop.index0 }}"
+class="img-thumbnail {% if loop.index0 == 0 %}bg-main{% endif %}"
 src="{{ vich_uploader_asset(image,'imageFile') |
 imagine_filter('pension_thumbnail') }}" onclick="showCarouselImage({{
 loop.index0 }})"> {% endfor %} </div> <div
@@ -105,35 +112,34 @@ role="button" data-slide="next"> <span class="carousel-control-next-icon
 bg-secondary" aria-hidden="true"></span> <span
 class="sr-only">Next</span> </a> </div> </div> <div class="col-lg-12
 px-4 pt-4"> <div class="row"> <div class="col-lg-12 col-xl-6 order-xl-12
-px-4 pt-4"> <h2>{{ 'gi.building.labels.information'|trans }}</h2> <div
+px-4 pt-4"> <h2> {{ 'gi.building.labels.information'|trans }} </h2> <div
 class="container"> <div class="col"> {% if isFlat %} <span>{{
-'gi.building.labels.price'|trans }}: </span>${{
+'gi.building.labels.price'|trans }}: </span>$ {{
 building.price|number_format(0, '.', '.') }} {% else %} <span>{{
-'gi.building.labels.price'|trans }}: </span>${{
-building.minimumPrice|number_format(0, '.', '.') }} - ${{
+'gi.building.labels.price'|trans }}: </span>$ {{
+building.minimumPrice|number_format(0, '.', '.') }} - $ {{
 building.maximumPrice|number_format(0, '.', '.') }} {% endif %} </div>
-</div> <div class="pt-2"> <div class="container"> <h5>{{
-'gi.contact.title'|trans }}</h5> <table> <tr><td><div class="pt-2"><i
-class="fa fa-envelope"></i></td><td class="break-word"><a
+</div> <div class="pt-2"> <div class="container"> <h5> {{
+'gi.contact.title'|trans }} </h5> <table> <tr> <td><div class="pt-2"> <i
+class="fa fa-envelope"></i></td> <td class="break-word"><a
 href="mailto:{{ 'gi.contact.email'|trans }}" style="text-decoration:
-none;color:white">{{ 'gi.contact.email'|trans }}</a></div></td></tr>
-<tr><td><div class="pt-1" style="width:40px;"><i class="fa
-fa-phone"></i><i class="fa fa-whatsapp ml-1"></i></td><td><a
-href="tel:{{ 'gi.contact.number'|trans }}" style="text-decoration:
-none;color:white">{{ 'gi.contact.number'|trans }}</a></div></td></tr>
-<tr><td><div class="pt-1"><i class="fa fa-whatsapp"></i></td><td>{{
-'gi.contact.number_second'|trans }}</div></td></tr> <tr><td><div
-class="pt-1" style="width:40px;"><i class="fa fa-phone"></i><i class="fa
-fa-whatsapp ml-1"></i></td><td><a href="tel:{{
-'gi.contact.number_third'|trans }}" style="text-decoration:
-none;color:white">{{ 'gi.contact.number_third'|trans
-}}</a></div></td></tr> </table> </div> </div> </div> <div
-class="col-lg-12 col-xl-6 order-xl-1 border-warning pt-4"> <h2>{{
-'gi.building.labels.description'|trans }}</h2> <div class="text-justify
-container mt-3 pension-description"> {% if app.request.getLocale() ==
-'fr' %} {{ building.descriptionFrench|raw }} {% endif %} {% if
-app.request.getLocale() == 'en' %} {{ building.descriptionEnglish|raw }}
-{% endif %} {% if app.request.getLocale() == 'es' %} {{
-building.descriptionSpanish|raw }} {% endif %} </div> </div> </div>
-</div> </div> </div>#}
+none; color: white">{{ 'gi.contact.email'|trans }}</a> </div></td> </tr>
+<tr> <td><div class="pt-1" style="width: 40px;"> <i class="fa
+fa-phone"></i><i class="fa fa-whatsapp ml-1"></i></td> <td><a
+href="tel:{{ 'gi.contact.number'|trans }}" style="text-decoration: none;
+color: white">{{ 'gi.contact.number'|trans }}</a> </div></td> </tr> <tr>
+<td><div class="pt-1"> <i class="fa fa-whatsapp"></i></td> <td>{{
+'gi.contact.number_second'|trans }} </div></td> </tr> <tr> <td><div
+class="pt-1" style="width: 40px;"> <i class="fa fa-phone"></i><i
+class="fa fa-whatsapp ml-1"></i></td> <td><a href="tel:{{
+'gi.contact.number_third'|trans }}" style="text-decoration: none; color:
+white">{{ 'gi.contact.number_third'|trans }}</a> </div></td> </tr>
+</table> </div> </div> </div> <div class="col-lg-12 col-xl-6 order-xl-1
+border-warning pt-4"> <h2> {{ 'gi.building.labels.description'|trans }}
+</h2> <div class="text-justify container mt-3 pension-description"> {%
+if app.request.getLocale() == 'fr' %} {{ building.descriptionFrench|raw
+}} {% endif %} {% if app.request.getLocale() == 'en' %} {{
+building.descriptionEnglish|raw }} {% endif %} {% if
+app.request.getLocale() == 'es' %} {{ building.descriptionSpanish|raw }}
+{% endif %} </div> </div> </div> </div> </div> </div> #}
 {% endblock %}

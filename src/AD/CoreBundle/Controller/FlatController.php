@@ -36,7 +36,8 @@ class FlatController extends Controller
 		$em = $this->getDoctrine()->getManager();
 		$flats = $em->getRepository('CoreBundle:Flat')->findBy(array(
 				'enabled' => true,
-				'forSale' => false
+				'forSale' => false,
+				'summer' => false
 		),array(
 				'rented' => 'ASC'
 		));
@@ -55,10 +56,16 @@ class FlatController extends Controller
 		if($flat == null || !$flat->getEnabled()){
 			return $this->redirectToRoute('pension_list');
 		}
+		
+		if($flat->getSummer() == true){
+			$menu = 'summer_flat';
+		}else{
+			$menu = 'flat';
+		}
 		 
 		return $this->render('CoreBundle:Building:building_show_item.html.twig', array(
 				'title' => 'Depa',
-				'menu' => 'flat',
+				'menu' => $menu,
 				'isFlat' => true,
 				'building' => $flat,
 		));

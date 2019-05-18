@@ -184,6 +184,7 @@ body {
 	/*line-height: 200px; /* Vertically center the text there */
 	background-color: #000040;
 	padding-top: 1em;
+	color: white;
 }
 
 /*
@@ -246,10 +247,6 @@ body {
 
 .img-list {
 	background-color: rgba(O, 0, 0, .4);
-}
-
-.img-show {
-	background-color: rgba(255, 255, 255, .4);
 }
 
 .img-team {

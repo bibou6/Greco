@@ -16,7 +16,7 @@
     			<div class="carousel-inner">
     			{% for image in flat.images %}
     				<div class="carousel-item pension-show-image {% if loop.index0 == 0 %}active{% endif %}" data-slide-to="{{ loop.index0 }}">
-    					<img class="d-block mw-100 rounded" src="{{ vich_uploader_asset(image,'imageFile')| imagine_filter('pension_show_height') }}" alt="">
+    					<img class="d-block mw-100 rounded img-fluid" src="{{ vich_uploader_asset(image,'imageFile')| imagine_filter('pension_show_height') }}" alt="">
     				</div>
     			{% endfor %}
     			</div>
