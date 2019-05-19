@@ -177,9 +177,11 @@ class FlatController extends Controller
     		return $this->redirectToRoute('pension_list');
     	}
     		
-    	return $this->render('CoreBundle:Flat:summer_show.html.twig', array(
+    	return $this->render('CoreBundle:Building:building_show_item.html.twig', array(
+    			'title' => 'Depa',
     			'menu' => 'summer_flat',
-    			'flat' => $flat,
+    			'isFlat' => true,
+    			'building' => $flat,
     	));
     }
     
