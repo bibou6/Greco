@@ -110,6 +110,8 @@ gi:
   
   
   building:
+    rented: Arrendado
+    sold: Vendido
     pension:
       title: Pensiones
       see: Ven a ver nuestras pensiones!

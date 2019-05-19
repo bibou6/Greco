@@ -172,7 +172,7 @@ html {
 }
 
 body {
-	margin-bottom: 120px; /* Margin bottom by footer height */
+	margin-bottom: 120px !important; /* Margin bottom by footer height */
 	background-color: #fff;
 }
 
@@ -213,6 +213,10 @@ body {
 
 .building-item-price{
 	margin-left: 10px;
+}
+
+.rented {
+	color: #800000;
 }
 
 
