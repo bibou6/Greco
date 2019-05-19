@@ -120,7 +120,7 @@
 	}	
 	
 	body {
-	  margin-bottom: 300px; /* Margin bottom by footer height */
+	  margin-bottom: 300px !important; /* Margin bottom by footer height */
 	}
 	
 	.footer {

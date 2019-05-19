@@ -4,6 +4,16 @@ liip_imagine:
             web_path: ~
     filter_sets:
         cache: ~
+        index_btn_image:
+            quality: 100
+            filters:
+                thumbnail:
+                    size: [500, 200]
+                    # crop the input image, if required
+                    mode: outbound
+                #crop:
+                 #    size: [ 500, 200 ]
+                  #   start: [050, 100]
         building_thumbnail:
             quality: 100
             filters:
@@ -33,16 +43,3 @@ liip_imagine:
             filters:
                 relative_resize:
                     heighten: 100
-
-        sold_es:
-            quality: 100
-            filters:
-                scale:
-                    dim: [ 300  , 200 ]
-                # use and setup the "watermark" filter
-                watermark:
-                    # path to the watermark file (prepended with "%kernel.root_dir%")
-                    image: ../web/bundles/core/img/stamps/sold_es.png
-                    # size of the water mark relative to the input image
-                    # set the position of the watermark
-                    position: center

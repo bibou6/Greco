@@ -116,6 +116,8 @@ gi:
           El trabajo de equipamiento, se basa en la experiencia de los proyectos ya realizados,  identificando las necesidades reales, aplicables a cada propiedad, con materiales durables, enfocados a la practicidad y satisfacción del cliente meta,  contamos con conocimiento de empresas que trabajan productos de calidad y bajo costo para lograr disminuir en lo máximo posible el capital inicial.
   
   building:
+    rented: Loué
+    sold: Vendu
     pension:
       title: Pensions
       see: Viens voir nos pensions!

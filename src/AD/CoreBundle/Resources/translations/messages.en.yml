@@ -117,6 +117,8 @@ gi:
   
   
   building:
+    rented: Rented
+    sold: Sold
     pension:
       title: Pensions
       see: Come see our pensions
