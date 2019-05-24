@@ -193,7 +193,13 @@ class FlatController extends Controller
     			'rented' => false
     	));
     	
+    	$pensions = $em->getRepository('CoreBundle:Pension')->findBy(array(
+    			'enabled' => true,
+    	));
+    	
     	shuffle($flats);
+    	
+    	$flats = $pensions + $flats;
     	
     	
     	return $this->render('CoreBundle:Flat:publish.html.twig', array(
