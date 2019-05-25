@@ -2,8 +2,8 @@
 
 namespace AD\CoreBundle\Service;
 
-use AD\FlatBundle\Entity\Flat;
-use AD\PensionBundle\Entity\Pension;
+use AD\CoreBundle\Entity\Flat;
+use AD\CoreBundle\Entity\Pension;
 use setasign\Fpdi\Fpdi;
 
 class PdfService {
