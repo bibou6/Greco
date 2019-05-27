@@ -553,4 +553,10 @@ class Pension
     	}
     }
     
+    
+    public function getPrice()
+    {
+    	
+    	return $this->minimumPrice;
+    }
 }
