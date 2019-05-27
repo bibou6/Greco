@@ -199,13 +199,17 @@ class FlatController extends Controller
     	
     	shuffle($flats);
     	
-    	$flats = $pensions + $flats;
+    	$result = array_merge($pensions,$flats);
     	
     	
     	return $this->render('CoreBundle:Flat:publish.html.twig', array(
-    			'flats' => $flats
+    			'flats' => $result
     	));
     }
+    
+    
+    
+    
     
     /**
      * @Security("has_role('ROLE_ADMIN')")
