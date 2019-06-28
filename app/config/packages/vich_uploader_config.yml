@@ -7,6 +7,12 @@ vich_uploader:
         pension_images:
             uri_prefix:         '%app.path.pension_images%'
             upload_destination: '%kernel.root_dir%/../web/uploads/images/pensions'
+            namer: Vich\UploaderBundle\Naming\UniqidNamer
+            delete_on_remove: true # suppression du fichier à la suppression de l’entité
+            delete_on_update: true # suppression du fichier quand un nouveau fichier est envoyé
         flat_images:
             uri_prefix:         '%app.path.flat_images%'
             upload_destination: '%kernel.root_dir%/../web/uploads/images/flats'
+            namer: Vich\UploaderBundle\Naming\UniqidNamer
+            delete_on_remove: true # suppression du fichier à la suppression de l’entité
+            delete_on_update: true # suppression du fichier quand un nouveau fichier est envoyé

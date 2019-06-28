@@ -107,6 +107,7 @@ class FlatController extends Controller
     	if($request->isMethod("POST")){
     		if($uploaded_file !== null){
 	    		$logger->info('Image upload for Flat : '.$flat->getName());
+	    		
 	    		$flatImage = new FlatImage();
 	    		$flatImage->setAlt(null);
 	    		$flatImage->setFlat($flat);
@@ -233,6 +234,25 @@ class FlatController extends Controller
     			);
     	
     }
+    
+    public function compress($source, $destination, $quality) {
+    	
+    	$info = getimagesize($source);
+    	dump($info);
+    	
+    	if ($info['mime'] == 'image/jpeg')
+    		$image = imagecreatefromjpeg($source);
+    		
+    		elseif ($info['mime'] == 'image/gif')
+    		$image = imagecreatefromgif($source);
+    		
+    		elseif ($info['mime'] == 'image/png')
+    		$image = imagecreatefrompng($source);
+    		
+    		return imagejpeg($image,$destination, $quality);
+    		
+    }
+    
     
     
 }

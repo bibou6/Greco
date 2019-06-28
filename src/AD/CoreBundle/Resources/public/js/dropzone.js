@@ -174,7 +174,7 @@ var Dropzone = function (_Emitter) {
          * How many file uploads to process in parallel (See the
          * Enqueuing file uploads* documentation section for more info)
          */
-        parallelUploads: 2,
+        parallelUploads: 4,
 
         /**
          * Whether to send multiple files in one request. If
@@ -191,7 +191,7 @@ var Dropzone = function (_Emitter) {
          *
          * See [chunksUploaded](#config-chunksUploaded) for the callback to finalise an upload.
          */
-        chunking: true,
+        chunking: false,
 
         /**
          * If `chunking` is enabled, this defines whether **every** file should be chunked,
@@ -362,7 +362,7 @@ var Dropzone = function (_Emitter) {
          * If false, files added to the dropzone will not be queued by default.
          * You'll have to call `enqueueFile(file)` manually.
          */
-        autoQueue: true,
+        autoQueue: false,
 
         /**
          * If `true`, this will add a link to every file preview to remove or cancel (if
@@ -2903,7 +2903,7 @@ Dropzone.forElement = function (element) {
 };
 
 // Set to false if you don't want Dropzone to automatically find and attach to .dropzone elements.
-Dropzone.autoDiscover = true;
+Dropzone.autoDiscover = false;
 
 // Looks for all .dropzone elements and creates a dropzone for them
 Dropzone.discover = function () {
