@@ -91,7 +91,8 @@ class PdfService {
 			$this->myLinks [$numPage] = $pdf->AddLink();
 
 			// on écrit le nom de la page et on y associe le lien
-			$pdf->cell ( 0, 5, ($key+1).') '.$building->getName(), 0, 0, 'L', false, $this->myLinks [$numPage] );
+			$text = iconv ( 'UTF-8', 'windows-1252', $building->getName() );
+			$pdf->cell ( 0, 5, ($key+1).') '.$text, 0, 0, 'L', false, $this->myLinks [$numPage] );
 
 			// on écrit le numéro de la page
 			$pdf->cell ( 0, 5, $numPage, 0, 1, 'R');
