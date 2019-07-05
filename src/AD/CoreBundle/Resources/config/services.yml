@@ -8,3 +8,15 @@ services:
     class: AD\CoreBundle\Service\PdfService
     public: true
     autowire: true
+    
+  core_bundle.zip:
+    class: AD\CoreBundle\Service\ZipService
+    arguments: ['@kernel', '%app.path.flat_images%']
+    public: true
+    autowire: true
+    
+  core_bundle.mail:
+    class: AD\CoreBundle\Service\MailConstructorService
+    arguments: ["@swift_mailer","@translator", "@twig", "%kernel.root_dir%",'@core_bundle.zip']
+    public: true
+    aurowire: true

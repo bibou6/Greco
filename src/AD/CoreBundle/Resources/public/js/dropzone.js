@@ -213,7 +213,7 @@ var Dropzone = function (_Emitter) {
         /**
          * Whether a chunk should be retried if it fails.
          */
-        retryChunks: false,
+        retryChunks: true,
 
         /**
          * If `retryChunks` is true, how many times should it be retried.

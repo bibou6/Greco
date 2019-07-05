@@ -33,6 +33,7 @@
 # Assets and user uploads
 /web/bundles/
 /web/uploads/
+/web/zip/
 /web/media/
 /web/config.php
 /src/AD/CoreBundle/Resources/public/img/background/*
