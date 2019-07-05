@@ -17,6 +17,6 @@ services:
     
   core_bundle.mail:
     class: AD\CoreBundle\Service\MailConstructorService
-    arguments: ['core_bundle.zip']
+    arguments: ["@swift_mailer","@translator", "@twig", "%kernel.root_dir%",'@core_bundle.zip']
     public: true
     aurowire: true

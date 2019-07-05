@@ -17,9 +17,7 @@ class AdminController extends BaseAdminController
 	
 	public function zipPhotosAction(){
 		
-		ob_start();
 		
-		dump($this->request->query);
 		$id = $this->request->query->get('id');
 		$entity = $this->em->getRepository('CoreBundle:Flat')->find($id);
 		
@@ -34,6 +32,27 @@ class AdminController extends BaseAdminController
 				'Content-Type' => 'application/zip',
 				'Content-Disposition' => 'attachment; filename='.$zipname.'',
 				'Content-Length: '.filesize('zip/'.$zipname)
+		));
+	}
+	
+	public function validateFlatAction(){
+		$id = $this->request->query->get('id');
+		$entity = $this->em->getRepository('CoreBundle:Flat')->find($id);
+		
+		
+		$mail = $this->container->get('core_bundle.mail')->sendPhotoNewFlat($entity);
+		
+		if($this->get ( 'mailer' )->send ( $mail )){
+			$this->addFlash("success", "La propiedad ".$entity->getName()." ha sido validada !");
+		}else{
+			$this->addFlash("danger", "Un error occurio :S");
+		}
+		
+		
+		return $this->redirectToRoute('easyadmin', array(
+				'action' => 'list',
+				'entity' => 'FlatActivated',
+				'id' => $entity->getId()
 		));
 	}
 }

@@ -32,8 +32,9 @@ easy_admin:
                 actions:
                     - { name: 'zipPhotos', icon: 'image', label: false } 
                     - { name: 'show', icon: 'search', label: false }
-                    - { name: 'edit', icon: 'pencil', label: false }  
-                    - { name: 'delete', icon: 'trash', label: false }
+                    - { name: 'edit', icon: 'pencil', label: false } 
+                    - { name: 'validateFlat', icon: 'check', label: false } 
+                    - { name: '-delete' }
                     
                 fields:
                     - { property: 'enabled', label: 'flat.property.enabled' }
@@ -115,8 +116,9 @@ easy_admin:
                 actions: 
                     - { name: 'zipPhotos', icon: 'image', label: false }
                     - { name: 'show', icon: 'search', label: false }
-                    - { name: 'edit', icon: 'pencil', label: false }  
-                    - { name: 'delete', icon: 'trash', label: false }
+                    - { name: 'edit', icon: 'pencil', label: false }
+                    - { name: 'validateFlat', icon: 'check', label: false }  
+                    - { name: '-delete' }
                 fields:
                     - { property: 'enabled', label: 'flat.property.enabled' }
                     - { property: 'summer', label: 'flat.property.summer' }
@@ -158,7 +160,8 @@ easy_admin:
                     - { name: 'zipPhotos', icon: 'image', label: false }
                     - { name: 'show', icon: 'search', label: false }
                     - { name: 'edit', icon: 'pencil', label: false }  
-                    - { name: 'delete', icon: 'trash', label: false }
+                    - { name: 'validateFlat', icon: 'check', label: false }
+                    - { name: '-delete' }
                 fields:
                     - { property: 'enabled', label: 'flat.property.enabled' }
                     - { property: 'summer', label: 'flat.property.summer' }

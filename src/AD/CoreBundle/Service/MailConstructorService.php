@@ -49,10 +49,8 @@ class MailConstructorService {
 				] ), 'text/html' );
 		
 		
-		foreach ($mail->getAttachments() as $atm){
-			$pathToFile = $this->webRoot."".$this->helper->asset($atm, 'file');
-			$message->attach(Swift_Attachment::fromPath($pathToFile));
-		}
+		$pathToFile = $this->webRoot."/zip/".$this->zip->zipFlatPhotos($flat);;
+		$message->attach(Swift_Attachment::fromPath($pathToFile));
 		
 		
 		
