@@ -1,7 +1,11 @@
 var dropzone = new Dropzone (".dropzone", {
   autoQueue: false,
   parallelUploads: 3,
-  chunking: false
+  chunking: true,
+  retryChunks: true,
+  retryChunksLimit: 3,
+  chunkSize: 1000000,
+  resizeQuality: 0.6,
 });
 
 
