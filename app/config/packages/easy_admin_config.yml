@@ -113,7 +113,7 @@ easy_admin:
                 title: flat.list.label
                 max_results: '10'
                 actions: 
-                    - { name: 'zipPhotos', icon: 'file-archive' }
+                    - { name: 'zipPhotos', icon: 'image', label: false }
                     - { name: 'show', icon: 'search', label: false }
                     - { name: 'edit', icon: 'pencil', label: false }  
                     - { name: 'delete', icon: 'trash', label: false }
@@ -155,7 +155,7 @@ easy_admin:
                 dql_filter: "entity.enabled = false"
                 max_results: '10'
                 actions: 
-                    - { name: 'zipPhotos', icon: 'file-archive' }
+                    - { name: 'zipPhotos', icon: 'image', label: false }
                     - { name: 'show', icon: 'search', label: false }
                     - { name: 'edit', icon: 'pencil', label: false }  
                     - { name: 'delete', icon: 'trash', label: false }
