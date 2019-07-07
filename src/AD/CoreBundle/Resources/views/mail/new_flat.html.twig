@@ -8,7 +8,7 @@
 		<div><ul>
 			<li>Nombre : {{ flat.name }} </li>
 			<li>Ciudad : {{ flat.city }}</li>
-			<li>Precio : {{ flat.price }}</li>
+			<li>Precio : {{ flat.price | number_format(0, '.', '.') }}</li>
 			<li>Arriendo: {{ flat.forSale==false?"Si":"No" }}</li>
 		</ul>
 		</div>

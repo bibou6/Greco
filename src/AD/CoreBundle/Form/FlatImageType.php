@@ -17,11 +17,10 @@ class FlatImageType extends AbstractType
     {
         $builder
             ->add('imageFile', VichImageType::class, array(
-                'required' => false,
+                'required' => true,
                 'allow_delete' => true, // not mandatory, default is true
                 'download_link' => true, // not mandatory, default is true
-                ))
-            ->add('alt');
+                ));
     }
 
     /**

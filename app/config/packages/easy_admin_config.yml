@@ -26,12 +26,14 @@ easy_admin:
             controller: AD\CoreBundle\Controller\AdminController
             translation_domain: 'admin'
             label: flat.labels.activated
+            templates:
+                edit: '@Core/templates/flat/edit.html.twig'
             list:
                 dql_filter: "entity.enabled = true and entity.rented = false"
                 max_results: '10'
                 actions:
                     - { name: 'zipPhotos', icon: 'image', label: false } 
-                    - { name: 'show', icon: 'search', label: false }
+                    - { name: '-show'}
                     - { name: 'edit', icon: 'pencil', label: false } 
                     - { name: 'validateFlat', icon: 'check', label: false } 
                     - { name: '-delete' }
@@ -70,24 +72,14 @@ easy_admin:
             search: 
                 fields:
                     - { property: 'name', label: 'flat.property.name' }
-            # SHOW
-            show:
-                fields:
-                    - { property: 'name', label: 'flat.property.name' }
-                    - { property: 'title', label: 'pension.property.title' }
-                    - { property: 'city', label: 'pension.property.city' }
-                    - { property: 'price', label: 'flat.property.price' }
-                    - { property: 'image', type: 'image', base_path: '%app.path.flat_images%', label: 'flat.property.image' }
-                    - { property: 'privateInformation', label: 'pension.property.privateInformation' }
-                    - { property: 'description_spanish', label: 'flat.property.description_spanish' }
-                    - { property: 'description_english', label: 'flat.property.description_english' }
-                    - { property: 'description_french', label: 'flat.property.description_french' }
-                    - { property: 'images', type: 'AD\CoreBundle\Entity\FlatImage', label: 'flat.property.images', template: 'images_list_upload.html.twig' }
         Flat:
             class: AD\CoreBundle\Entity\Flat
             controller: AD\CoreBundle\Controller\AdminController
             translation_domain: 'admin'
             label: flat.labels.name
+            
+            templates:
+                edit: '@Core/templates/flat/edit.html.twig'
             # FORM
             form:
                 fields:
@@ -115,7 +107,7 @@ easy_admin:
                 max_results: '10'
                 actions: 
                     - { name: 'zipPhotos', icon: 'image', label: false }
-                    - { name: 'show', icon: 'search', label: false }
+                    - { name: '-show'}
                     - { name: 'edit', icon: 'pencil', label: false }
                     - { name: 'validateFlat', icon: 'check', label: false }  
                     - { name: '-delete' }
@@ -133,32 +125,19 @@ easy_admin:
             search: 
                 fields:
                     - { property: 'name', label: 'flat.property.name' }
-            # SHOW
-            show:
-                fields:
-                    - { property: 'name', label: 'flat.property.name' }
-                    - { property: 'title', label: 'pension.property.title' }
-                    - { property: 'city', label: 'pension.property.city' }
-                    - { property: 'price', label: 'flat.property.price' }
-                    - { property: 'image', type: 'image', base_path: '%app.path.flat_images%', label: 'flat.property.image' }
-                    - { property: 'privateInformation', label: 'pension.property.privateInformation' }
-                    - { property: 'description_spanish', label: 'flat.property.description_spanish' }
-                    - { property: 'description_english', label: 'flat.property.description_english' }
-                    - { property: 'description_french', label: 'flat.property.description_french' }
-                    - { property: 'images', type: 'AD\CoreBundle\Entity\FlatImage', label: 'flat.property.images', template: 'images_list_upload.html.twig' }
-        
-       
         FlatDeactivated:
             class: AD\CoreBundle\Entity\Flat
             controller: AD\CoreBundle\Controller\AdminController
             translation_domain: 'admin'
             label: flat.labels.deactivated
+            templates:
+                edit: '@Core/templates/flat/edit.html.twig'
             list:
                 dql_filter: "entity.enabled = false"
                 max_results: '10'
                 actions: 
                     - { name: 'zipPhotos', icon: 'image', label: false }
-                    - { name: 'show', icon: 'search', label: false }
+                    - { name: '-show'}
                     - { name: 'edit', icon: 'pencil', label: false }  
                     - { name: 'validateFlat', icon: 'check', label: false }
                     - { name: '-delete' }
@@ -196,20 +175,6 @@ easy_admin:
             search: 
                 fields:
                     - { property: 'name', label: 'flat.property.name' }
-            # SHOW
-            show:
-                fields:
-                    - { property: 'name', label: 'flat.property.name' }
-                    - { property: 'title', label: 'pension.property.title' }
-                    - { property: 'city', label: 'pension.property.city' }
-                    - { property: 'price', label: 'flat.property.price' }
-                    - { property: 'image', type: 'image', base_path: '%app.path.flat_images%', label: 'flat.property.image' }
-                    - { property: 'privateInformation', label: 'pension.property.privateInformation' }
-                    - { property: 'description_spanish', label: 'flat.property.description_spanish' }
-                    - { property: 'description_english', label: 'flat.property.description_english' }
-                    - { property: 'description_french', label: 'flat.property.description_french' }
-                    - { property: 'images', type: 'AD\CoreBundle\Entity\FlatImage', label: 'flat.property.images', template: 'images_list_upload.html.twig' }
-              
         #############################################
         #         PENSION CONFIGURATION             #
         #############################################
