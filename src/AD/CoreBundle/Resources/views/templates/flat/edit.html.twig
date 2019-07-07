@@ -1,0 +1,22 @@
+{% extends '@EasyAdmin/default/new.html.twig' %}
+
+{% block content_title %}
+        {# ... customize the content title ... #}
+    {% trans_default_domain "CoreBundle" %}
+    {% for val in form.vars.value.images %}
+    	{# <a href="{{ path('flat_image_delete', { entity: 'Pension', id: val.id }) }}" onclick="return confirm('{{ 'pensionImage.delete.confirm'|trans({}, 'admin') }}')")><img src="{{ vich_uploader_asset(val,'imageFile') | imagine_filter('my_thumb')}}" /></a>#}
+    	
+    	<a href="#" class="easyadmin-thumbnail" data-featherlight="#easyadmin-lightbox-{{ val.id }}" data-featherlight-close-on-click="anywhere">
+        	<img src="{{ vich_uploader_asset(val,'imageFile') }}" style="width: 50px;height:50px;">
+    	</a>
+    	<div id="easyadmin-lightbox-{{ val.id }}" class="easyadmin-lightbox" data-featherlight="#easyadmin-lightbox-{{ val.id }}" data-featherlight-close-on-click="anywhere">
+        	<img src="{{ vich_uploader_asset(val,'imageFile') }}">
+    	</div>
+    {% endfor %}
+    <form id="myAwesomeDropzone" action="{{ path('flat_image_upload', { 'id': form.vars.value.id, '_locale': app.request.locale }) }}" class="dropzone" method="post" enctype="multipart/form-data">
+          <div class="dz-message" data-dz-message><span>{{ 'dropzone.upload.message'|trans({},'admin') }}</span></div>
+          <div class="fallback">
+            <input name="file" type="file" multiple />
+          </div>
+    </form>
+{% endblock %}
