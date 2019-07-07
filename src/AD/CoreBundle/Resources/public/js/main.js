@@ -1,10 +1,7 @@
-var dropzone = new Dropzone (".dropzone", {
+var dropzone = new Dropzone ("#dropzone-easyadmin", {
   autoQueue: false,
   parallelUploads: 3,
-  chunking: true,
-  retryChunks: true,
-  retryChunksLimit: 3,
-  chunkSize: 1000000,
+  chunking: false,
   resizeQuality: 0.6,
 });
 
