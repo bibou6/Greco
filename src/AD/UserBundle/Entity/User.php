@@ -37,9 +37,14 @@ class User extends BaseUser
 	 * @ORM\Column(type="datetime", nullable=true)
 	 * @var \DateTime
 	 */
-	private $updatedAt = new \Datetime("now");
+	private $updatedAt;
 	
 	// ...
+	
+	public function __construct(){
+		$this->updatedAt = new \Datetime("now");
+	}
+	
 	
 	public function setImageFile(File $image = null)
 	{
