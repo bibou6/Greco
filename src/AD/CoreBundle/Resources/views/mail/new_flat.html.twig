@@ -1,23 +1,22 @@
-<html>
-	<head>
-	</head>
-	<body>
-		<div>Buenas tardes,</div>
+{% extends "CoreBundle:mail:email_layout.html.twig" %}
 
-		<div>Se ha subido una nueva propiedad !</div>
-		<div><ul>
-			<li>Nombre : {{ flat.name }} </li>
+{% block body %}
+<div class="content">
+	<div>Buenas tardes,</div>
+
+	<div>Se ha subido una nueva propiedad !</div>
+	<div>
+		<ul>
+			<li>Nombre : {{ flat.name }}</li>
 			<li>Ciudad : {{ flat.city }}</li>
-			<li>Precio : {{ flat.price | number_format(0, '.', '.') }}</li>
+			<li>Precio : ${{ flat.price | number_format(0, '.', '.') }}</li>
 			<li>Arriendo: {{ flat.forSale==false?"Si":"No" }}</li>
 		</ul>
-		</div>
-		
-		<h3>Ajunto encontrarán las fotos subidas para publicarlas</h3>
-		
-		<br>
-		<div>
-			Su administrador preferido !
-		</div>
-	</body>
-</html>
+	</div>
+
+	<h3>Ajunto encontrarán las fotos subidas para publicarlas</h3>
+
+	<br>
+	<div>Su administrador preferido !</div>
+</div>
+{% endblock %}
