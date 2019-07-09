@@ -35,7 +35,7 @@ class MailConstructorService {
 	public function sendPhotoNewFlat(Flat $flat){
 		
 		$message = (new \Swift_Message ("Un departamento ha sido agregado !"));
-		$message->setFrom ( "no-reply@grecoinmobiliaria.com", "No-reply" );
+		$message->setFrom ( "no-reply@grecoinmobiliaria.com", "no-reply@grecoinmobiliaria.com" );
 		
 		$message->addTo("adriendurot3@hotmail.com", "Adrien Durot");
 		$message->addTo("gis.greco@gmail.com", "Giselle Durot");

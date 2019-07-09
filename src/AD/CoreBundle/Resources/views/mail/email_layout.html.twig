@@ -1,0 +1,81 @@
+<html>
+<head>
+<style>
+.email {
+	font-size: 1em;
+	border-top: 1px #112244 solid;
+	border-left: 1px #112244 solid;
+	border-right: 1px #112244 solid;
+}
+
+.noreply-message{
+	font-style: italic;
+	font-size: 0.6em;
+	color: #949596;
+}
+
+.content {
+	margin-top: 20px;
+}
+
+.email-body {
+	padding: 40px;
+}
+
+.footer {
+	font-weight: bold;
+	margin-top: 20px;
+	color: #112244
+}
+
+.title {
+	font-size: 1.2em;
+}
+
+.information {
+	font-size: 0.8em;
+}
+</style>
+{% block style %}
+{% endblock %}
+</head>
+<body>
+
+	{% trans_default_domain 'email' %}
+
+	<div class="email">
+		<div
+			style="width: 100%; text-align: center; background-color: #d66e00;">
+			<img
+				src="{{ absolute_url(asset('bundles/core/img/logo_small_rounded_96x96.png')) }}"
+				alt="Greco Inmobiliaria (LOGO)" style="padding: 10px 0px;" />
+		</div>
+		<div class="email-body">
+			{% block body %}
+			{% endblock %}
+
+			<div class="footer">
+				<div class="name">
+					{{ 'footer.line.1' | trans }}
+				</div>
+				<div class="information">
+					<div>
+						{{ 'footer.line.2' | trans }}
+					</div>
+					<div>
+						{{ 'footer.line.3' | trans }}
+					</div>
+					<div>
+						{{ 'footer.line.4' | trans }}
+					</div>
+					<div>
+						{{ 'footer.line.5' | trans }}
+					</div>
+				</div>
+			</div>
+			{% block noreply %}
+			{% endblock %}
+		</div>
+	</div>
+</body>
+</html>
