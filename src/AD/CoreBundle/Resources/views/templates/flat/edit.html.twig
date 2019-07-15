@@ -19,4 +19,14 @@
             <input name="file" type="file" multiple />
           </div>
     </form>
+    
+    
+    
+    <h1>Imagen principal</h1>
+    <form id="dropzone-easyadmin-alone" action="{{ path('flat_main_image_upload', { 'id': form.vars.value.id, '_locale': app.request.locale }) }}" class="dropzone" method="post" enctype="multipart/form-data">
+          <div class="dz-message" data-dz-message><span>{{ 'dropzone.upload.message'|trans({},'admin') }}</span></div>
+          <div class="fallback">
+            <input name="file" type="file" multiple />
+          </div>
+    </form>
 {% endblock %}

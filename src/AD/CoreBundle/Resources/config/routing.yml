@@ -52,7 +52,7 @@ fos_user_change_password:
 
 #Image Section
 _liip_imagine:
-    resource: "@LiipImagineBundle/Resources/config/routing.xml"
+    resource: "@LiipImagineBundle/Resources/config/routing.yaml"
 
 #Pension Section
 pension:

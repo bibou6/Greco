@@ -14,11 +14,15 @@ liip_imagine:
                 #crop:
                  #    size: [ 500, 200 ]
                   #   start: [050, 100]
+                  
+                  
         building_thumbnail:
             quality: 100
             filters:
                 scale:
                     dim: [ 300  , 200 ]
+                    
+                    
         building_show:
             quality: 100
             filters:
@@ -27,17 +31,23 @@ liip_imagine:
                     # crop the input image, if required
                     mode: outbound
                     
+                    
         thumbnail:
             quality: 70
             filters:
                 thumbnail:
                     size: [50, 50]
                     mode: outbound
+                    
+                    
         building_thumbnail_bg:
             quality: 70
             filters:
                 scale:
                     dim: [ 200, 322 ]
+                    
+                    
+                    
         my_banner:
             quality: 100
             filters:
