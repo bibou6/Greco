@@ -21,12 +21,7 @@
 			<attribute name="composer" value="vendor"/>
 		</attributes>
 	</buildpathentry>
-	<buildpathentry excluding="ca-bundle/" kind="src" path="vendor/composer">
-		<attributes>
-			<attribute name="composer" value="vendor"/>
-		</attributes>
-	</buildpathentry>
-	<buildpathentry kind="src" path="vendor/composer/ca-bundle/src">
+	<buildpathentry kind="src" path="vendor/composer">
 		<attributes>
 			<attribute name="composer" value="vendor"/>
 		</attributes>
@@ -96,7 +91,7 @@
 			<attribute name="composer" value="vendor"/>
 		</attributes>
 	</buildpathentry>
-	<buildpathentry kind="src" path="vendor/doctrine/lexer/lib">
+	<buildpathentry kind="src" path="vendor/doctrine/lexer/lib/Doctrine/Common/Lexer">
 		<attributes>
 			<attribute name="composer" value="vendor"/>
 		</attributes>
@@ -281,6 +276,21 @@
 			<attribute name="composer" value="vendor"/>
 		</attributes>
 	</buildpathentry>
+	<buildpathentry kind="src" path="vendor/symfony/http-client">
+		<attributes>
+			<attribute name="composer" value="vendor"/>
+		</attributes>
+	</buildpathentry>
+	<buildpathentry kind="src" path="vendor/symfony/http-client-contracts">
+		<attributes>
+			<attribute name="composer" value="vendor"/>
+		</attributes>
+	</buildpathentry>
+	<buildpathentry kind="src" path="vendor/symfony/mime">
+		<attributes>
+			<attribute name="composer" value="vendor"/>
+		</attributes>
+	</buildpathentry>
 	<buildpathentry kind="src" path="vendor/symfony/monolog-bundle">
 		<attributes>
 			<attribute name="composer" value="vendor"/>
@@ -306,6 +316,11 @@
 			<attribute name="composer" value="vendor"/>
 		</attributes>
 	</buildpathentry>
+	<buildpathentry kind="src" path="vendor/symfony/polyfill-intl-idn">
+		<attributes>
+			<attribute name="composer" value="vendor"/>
+		</attributes>
+	</buildpathentry>
 	<buildpathentry kind="src" path="vendor/symfony/polyfill-mbstring">
 		<attributes>
 			<attribute name="composer" value="vendor"/>
@@ -322,6 +337,21 @@
 		</attributes>
 	</buildpathentry>
 	<buildpathentry kind="src" path="vendor/symfony/polyfill-php70/Resources/stubs">
+		<attributes>
+			<attribute name="composer" value="vendor"/>
+		</attributes>
+	</buildpathentry>
+	<buildpathentry kind="src" path="vendor/symfony/polyfill-php72">
+		<attributes>
+			<attribute name="composer" value="vendor"/>
+		</attributes>
+	</buildpathentry>
+	<buildpathentry excluding="Resources/stubs/" kind="src" path="vendor/symfony/polyfill-php73">
+		<attributes>
+			<attribute name="composer" value="vendor"/>
+		</attributes>
+	</buildpathentry>
+	<buildpathentry kind="src" path="vendor/symfony/polyfill-php73/Resources/stubs">
 		<attributes>
 			<attribute name="composer" value="vendor"/>
 		</attributes>
@@ -416,7 +446,7 @@
 			<attribute name="composer" value="vendor"/>
 		</attributes>
 	</buildpathentry>
-	<buildpathentry excluding="behat/transliterator/src/|composer/|coresphere/console-bundle/|doctrine/annotations/lib/Doctrine/Common/Annotations/|doctrine/cache/lib/Doctrine/Common/Cache/|doctrine/collections/lib/Doctrine/Common/Collections/|doctrine/common/lib/Doctrine/Common/|doctrine/data-fixtures/lib/Doctrine/Common/DataFixtures/|doctrine/dbal/lib/Doctrine/DBAL/|doctrine/doctrine-bundle/|doctrine/doctrine-cache-bundle/|doctrine/doctrine-fixtures-bundle/|doctrine/event-manager/lib/Doctrine/Common/|doctrine/inflector/lib/Doctrine/Common/Inflector/|doctrine/instantiator/src/Doctrine/Instantiator/|doctrine/lexer/lib/|doctrine/orm/lib/Doctrine/ORM/|doctrine/persistence/lib/Doctrine/Common/|doctrine/reflection/lib/Doctrine/Common/|easycorp/easyadmin-bundle/legacy/|easycorp/easyadmin-bundle/src/|egeloen/ckeditor-bundle/|egeloen/json-builder/src/|fig/link-util/src/|friendsofsymfony/user-bundle/|gedmo/doctrine-extensions/lib/Gedmo/|imagine/imagine/lib/|incenteev/composer-parameter-handler/|jdorn/sql-formatter/lib/|jms/metadata/src/|kriswallsmith/assetic/src/|leafo/scssphp/src/|liip/imagine-bundle/|monolog/monolog/src/Monolog/|pagerfanta/pagerfanta/src/Pagerfanta/|patchwork/jsqueeze/class/|psr/cache/src/|psr/container/src/|psr/link/src/|psr/log/Psr/Log/|psr/simple-cache/src/|sensio/distribution-bundle/|sensio/framework-extra-bundle/|sensio/generator-bundle/|sensiolabs/security-checker/SensioLabs/Security/|setasign/fpdf/|setasign/fpdi/src/|setasign/tfpdf/|stof/doctrine-extensions-bundle/|swiftmailer/swiftmailer/lib/|symfony/assetic-bundle/|symfony/monolog-bundle/|symfony/phpunit-bridge/|symfony/polyfill-apcu/|symfony/polyfill-ctype/|symfony/polyfill-intl-icu/|symfony/polyfill-mbstring/|symfony/polyfill-php56/|symfony/polyfill-php70/|symfony/polyfill-util/|symfony/swiftmailer-bundle/|symfony/symfony/src/Symfony/Bridge/Doctrine/|symfony/symfony/src/Symfony/Bridge/Monolog/|symfony/symfony/src/Symfony/Bridge/ProxyManager/|symfony/symfony/src/Symfony/Bridge/Twig/|symfony/symfony/src/Symfony/Bundle/|symfony/symfony/src/Symfony/Component/|tecnickcom/tcpdf/|twig/extensions/lib/|twig/extensions/src/|twig/twig/lib/|twig/twig/src/|vich/uploader-bundle/" kind="src" path="vendor">
+	<buildpathentry excluding="behat/transliterator/src/|composer/|coresphere/console-bundle/|doctrine/annotations/lib/Doctrine/Common/Annotations/|doctrine/cache/lib/Doctrine/Common/Cache/|doctrine/collections/lib/Doctrine/Common/Collections/|doctrine/common/lib/Doctrine/Common/|doctrine/data-fixtures/lib/Doctrine/Common/DataFixtures/|doctrine/dbal/lib/Doctrine/DBAL/|doctrine/doctrine-bundle/|doctrine/doctrine-cache-bundle/|doctrine/doctrine-fixtures-bundle/|doctrine/event-manager/lib/Doctrine/Common/|doctrine/inflector/lib/Doctrine/Common/Inflector/|doctrine/instantiator/src/Doctrine/Instantiator/|doctrine/lexer/lib/Doctrine/Common/Lexer/|doctrine/orm/lib/Doctrine/ORM/|doctrine/persistence/lib/Doctrine/Common/|doctrine/reflection/lib/Doctrine/Common/|easycorp/easyadmin-bundle/legacy/|easycorp/easyadmin-bundle/src/|egeloen/ckeditor-bundle/|egeloen/json-builder/src/|fig/link-util/src/|friendsofsymfony/user-bundle/|gedmo/doctrine-extensions/lib/Gedmo/|imagine/imagine/lib/|incenteev/composer-parameter-handler/|jdorn/sql-formatter/lib/|jms/metadata/src/|kriswallsmith/assetic/src/|leafo/scssphp/src/|liip/imagine-bundle/|monolog/monolog/src/Monolog/|pagerfanta/pagerfanta/src/Pagerfanta/|patchwork/jsqueeze/class/|psr/cache/src/|psr/container/src/|psr/link/src/|psr/log/Psr/Log/|psr/simple-cache/src/|sensio/distribution-bundle/|sensio/framework-extra-bundle/|sensio/generator-bundle/|sensiolabs/security-checker/SensioLabs/Security/|setasign/fpdf/|setasign/fpdi/src/|setasign/tfpdf/|stof/doctrine-extensions-bundle/|swiftmailer/swiftmailer/lib/|symfony/assetic-bundle/|symfony/http-client/|symfony/http-client-contracts/|symfony/mime/|symfony/monolog-bundle/|symfony/phpunit-bridge/|symfony/polyfill-apcu/|symfony/polyfill-ctype/|symfony/polyfill-intl-icu/|symfony/polyfill-intl-idn/|symfony/polyfill-mbstring/|symfony/polyfill-php56/|symfony/polyfill-php70/|symfony/polyfill-php72/|symfony/polyfill-php73/|symfony/polyfill-util/|symfony/swiftmailer-bundle/|symfony/symfony/src/Symfony/Bridge/Doctrine/|symfony/symfony/src/Symfony/Bridge/Monolog/|symfony/symfony/src/Symfony/Bridge/ProxyManager/|symfony/symfony/src/Symfony/Bridge/Twig/|symfony/symfony/src/Symfony/Bundle/|symfony/symfony/src/Symfony/Component/|tecnickcom/tcpdf/|twig/extensions/lib/|twig/extensions/src/|twig/twig/lib/|twig/twig/src/|vich/uploader-bundle/" kind="src" path="vendor">
 		<attributes>
 			<attribute name="composer" value="vendor"/>
 		</attributes>

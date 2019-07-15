@@ -102,6 +102,7 @@ class FlatController extends Controller
     	//Retrieving flat on which you add the file
     	
 	 	$flat = $em->getRepository('CoreBundle:Flat')->find($id);
+	 	dump($request->files);
     	$uploaded_file = $request->files->get('file');
     	
     	if($request->isMethod("POST")){
@@ -117,6 +118,7 @@ class FlatController extends Controller
 	    		$flat->addImage($flatImage);
 	    		
 	    		$em->flush();
+	    		
 	    	}
     		// redirect to the 'list' view of the given entity
     		return new JsonResponse(array('success' => true));
@@ -125,6 +127,39 @@ class FlatController extends Controller
     	// redirect to the 'list' view of the given entity
     	return new JsonResponse(array('success' => false));
     	 
+    }
+    
+    
+    
+    /**
+     * @Security("has_role('ROLE_ADMIN')")
+     */
+    public function uploadFlatMainImageAction($id, Request $request){
+    	
+    	$logger = $this->get('logger');
+    	$em = $this->getDoctrine()->getManager();
+    	
+    	//Retrieving flat on which you add the file
+    	
+    	$flat = $em->getRepository('CoreBundle:Flat')->find($id);
+    	$uploaded_file = $request->files->get('file');
+    	
+    	if($request->isMethod("POST")){
+    		if($uploaded_file !== null){
+    			$logger->info('Image upload for Flat : '.$flat->getName());
+    			
+    			$flat->setImageFile($uploaded_file);
+    			
+    			$em->flush();
+    			
+    		}
+    		// redirect to the 'list' view of the given entity
+    		return new JsonResponse(array('success' => true));
+    	}
+    	
+    	// redirect to the 'list' view of the given entity
+    	return new JsonResponse(array('success' => false));
+    	
     }
     
     /**

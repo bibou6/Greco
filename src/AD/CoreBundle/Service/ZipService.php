@@ -4,6 +4,7 @@ namespace AD\CoreBundle\Service;
 
 use AD\CoreBundle\Entity\Flat;
 use AD\CoreBundle\Entity\Pension;
+use Exception;
 use setasign\Fpdi\Fpdi;
 
 class ZipService {
@@ -53,10 +54,11 @@ class ZipService {
 				$zip->close();
 				ob_end_clean();
 				
-				rename($webDir.'/'.$zipname,$webDir."/zip/".$zipname);
-				//$zip=fopen($zipname, "r");//astuce ici
-				//$content=stream_get_contents($zip);// et ici
-				//application/zip
+				try{
+					rename($webDir.'/'.$zipname,$webDir."/zip/".$zipname);
+				}catch(Exception $e){
+					
+				}
 			}
 		}
 		return $zipname;

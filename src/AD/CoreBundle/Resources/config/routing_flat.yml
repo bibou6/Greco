@@ -22,6 +22,12 @@ flat_image_upload:
     requirements:
         id: \d+
         
+flat_main_image_upload:
+    path:     /upload/main/{id}/image
+    defaults: { _controller: 'CoreBundle:Flat:uploadFlatMainImage' }
+    requirements:
+        id: \d+
+        
 admin_flatimage_sort:
     path:     /image/sort/{id}/{position}
     defaults: { _controller: 'CoreBundle:Flat:sort' }

@@ -59,8 +59,6 @@ easy_admin:
                     - { property: 'forSale', label: 'flat.property.forSale' }
                     - { property: 'rented', label: 'flat.property.rented' }
                     - { property: 'summer', label: 'flat.property.summer' }
-                    - { type: 'group', label: 'flat.images', css_class: 'col-sm-6' }
-                    - { property: 'imageFile', type: 'vich_image', label: 'flat.property.imageFile' }
                     - { type: 'group', label: 'flat.description' }
                     - { property: 'privateInformation', type: 'ckeditor', label: 'flat.property.privateInformation' }
                     - { property: 'description_spanish', type: 'ckeditor', label: 'flat.property.description_spanish' }
@@ -92,8 +90,6 @@ easy_admin:
                     - { property: 'forSale', label: 'flat.property.forSale' }
                     - { property: 'rented', label: 'flat.property.rented' }
                     - { property: 'summer', label: 'flat.property.summer' }
-                    - { type: 'group', label: 'flat.images', css_class: 'col-sm-6' }
-                    - { property: 'imageFile', type: 'vich_image', label: 'flat.property.imageFile' }
                     - { type: 'group', label: 'flat.description' }
                     - { property: 'privateInformation', type: 'ckeditor', label: 'flat.property.privateInformation' }
                     - { property: 'description_spanish', type: 'ckeditor', label: 'flat.property.description_spanish' }
@@ -162,8 +158,6 @@ easy_admin:
                     - { property: 'forSale', label: 'flat.property.forSale' }
                     - { property: 'rented', label: 'flat.property.rented' }
                     - { property: 'summer', label: 'flat.property.summer' }
-                    - { type: 'group', label: 'flat.images', css_class: 'col-sm-6' }
-                    - { property: 'imageFile', type: 'vich_image', label: 'flat.property.imageFile' }
                     - { type: 'group', label: 'flat.description' }
                     - { property: 'privateInformation', type: 'ckeditor', label: 'flat.property.privateInformation' }
                     - { property: 'description_spanish', type: 'ckeditor', label: 'flat.property.description_spanish' }
