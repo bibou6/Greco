@@ -111,7 +111,6 @@ dropzone.on("addedfile", function(origFile) {
 				canvas.width = width;
 				canvas.height = height;
 
-				alert("degree: " +degree);
 				var ctx = canvas.getContext("2d");
 				ctx.translate(canvas.width/2, canvas.height/2);
 				ctx.rotate(Math.PI / 180 *degree);
