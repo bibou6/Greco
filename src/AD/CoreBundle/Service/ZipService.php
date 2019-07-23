@@ -29,6 +29,7 @@ class ZipService {
 		
 		$zip=new \ZipArchive();
 		$zipname=str_replace(' ','_',$flat->getName()."_fotos.zip");
+		$zipname=str_replace(',','_',$zipname);
 		$webDir = $this->kernel->getRootdir()."/../web";
 		
 		if(!file_exists($webDir.'/zip/'.$zipname)){
