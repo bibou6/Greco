@@ -59,6 +59,7 @@ easy_admin:
                     - { property: 'forSale', label: 'flat.property.forSale' }
                     - { property: 'rented', label: 'flat.property.rented' }
                     - { property: 'summer', label: 'flat.property.summer' }
+                    - { property: 'uploadedDate', type_options: { widget: 'single_text' }, label: 'flat.property.uploadedDate' }
                     - { type: 'group', label: 'flat.description' }
                     - { property: 'privateInformation', type: 'ckeditor', label: 'flat.property.privateInformation' }
                     - { property: 'description_spanish', type: 'ckeditor', label: 'flat.property.description_spanish' }

@@ -30,6 +30,13 @@ class Flat
      * @ORM\Column(name="updatedAt", type="datetime", nullable=true)
      */
     private $updatedAt;
+    
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="uploadedDate", type="datetime", nullable=true)
+     */
+    private $uploadedDate;
 
     /**
      * @var int
@@ -160,6 +167,8 @@ class Flat
     {
     	$this->images = new \Doctrine\Common\Collections\ArrayCollection();
     	$this->enabled = true;
+    	$this->uploadedDate = new \Datetime("now");
+    	$this->updatedAt = new \Datetime("now");
     }
     
     
@@ -641,5 +650,29 @@ class Flat
     		default:
     			return $this->getDescriptionSpanish();
     	}
+    }
+
+    /**
+     * Set uploadedDate.
+     *
+     * @param \DateTime|null $uploadedDate
+     *
+     * @return Flat
+     */
+    public function setUploadedDate($uploadedDate = null)
+    {
+        $this->uploadedDate = $uploadedDate;
+
+        return $this;
+    }
+
+    /**
+     * Get uploadedDate.
+     *
+     * @return \DateTime|null
+     */
+    public function getUploadedDate()
+    {
+        return $this->uploadedDate;
     }
 }

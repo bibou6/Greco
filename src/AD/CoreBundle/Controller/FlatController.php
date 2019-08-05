@@ -227,13 +227,14 @@ class FlatController extends Controller
     			'enabled' => true,
     			'summer' => false,
     			'rented' => false
+    	),array(
+    		'uploadedDate' => 'DESC'
     	));
     	
     	$pensions = $em->getRepository('CoreBundle:Pension')->findBy(array(
     			'enabled' => true,
     	));
     	
-    	shuffle($flats);
     	
     	$result = array_merge($pensions,$flats);
     	
