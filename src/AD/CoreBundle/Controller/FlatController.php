@@ -20,7 +20,8 @@ class FlatController extends Controller
 				'enabled' => true,
 				'forSale' => true
 		),array(
-				'rented' => 'ASC'
+				'rented' => 'ASC',
+				'uploadedDate' => 'DESC'
 		));
 		 
 		 
@@ -39,7 +40,8 @@ class FlatController extends Controller
 				'forSale' => false,
 				'summer' => false
 		),array(
-				'rented' => 'ASC'
+				'rented' => 'ASC',
+				'uploadedDate' => 'DESC'
 		));
 			
 			
