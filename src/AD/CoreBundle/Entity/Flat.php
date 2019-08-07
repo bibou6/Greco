@@ -69,6 +69,13 @@ class Flat
     /**
      * @var boolean
      *
+     * @ORM\Column(name="toPublish", type="boolean")
+     */
+    private $toPublish;
+    
+    /**
+     * @var boolean
+     *
      * @ORM\Column(name="summer", type="boolean")
      */
     private $summer;
@@ -674,5 +681,29 @@ class Flat
     public function getUploadedDate()
     {
         return $this->uploadedDate;
+    }
+
+    /**
+     * Set toPublish.
+     *
+     * @param bool $toPublish
+     *
+     * @return Flat
+     */
+    public function setToPublish($toPublish)
+    {
+        $this->toPublish = $toPublish;
+
+        return $this;
+    }
+
+    /**
+     * Get toPublish.
+     *
+     * @return bool
+     */
+    public function getToPublish()
+    {
+        return $this->toPublish;
     }
 }

@@ -226,9 +226,7 @@ class FlatController extends Controller
     public function publishAction(){
     	$em = $this->getDoctrine()->getManager();
     	$flats = $em->getRepository('CoreBundle:Flat')->findBy(array(
-    			'enabled' => true,
-    			'summer' => false,
-    			'rented' => false
+    			'toPublish' => true
     	),array(
     		'uploadedDate' => 'DESC'
     	));

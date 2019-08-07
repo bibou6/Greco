@@ -5,7 +5,7 @@ easy_admin:
         time:     'H:i'
         datetime: 'd/m/Y H:i:s'
     design:
-        menu: ['FlatActivated', 'FlatDeactivated','Flat','Pension', 'User']
+        menu: ['FlatActivated', 'FlatDeactivated','Pension', 'User']
         brand_color: '#d66e00'
         color_scheme: 'dark'
         form_theme: 'vertical'
@@ -30,7 +30,7 @@ easy_admin:
                 edit: '@Core/templates/flat/edit.html.twig'
             list:
                 dql_filter: "entity.enabled = true and entity.rented = false"
-                max_results: '10'
+                max_results: '30'
                 actions:
                     - { name: 'zipPhotos', icon: 'image', label: false } 
                     - { name: '-show'}
@@ -40,13 +40,11 @@ easy_admin:
                     
                 fields:
                     - { property: 'enabled', label: 'flat.property.enabled' }
-                    - { property: 'summer', label: 'flat.property.summer' }
-                    - { property: 'rented', label: 'flat.property.rented' }
+                    - { property: 'toPublish', label: 'flat.property.toPublish' }
                     - { property: 'forSale', label: 'flat.property.forSale' }
                     - { property: 'image', type: 'image', base_path: '%app.path.flat_images%', label: 'flat.property.image' }
                     - { property: 'name', label: 'flat.property.name' }
                     - { property: 'price',label: 'flat.property.price' }
-                    - { property: 'dailyPrice',label: 'flat.property.dailyPrice' }
             # FORM
             form:
                 fields:
@@ -71,57 +69,6 @@ easy_admin:
             search: 
                 fields:
                     - { property: 'name', label: 'flat.property.name' }
-        Flat:
-            class: AD\CoreBundle\Entity\Flat
-            controller: AD\CoreBundle\Controller\AdminController
-            translation_domain: 'admin'
-            label: flat.labels.name
-            
-            templates:
-                edit: '@Core/templates/flat/edit.html.twig'
-            # FORM
-            form:
-                fields:
-                    - { type: 'group', label: 'flat.information', css_class: 'col-sm-6' }
-                    - { property: 'name', label: 'flat.property.name' }
-                    - { property: 'title', label: 'pension.property.title' }
-                    - { property: 'city', label: 'pension.property.city' }
-                    - { property: 'price', label: 'flat.property.price',type: 'money', type_options: { currency: 'CLP' } }
-                    - { property: 'dailyPrice', label: 'flat.property.dailyPrice',type: 'money', type_options: { currency: 'CLP' } }
-                    - { property: 'forSale', label: 'flat.property.forSale' }
-                    - { property: 'rented', label: 'flat.property.rented' }
-                    - { property: 'summer', label: 'flat.property.summer' }
-                    - { type: 'group', label: 'flat.description' }
-                    - { property: 'privateInformation', type: 'ckeditor', label: 'flat.property.privateInformation' }
-                    - { property: 'description_spanish', type: 'ckeditor', label: 'flat.property.description_spanish' }
-                    - { property: 'description_english', type: 'ckeditor', label: 'flat.property.description_english' }
-                    - { property: 'description_french', type: 'ckeditor', label: 'flat.property.description_french' }
-                    - { type: 'group', label: 'flat.attachment' }
-                    - { property: 'images', type: 'collection', type_options: { entry_type: 'AD\CoreBundle\Form\FlatImageType', by_reference: false } }
-            # LIST
-            list:
-                title: flat.list.label
-                max_results: '10'
-                actions: 
-                    - { name: 'zipPhotos', icon: 'image', label: false }
-                    - { name: '-show'}
-                    - { name: 'edit', icon: 'pencil', label: false }
-                    - { name: 'validateFlat', icon: 'check', label: false }  
-                    - { name: '-delete' }
-                fields:
-                    - { property: 'enabled', label: 'flat.property.enabled' }
-                    - { property: 'summer', label: 'flat.property.summer' }
-                    - { property: 'rented', label: 'flat.property.rented' }
-                    - { property: 'forSale', label: 'flat.property.forSale' }
-                    - { property: 'image', type: 'image', base_path: '%app.path.flat_images%', label: 'flat.property.image' }
-                    - { property: 'name', label: 'flat.property.name' }
-                    - { property: 'price',label: 'flat.property.price' }
-                    - { property: 'dailyPrice',label: 'flat.property.dailyPrice' }
-                    #- { property: 'images', type: 'AD\CoreBundle\Entity\FlatImage', label: 'flat.property.images', template: 'images_list.html.twig' }
-            # SEARCH
-            search: 
-                fields:
-                    - { property: 'name', label: 'flat.property.name' }
         FlatDeactivated:
             class: AD\CoreBundle\Entity\Flat
             controller: AD\CoreBundle\Controller\AdminController
@@ -131,7 +78,7 @@ easy_admin:
                 edit: '@Core/templates/flat/edit.html.twig'
             list:
                 dql_filter: "entity.enabled = false"
-                max_results: '10'
+                max_results: '30'
                 actions: 
                     - { name: 'zipPhotos', icon: 'image', label: false }
                     - { name: '-show'}
@@ -140,13 +87,10 @@ easy_admin:
                     - { name: '-delete' }
                 fields:
                     - { property: 'enabled', label: 'flat.property.enabled' }
-                    - { property: 'summer', label: 'flat.property.summer' }
-                    - { property: 'rented', label: 'flat.property.rented' }
                     - { property: 'forSale', label: 'flat.property.forSale' }
                     - { property: 'image', type: 'image', base_path: '%app.path.flat_images%', label: 'flat.property.image' }
                     - { property: 'name', label: 'flat.property.name' }
                     - { property: 'price',label: 'flat.property.price' }
-                    - { property: 'dailyPrice',label: 'flat.property.dailyPrice' }
             # FORM
             form:
                 fields:

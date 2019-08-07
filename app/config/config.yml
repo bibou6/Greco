@@ -24,7 +24,7 @@ parameters:
       project: true
       flat: true
       pension: true
-      summerFlat: true
+      summerFlat: false
       locale:
         es: true
         fr: true
