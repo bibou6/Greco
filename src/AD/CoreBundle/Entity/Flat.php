@@ -176,6 +176,7 @@ class Flat
     	$this->enabled = true;
     	$this->uploadedDate = new \Datetime("now");
     	$this->updatedAt = new \Datetime("now");
+    	$this->toPublish = true;
     }
     
     
